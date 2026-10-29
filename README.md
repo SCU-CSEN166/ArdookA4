@@ -38,9 +38,12 @@
 | Dataset/source | Link or access instructions | Purpose | Size / languages | Privacy or usage considerations |
 |---|---|---|---|---|
 | [Name] | [URL](https://huggingface.co/datasets) or other instructions] | [Training/development/evaluation] | [Details] | [Notes] |
+| Provided skeleton spreadsheet of Ardook Data Grant Recommendations and manually added data found through NSF,NIH,Humanity AI and Google.| [https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512](url)| Used for training, testing and validation| Size:mutable as grants get found| Additional Notes: NSF and NIH grants tend to either have requirements of organizations being in the U.S or that the organization is STEM focused|
 
 - **Data preparation:** [Cleaning, anonymization, annotation, splitting, deduplication, etc.]
+- | The given data may need to be cleaned of grants that are no longer open. If they are already closed there is no point in looking at them for evaluation. When it comes to implementation the data will have to be split into train, test and validation. Currently proposing a 80,10,10 split for train test and validation respectively.|
 - **Data limitations:** [What is missing, noisy, or uncertain?]
+- | There was not a lot of starting data from the spreadsheet so it will be a bit tedious to go manually find more grants. Also unsurprisingly there are not many datasets out there that contain what we are trying to assess: women led business grant validation.|
 
 ### 4. Proposed evaluation
 | Metric / test | What it measures | How it will be calculated | Target / success criterion |
@@ -55,7 +58,7 @@
 | Member | Primary responsibility | Specific Weekly contribution | Planned next task |
 |---|---|---|---|
 | [Name] | [Data / models / evaluation / integration / etc.] | [Actual work completed] | [Next action] |
-
+| Timothy| Data Collection and Model Investigation| Added multiple entries to the spreadsheet for data collection. Beginning investigation on what models to use for implementation. Went to go ask clarifying questions for the project in office hours. Scheduled outside of lab period meeting.| Collect more data of grants. Find appropriate models for classifying what grants are worth applying to.|
 ---
 
 ## Week 6 — Build: Working Baseline
