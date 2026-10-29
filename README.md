@@ -1,10 +1,10 @@
 # CSEN 166 — Term Team Project for Social Impact (TTP4SI)
 
-**Team:** [A4]  
-**Challenge:** [Ardook]  
-**Team members:** [Shreya Vishwanath, Thien Giap Do, Timothy Le, Yash Sanghvi]  
-**Repository:** [Link]  
-**Last updated:** [10/28/26]
+**Team:** A4  
+**Challenge:** Ardook 
+**Team members:** Shreya Vishwanath, Thien Giap Do, Timothy Le, Yash Sanghvi  
+**Repository:** https://github.com/SCU-CSEN166/ArdookGrantProject 
+**Last updated:** 10/29/26
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -16,7 +16,7 @@
 
 ### Known limitations
 
-[Currently starting out! We found a few models that we are testing the retrieval and ranking abilities of.]
+[Keep a list of what the system cannot reliably do.]
 
 ## Week 5 — Scope: Project Plan
 
