@@ -49,6 +49,9 @@
   4. rank-bm25 (Python): Lexical sparse retrieval baseline to evaluate improvements from dense embeddings.
   5. intfloat/multilingual-e5-small: lightweight option for semantics retrieval
   6. facebook/bart-large-mnli: good for tagging based on certain focus areas or classifications
+  7. DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF (Strong logical reasoning packaged specifically for local execution via Mac-friendly runners like LM Studio or Ollama.)
+  8. flair/ner-english-large (SynEval Framework Model)
+  9. deepseek-ai/DeepSeek-V4.1-Flash-1017 (aggressive KV cache compression and efficient throughput for complex code generation, script execution, and multi-turn analytical tasks.)
 - **Alternative approach:**
   1. If dense retrieval underperforms on domain-specific terminology (e.g., specific non-profit legal terms), implement a Hybrid Search (BM25 + Dense Embeddings with Reciprocal Rank Fusion).
 
