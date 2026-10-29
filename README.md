@@ -99,6 +99,8 @@
 
 **Deliverable during Week 7 Lab:** A runnable baseline, setup/run instructions, and 1–2 example inputs and outputs. Update this section with what worked, what failed, and individual contributions.
 
+Working baseline: https://colab.research.google.com/drive/1jBrEaOzwwaEgq44S9PaTRLZysHg4V29o?usp=sharing
+
 ### Implementation status
 
 - **What runs end-to-end now?** [Describe exactly.]
