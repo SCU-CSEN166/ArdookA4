@@ -24,11 +24,11 @@
 
 ### 1. Problem formulation and social impact
 
-- **Problem:** What specific task are you solving? [Ardook provides mothers, who are unable to leave their childrens' sides, with job opportunities and therefore, stable sources of income. To continue their work, Ardook requires adequate funding, much of which can be obtained through grants for social impact organizations and non-profits. However, the process of identifying relevant grant options and determining eligibility for such grants can be time-consuming and tedious for the non-profit employees. Our AI agent will streamline this process by identifying applicable grants and making suggestions to the non-profit regarding which grants are a best-fit and which should be applied to.]
-- **Intended users:** Who would use the system, and for what decisions or activities? [The primary users of this system will be the employees of Ardook who are in charge of obtaining grant funding for the organization. They will be able to search for grants using the software and/or recieve suggestions for grants that Ardook is eligible for and could apply to. If the project expands outside of Ardook, other non-profit organizations that are also interested in expediting their grant search process could also utilize this AI system.]
-- **Inputs and outputs:** What will the system receive and produce? Give one concrete example. [ ]
-- **Success criteria:** What would make the system useful and reliable? [The system could be considered useful if it provides reliable reccomendations for grants with minimal to zero hallucinated reccomendations. It would also be considered successful if Ardook is able to apply to and receive grants from a multitude of sources because they match the criteria of what the grant is looking for. ]
-- **Constraints and risks:** [Some risks include maintaining the privacy of Ardook as the AI system gathers information about them and uses it to search for grants. Another risk is hallucinations as we test the model and try to ensure that it produces a competent responses.]
+- **Problem:** What specific task are you solving? Ardook provides mothers, who are unable to leave their childrens' sides, with job opportunities and therefore, stable sources of income. To continue their work, Ardook requires adequate funding, much of which can be obtained through grants for social impact organizations and non-profits. However, the process of identifying relevant grant options and determining eligibility for such grants can be time-consuming and tedious for the non-profit employees. Our AI agent will streamline this process by identifying applicable grants and making suggestions to the non-profit regarding which grants are a best-fit and which should be applied to.
+- **Intended users:** Who would use the system, and for what decisions or activities? The primary users of this system will be the employees of Ardook who are in charge of obtaining grant funding for the organization. They will be able to search for grants using the software and/or recieve suggestions for grants that Ardook is eligible for and could apply to. If the project expands outside of Ardook, other non-profit organizations that are also interested in expediting their grant search process could also utilize this AI system.
+- **Inputs and outputs:** What will the system receive and produce? Give one concrete example. The system would receive information about a  grant and would output whether Ardook is eligible for the grant.
+- **Success criteria:** What would make the system useful and reliable? The system could be considered useful if it provides reliable reccomendations for grants with minimal to zero hallucinated reccomendations. It would also be considered successful if Ardook is able to apply to and receive grants from a multitude of sources because they match the criteria of what the grant is looking for. 
+- **Constraints and risks:** Some risks include maintaining the privacy of Ardook as the AI system gathers information about them and uses it to search for grants. Another risk is hallucinations as we test the model and try to ensure that it produces a competent responses.
 
 ### 2. Proposed technical approach
 
@@ -47,6 +47,8 @@
   2. BAAI/bge-reranker-base: Cross-encoder reranker for joint scoring of query-grant pairs; selected to maximize top-tier ranking precision over first-stage retrieval candidates.
   3. Qwen/Qwen2.5-0.5B-Instruct: Compact generative LLM for structured JSON extraction and rationale synthesis; selected because it fits within constrained compute environments while strictly following zero-shot extraction prompts.
   4. rank-bm25 (Python): Lexical sparse retrieval baseline to evaluate improvements from dense embeddings.
+  5. intfloat/multilingual-e5-small: lightweight option for semantics retrieval
+  6. facebook/bart-large-mnli: good for tagging based on certain focus areas or classifications
 - **Alternative approach:**
   1. If dense retrieval underperforms on domain-specific terminology (e.g., specific non-profit legal terms), implement a Hybrid Search (BM25 + Dense Embeddings with Reciprocal Rank Fusion).
 
@@ -69,8 +71,12 @@
 | Metric / test                    | What it measures    | How it will be calculated | Target / success criterion |
 | -------------------------------- | ------------------- | ------------------------- | -------------------------- |
 | [Metric - e.g Accuracy, F1, AoC] | [Quality dimension] | [Method/ Formula]         | [Target]                   |
+| F1 | How well relevant, comparable information was extracted from the provided grant info | compare the model's capability to what we're able to derive about a grant by reading it ourselves, F1 equation        | the model is able to identify the same relevant information that we are, calculated F1 value is high enough |
+| recall | whether the model correctly retrieves and outputs relevant grant, whether it drops relevant grants | compare the model's capability to what we're able to derive about a grant by reading it ourselves, recall equation        | the model is able to identify the same relevant grants that we are, calculated recall value is high enough |
+| precision | whether the model suggests grants that Ardook would actually use | compare the model's capability to what we're able to derive about a grant by reading it ourselves, precision equation        | the model's evaluation of top grants is the same as ours, calculated precision value is high enough |
 
-- **Evaluation examples:** [How will you build or select a development set?]
+
+- **Evaluation examples:** [How will you build or select a development set?] We have a set of grants that have been evaluated for eligibility by employees of Ardook, so we can use this as a development set and ensure that the model is first able to derive the same output and reach the same conclusions on eligibility that the non-profit did.
 - **Human verification:** [If relevant, who will check outputs and how?]
 - | Two group members will check if the outputs actually match the appropriate classification and if we agree on the classification then its an accurate classification|
 - **Failure cases to watch:** [At least two anticipated risks]
@@ -82,6 +88,8 @@
 | ------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | [Name]  | [Data / models / evaluation / integration / etc.] | [Actual work completed]                                                                                                                                                                                                                                                                              | [Next action]                                                                                                     |
 | Timothy | Data Collection and Model Investigation           | Added multiple entries to the spreadsheet for data collection. Beginning investigation on what models to use for implementation. Updated README with parts 3 and 5 and some of part 4. Went to go ask clarifying questions for the project in office hours. Scheduled outside of lab period meeting. | Next Task:Collect more data of grants. Find appropriate models for classifying what grants are worth applying to. |
+| Shreya | Data Collection and Model Investigation           | Beginning investigation on what models to use for implementation. Updated README with part 1, 2. Attended outside of lab period meeting where we discussed data collection and model possibilities. | Next Task: Collect more data of grants. Begin implementing models/filling in gaps in pipeline. |
+
 
 ---
 
