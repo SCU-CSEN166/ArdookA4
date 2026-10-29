@@ -4,7 +4,7 @@
 **Challenge:** [Ardook]  
 **Team members:** [Shreya Vishwanath, Thien Giap Do, Timothy Le, Yash Sanghvi]  
 **Repository:** [Link]  
-**Last updated:** [10/27/26]
+**Last updated:** [10/28/26]
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -38,8 +38,7 @@
 | Dataset/source | Link or access instructions | Purpose | Size / languages | Privacy or usage considerations |
 |---|---|---|---|---|
 | [Name] | [URL](https://huggingface.co/datasets) or other instructions] | [Training/development/evaluation] | [Details] | [Notes] |
-| Provided skeleton spreadsheet of Ardook Data Grant Recommendations and manually added data found through NSF,NIH,Humanity AI and Google.| [https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512](url)| Used for training, testing and validation| Size:mutable as grants get found| Additional Notes: NSF and NIH grants tend to either have requirements of organizations being in the U.S or that the organization is STEM focused|
-
+| Provided skeleton spreadsheet of Ardook Data Grant Recommendations and manually added data found through NSF,NIH,Humanity AI and Google.| [https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512](https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512)| Used for training, testing and validation| Size:mutable as grants get found| Additional Notes: NSF and NIH grants tend to either have requirements of organizations being in the U.S or that the organization is STEM focused|
 - **Data preparation:** [Cleaning, anonymization, annotation, splitting, deduplication, etc.]
 - | The given data may need to be cleaned of grants that are no longer open. If they are already closed there is no point in looking at them for evaluation. When it comes to implementation the data will have to be split into train, test and validation. Currently proposing a 80,10,10 split for train test and validation respectively.|
 - **Data limitations:** [What is missing, noisy, or uncertain?]
@@ -52,13 +51,15 @@
 
 - **Evaluation examples:** [How will you build or select a development set?]
 - **Human verification:** [If relevant, who will check outputs and how?]
+- | Two group members will check if the outputs actually match the appropriate classification and if we agree on the classification then its an accurate classification|
 - **Failure cases to watch:** [At least two anticipated risks]
+- |1. There is some data that is labeled as in between such as weak-moderate fit. I think that there may come some issues with properly trying to classify unless we consider weak-moderate for example as its own category. Also some of the data is conditional such as “Excellent fit if…” which means that our classifier may run into issues for finding the proper conditions to meet an excellent fit. 2. I think another issue that may arise is how we have our model distinguish how much to emphasize the key concern/disqualifier factor. We would need to determine what is a major disqualification versus a minor one|
 
 ### 5. Team responsibilities
 | Member | Primary responsibility | Specific Weekly contribution | Planned next task |
 |---|---|---|---|
 | [Name] | [Data / models / evaluation / integration / etc.] | [Actual work completed] | [Next action] |
-| Timothy| Data Collection and Model Investigation| Added multiple entries to the spreadsheet for data collection. Beginning investigation on what models to use for implementation. Went to go ask clarifying questions for the project in office hours. Scheduled outside of lab period meeting.| Collect more data of grants. Find appropriate models for classifying what grants are worth applying to.|
+| Timothy| Data Collection and Model Investigation| Added multiple entries to the spreadsheet for data collection. Beginning investigation on what models to use for implementation. Updated README with parts 3 and 5 and some of part 4. Went to go ask clarifying questions for the project in office hours. Scheduled outside of lab period meeting.| Next Task:Collect more data of grants. Find appropriate models for classifying what grants are worth applying to.|
 ---
 
 ## Week 6 — Build: Working Baseline
