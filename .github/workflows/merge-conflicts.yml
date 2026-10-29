@@ -1,0 +1,60 @@
+name: Merge conflicts
+
+# GitHub doesn't notify anyone when a PR starts conflicting with main, and
+# pull_request workflows (like CI) don't run at all while a PR has conflicts.
+# So whenever main changes, this checks every open PR: ones that now conflict
+# get a "merge-conflict" label and a comment (which notifies the author), and
+# the label comes off once the conflict is resolved.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: merge-conflicts
+  cancel-in-progress: true
+
+jobs:
+  label:
+    name: Label conflicting PRs
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      LABEL: merge-conflict
+    steps:
+      - name: Label PRs that conflict with main
+        run: |
+          gh label create "$LABEL" --color B60205 --description "Has conflicts with main" --force
+
+          # GitHub works out whether a PR conflicts in the background, so right
+          # after a push some PRs report UNKNOWN; wait for those to settle.
+          for _ in 1 2 3 4 5 6; do
+            prs=$(gh pr list --state open --base main --limit 100 --json number,mergeable,labels)
+            if ! jq -e 'any(.[]; .mergeable == "UNKNOWN")' <<<"$prs" >/dev/null; then break; fi
+            sleep 10
+          done
+
+          jq -c '.[]' <<<"$prs" | while read -r pr; do
+            number=$(jq -r '.number' <<<"$pr")
+            state=$(jq -r '.mergeable' <<<"$pr")
+            labeled=$(jq -r --arg l "$LABEL" 'any(.labels[]; .name == $l)' <<<"$pr")
+
+            if [ "$state" = CONFLICTING ] && [ "$labeled" = false ]; then
+              echo "#$number conflicts with main; labeling"
+              gh api "repos/{owner}/{repo}/issues/$number/labels" -f "labels[]=$LABEL" --silent
+              gh api "repos/{owner}/{repo}/issues/$number/comments" --silent -f body="This PR now has merge conflicts with \`main\`. Click **Resolve conflicts** on this page (or merge \`main\` into your branch locally), then push. CI can't run on this PR until the conflicts are fixed."
+            elif [ "$state" = MERGEABLE ] && [ "$labeled" = true ]; then
+              echo "#$number no longer conflicts; removing label"
+              gh api -X DELETE "repos/{owner}/{repo}/issues/$number/labels/$LABEL" --silent
+            fi
+          done

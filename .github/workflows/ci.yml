@@ -1,0 +1,93 @@
+name: CI
+
+# Pull requests are tested on GitHub's merge commit (the PR branch merged into
+# the current main), so this catches code that works alone but breaks once
+# combined with someone else's changes. Pushes to main are checked too, since
+# edits made directly on main (e.g. through the web UI) skip the PR step.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# A new push to the same PR cancels the run that is already in progress.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Lint and test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          # pip caching needs a requirements.txt to key on, so it turns on once one exists.
+          cache: ${{ hashFiles('requirements.txt') != '' && 'pip' || '' }}
+
+      - name: Install dependencies
+        env:
+          # CI has no GPU; the CPU-only PyTorch build is far smaller than the default CUDA one.
+          PIP_EXTRA_INDEX_URL: https://download.pytorch.org/whl/cpu
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install pytest ruff==0.17.1
+
+      # Only hard errors (syntax errors, undefined names), not style.
+      - name: Lint
+        run: ruff check --select E9,F63,F7,F82 --output-format=github .
+
+      - name: Run tests
+        run: |
+          # pytest exits with 5 when it finds no tests; that is expected until tests/ is filled in.
+          pytest -q || {
+            code=$?
+            if [ "$code" -eq 5 ]; then echo "::notice::No tests found yet."; else exit "$code"; fi
+          }
+
+  hygiene:
+    name: Repo hygiene
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      # Scans the full git history: a key that was committed and later deleted is still exposed.
+      - name: Scan for secrets
+        env:
+          GITLEAKS_VERSION: 8.30.1
+        run: |
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" \
+            | tar -xz -C /usr/local/bin gitleaks
+          gitleaks git . --redact --verbose
+
+      # A conflict that was "resolved" but still has the <<<<<<< / >>>>>>> lines in it.
+      # Python would also fail lint, but a broken README wouldn't. (======= is skipped
+      # because Markdown uses it to underline headings.)
+      - name: Reject leftover conflict markers
+        run: |
+          if git grep -nIE '^(<<<<<<<|>>>>>>>)( |$)'; then
+            echo "::error::Leftover merge conflict markers (lines above). Finish resolving the conflict."
+            exit 1
+          fi
+
+      # Datasets and model weights belong outside git; anything committed stays in history for good.
+      - name: Reject files over 10 MB
+        run: |
+          big=$(find . -path ./.git -prune -o -type f -size +10M -print)
+          if [ -n "$big" ]; then
+            echo "::error::Files over 10 MB (keep data/model files out of git):"
+            echo "$big"
+            exit 1
+          fi
