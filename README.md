@@ -4,7 +4,7 @@
 **Challenge:** Ardook 
 **Team members:** Shreya Vishwanath, Thien Giap Do, Timothy Le, Yash Sanghvi  
 **Repository:** https://github.com/SCU-CSEN166/ArdookGrantProject 
-**Last updated:** 10/29/26
+**Last updated:** 11/03/26
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -138,7 +138,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Member | What I personally implemented/tested | Result (worked / partly / failed) | Evidence (commit, PR, experiment) | Blocker / next step |
 | ------ | ------------------------------------ | --------------------------------- | --------------------------------- | ------------------- |
 | [Name] | [Specific contribution]              | [Status]                          | [Link]                            | [Next step]         |
-
+|Timothy | Tried finding new ways to get more real data onto our working spreadsheet. Investigated how to go about getting synthetic data that can be relevant to training| Result: Added 20 rows of data to our spreadsheet of grants| Evidence:Can be found in the uploaded spreadsheet on this README| Blocker: We need to start working on trying and training models. Will need to make synthetic data set to use in future week.|
 ---
 
 ## Week 7 — Evaluate: Results Checkpoint
@@ -155,13 +155,13 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | ---------------- | -------: | -------: | ------- |
 | Baseline         |  [Value] |  [Value] | [Notes] |
 | Current          |  [Value] |  [Value] | [Notes] |
-
+| sentence-transformers/all-MiniLM-L6-v2| Accuracy:50%| confusion matrix: [[49 0 9 0] [12 29 8 20] [2 16 11 14] [0 10 9 11]]| Notes: The confusion matrix is ordered by weak, moderate, strong and excellent classifications. 200 synthetic samples used to train the model. 9 mislabeled as weak, 40 mislabeled as moderate, 32 mislabeled as strong, 19 mislabeled as excellent. Sums to 100 mislabeles =  50% accuracy = model is guessing|
 ### Successes, failures, and interpretation
 
 | Example / category | Expected behavior | Actual behavior | Success or failure? | Likely reason |
 | ------------------ | ----------------- | --------------- | ------------------- | ------------- |
 | [Case]             | [Expected]        | [Observed]      | [Status]            | [Hypothesis]  |
-
+| Tested the sentence-transformers/all-MiniLM-L6-v2 model| Expected behavior: | Observed behavior: Model has 50% accuracy. Therefore it is guessing on the classifications| Failure-not worth using this model unless time for further refinement| Embeddings are blurring the eligibility facts together from our Ardook source of truths document. Training entirely on synthetic data may be leading to bad results.|
 - **What improved?** [Evidence]
 - **What did not improve?** [Evidence]
 - **Next experiment:** [Specific change and how you will measure it]
@@ -171,7 +171,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Member | Work completed  | Result (worked / partly / failed) | Evidence | Next step   |
 | ------ | --------------- | --------------------------------- | -------- | ----------- |
 | [Name] | [Specific work] | [Status]                          | [Link]   | [Next step] |
-
+|Timothy| Worked with the sentence-transformers/all-MiniLM-L6-v2 model and trained on a synthetic dataset. Collected more grant data to our spreadsheet.| Result: the model is currently functioning just gives poor results| Evidence: Added TTP4SI_sentence-transformers/all-MiniLM-L6-v2.ipynb to repo.| Next Step:Try different models. Train the sentence-transformers/all-MiniLM-L6-v2 model on our synthetic data and the real grant data even though there is not as much of it|
 ---
 
 ## Week 8 — Stress-Test: Reliability on Hidden Data
