@@ -4,7 +4,7 @@
 **Challenge:** Ardook 
 **Team members:** Shreya Vishwanath, Thien Giap Do, Timothy Le, Yash Sanghvi  
 **Repository:** https://github.com/SCU-CSEN166/ArdookGrantProject 
-**Last updated:** 10/29/26
+**Last updated:** 11/04/26
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -67,6 +67,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Name]                                                                                                                                   | [URL](https://huggingface.co/datasets) or other instructions]                                                                                                                                                          | [Training/development/evaluation]         | [Details]                        | [Notes]                                                                                                                                          |
 | Provided skeleton spreadsheet of Ardook Data Grant Recommendations and manually added data found through NSF,NIH,Humanity AI and Google. | [https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512](https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512) | Used for training, testing and validation | Size:mutable as grants get found | Additional Notes: NSF and NIH grants tend to either have requirements of organizations being in the U.S or that the organization is STEM focused |
+|Synthetic dataset of grants formatted similarly to the provided Ardook Data Grant Recommendations spreadsheet|[https://docs.google.com/spreadsheets/d/1pDHV5oLXcrvqiCR492Pt_GJ0iT-nyBWuz3nXgMmGzRw/edit?gid=625416258#gid=625416258] ([url](https://docs.google.com/spreadsheets/d/1pDHV5oLXcrvqiCR492Pt_GJ0iT-nyBWuz3nXgMmGzRw/edit?gid=625416258#gid=625416258))| Used for training sentence-transformers/all-MiniLM-L6-v2|200 entries, 58 labeled weak, 69 moderate, 43 strong, 30 excellent|Additional Notes: All URLs in the spreadsheet are synthetic.|
 
 - **Data preparation:** [Cleaning, anonymization, annotation, splitting, deduplication, etc.]
 - | The given data may need to be cleaned of grants that are no longer open. If they are already closed there is no point in looking at them for evaluation. When it comes to implementation the data will have to be split into train, test and validation. Currently proposing a 80,10,10 split for train test and validation respectively.|
@@ -93,10 +94,8 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Member  | Primary responsibility                                                | Specific Weekly contribution                                                                        | Planned next task                                                                                                                                                                                                                                                                                                                                                                               |
 | ------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Giap Do | Collecting feasible models from HuggingFace and brainstorm approaches | Found 4 potential models the team can test with against the sample data that Timothy has collected. | Evaluation of models. Will need to measure metrics of these models against the data that we have collected. I can use techniques that we have learned in class such as accuracy, precision, recall, and F-1 score to evaluate the performance of these models. However, I will also need to evaluate the performance against the data that we have found. Data could potentially be imbalanced. |
-
 | Timothy | Data Collection and Model Investigation | Added multiple entries to the spreadsheet for data collection. Beginning investigation on what models to use for implementation. Updated README with parts 3 and 5 and some of part 4. Went to go ask clarifying questions for the project in office hours. Scheduled outside of lab period meeting. | Next Task:Collect more data of grants. Find appropriate models for classifying what grants are worth applying to. |
 | Shreya | Data Collection and Model Investigation | Beginning investigation on what models to use for implementation. Updated README with part 1, 2. Attended outside of lab period meeting where we discussed data collection and model possibilities. | Next Task: Collect more data of grants. Begin implementing models/filling in gaps in pipeline. |
-
 | Yash Sanghvi | Synthetic data generation/evaluations| Beggining investigations on how to create trainable synthetic data with high fidelity and diversity. Looking at what data can actually help grant discovery and how to evaluate the data with the model. Working on system design to make the system run optimaly from end to end. |
 
 ---
@@ -138,7 +137,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Member | What I personally implemented/tested | Result (worked / partly / failed) | Evidence (commit, PR, experiment) | Blocker / next step |
 | ------ | ------------------------------------ | --------------------------------- | --------------------------------- | ------------------- |
 | [Name] | [Specific contribution]              | [Status]                          | [Link]                            | [Next step]         |
-
+|Timothy | Tried finding new ways to get more real data onto our working spreadsheet. Investigated how to go about getting synthetic data that can be relevant to training| Result: Added 20 rows of data to our spreadsheet of grants| Evidence:Can be found in the uploaded spreadsheet on this README| Blocker: We need to start working on trying and training models. Will need to make synthetic data set to use in future week.|
 ---
 
 ## Week 7 — Evaluate: Results Checkpoint
@@ -155,13 +154,13 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | ---------------- | -------: | -------: | ------- |
 | Baseline         |  [Value] |  [Value] | [Notes] |
 | Current          |  [Value] |  [Value] | [Notes] |
-
+| sentence-transformers/all-MiniLM-L6-v2| Accuracy:50%| confusion matrix: [[49 0 9 0] [12 29 8 20] [2 16 11 14] [0 10 9 11]]| Notes: The confusion matrix is ordered by weak, moderate, strong and excellent classifications. 200 synthetic samples used to train the model. 9 mislabeled as weak, 40 mislabeled as moderate, 32 mislabeled as strong, 19 mislabeled as excellent. Sums to 100 mislabeles =  50% accuracy = model is guessing|
 ### Successes, failures, and interpretation
 
 | Example / category | Expected behavior | Actual behavior | Success or failure? | Likely reason |
 | ------------------ | ----------------- | --------------- | ------------------- | ------------- |
 | [Case]             | [Expected]        | [Observed]      | [Status]            | [Hypothesis]  |
-
+| Tested the sentence-transformers/all-MiniLM-L6-v2 model| Expected behavior: | Observed behavior: Model has 50% accuracy. Therefore it is guessing on the classifications| Failure-not worth using this model unless time for further refinement| Embeddings are blurring the eligibility facts together from our Ardook source of truths document. Training entirely on synthetic data may be leading to bad results.|
 - **What improved?** [Evidence]
 - **What did not improve?** [Evidence]
 - **Next experiment:** [Specific change and how you will measure it]
@@ -171,7 +170,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Member | Work completed  | Result (worked / partly / failed) | Evidence | Next step   |
 | ------ | --------------- | --------------------------------- | -------- | ----------- |
 | [Name] | [Specific work] | [Status]                          | [Link]   | [Next step] |
-
+|Timothy| Worked with the sentence-transformers/all-MiniLM-L6-v2 model and trained on a synthetic dataset. Collected more grant data to our spreadsheet.| Result: the model is currently functioning just gives poor results| Evidence: Added TTP4SI_sentence-transformers/all-MiniLM-L6-v2.ipynb to repo.| Next Step:Try different models. Train the sentence-transformers/all-MiniLM-L6-v2 model on our synthetic data and the real grant data even though there is not as much of it|
 ---
 
 ## Week 8 — Stress-Test: Reliability on Hidden Data
