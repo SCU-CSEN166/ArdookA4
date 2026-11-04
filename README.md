@@ -32,27 +32,32 @@
 
 ### 2. Proposed technical approach
 
-- **Pipeline:**
-  1. Ingestion & Metadata Extraction: Parse raw grant listings (JSON / CSV / Web scrapes) and extract structural attributes: geographic constraints, legal entity requirements (e.g., 501(c)(3), foreign non-profit, for-profit), focus areas, deadline, and award range.
-  2. Rule-Based Disqualification Filter: Pass grants through a hard-constraint screening against Ardook’s baseline profile (e.g., immediate elimination if strict US-only 501(c)(3) or purely lab-based STEM research is required).
-  3. Bi-Encoder Dense Retrieval: Embed Ardook’s organizational profile and programmatic descriptions alongside surviving grant summaries into a unified vector space to retrieve the top-$K$ semantic matches.Cross-Encoder Reranker & Fit Scorer: Run pairs of (Ardook Profile, Candidate Grant) through a cross-encoder to compute a fine-grained relevance score and categorize into fit tiers (High Fit, Moderate Fit, Weak / Unlikely Fit).
-  4. Grounded Rationale Generation: A lightweight instruction-tuned LLM synthesizes an eligibility summary highlighting key criteria matches and flag risks without hallucinating unstated grant requirements.
-- **Baseline(s):**
-  1. Lexical Baseline (BM25 / TF-IDF): Keyword-based retrieval using Python (rank_bm25) matching Ardook's mission keywords ("mothers", "flexible work", "women employment", "social enterprise") against grant titles and descriptions.
-  2. Zero-Shot Heuristic Classifier: A rule-based keyword scoring metric combined with a basic threshold classifier mapping overlap scores into Fit vs. Not Eligible.
-- **Proposed models/tools:**
-  1. sentence-transformers/all-MiniLM-L6-v2: Dense bi-encoder for generating 384-dimensional semantic embeddings; selected for fast inference, lightweight memory footprint, and strong performance on semantic similarity benchmarks.
-  2. BAAI/bge-reranker-base: Cross-encoder reranker for joint scoring of query-grant pairs; selected to maximize top-tier ranking precision over first-stage retrieval candidates.
-  3. Qwen/Qwen2.5-0.5B-Instruct: Compact generative LLM for structured JSON extraction and rationale synthesis; selected because it fits within constrained compute environments while strictly following zero-shot extraction prompts.
-  4. rank-bm25 (Python): Lexical sparse retrieval baseline to evaluate improvements from dense embeddings.
-  5. intfloat/multilingual-e5-small: lightweight option for semantics retrieval
-  6. facebook/bart-large-mnli: good for tagging based on certain focus areas or classifications
-  7. DavidAU/Qwen3.5-9B-The-Defiant-Fable-Uncensored-Heretic-NEO-IMATRIX-MAX-MTP-GGUF (Strong logical reasoning packaged specifically for local execution via Mac-friendly runners like LM Studio or Ollama.)
-  8. flair/ner-english-large (SynEval Framework Model)
-  9. deepseek-ai/DeepSeek-V4.1-Flash-1017 (aggressive KV cache compression and efficient throughput for complex code generation, script execution, and multi-turn analytical tasks.)
-- **Alternative approach:**
-  1. If dense retrieval underperforms on domain-specific terminology (e.g., specific non-profit legal terms), implement a Hybrid Search (BM25 + Dense Embeddings with Reciprocal Rank Fusion).
-  2. If the cross-encoder struggles with multi-factor eligibility logic, convert the scoring step into a multi-attribute prompting chain where eligibility rules are evaluated sequentially as boolean gates.
+Proposed Technical Approach
+
+Solutions
+Initially, as we were brainstorming how to help Ardook target grants efficiently and effectively, our first intuition was the simple one. We can compare Ardook’s vision and purpose from their website and statements to various grants out there. The idea is to retrieve grants that share similar visions and purposes. Obviously, we couldn’t do exact word matching because that would simply be impossible and tedious. So our first and initial approach is to find similarities between Ardook and grants. For this, we would need to use hugging face models that are suited and equipped to find similarities between texts and documents given to it.
+Building off of the initial approach that we have, we also want to incorporate TF-IDF to retrieve grants that stand out among many grants especially to Ardook. Another consideration for this is to remove stop words that are common in the English language but have no real significance to our grant search for Ardook. 
+Something we can do to help our search is to build a bag of words that are specific to Ardook and what they are trying to accomplish. As we train our models on different data, we can add or subtract to that bag of words depending on the performance.
+In terms of using the dataset given to us from Ardook, we will need to clean that data and categorize it in a way that is helpful and useful for our models to interpret and train against.
+Models
+sentence-transformers/all-MiniLM-L6-v2
+This model from Hugging Face turns sentences and paragraphs into a compact vector space. Which it will do for synthetic data first and compare it to the vector space of our Ardook’s data and information.
+The way this model actually helps us is that it can measure similarities between documents and texts by using cosine similarity which is actually something I just learned in my data mining class. 
+A cool feature for this model as well is that it can catch similar words as we were hoping for in our solution because exact matching would not be feasible or effective at all.
+This is a great starter model for us because it is lightweight and easy to iterate and test with before moving on to bigger and complex models. But it will also give us a good sense of our data and how we can improve our training dataset.
+BAAI/bge-small-en-v1.5
+This model is also a good option for our approach to solve our problem. It is different from the MiniLM because it is designed specifically for information retrieval.
+Instead of just passing all of Ardook’s information into a vector space, I would create an instruction + a query for Ardook. So it requires more details and thought behind our query to best maximize our retrieval. Then we can run it against our synthetical data then eventual real data.
+
+
+cross-encoder/ms-marco-MiniLM-L-6-v2
+The first two proposed models are both bi-encoders which means they produce separate embeddings for Ardook and grants. With this model, we can go beyond that with the ability to combine their data simultaneously. This is helpful because our earlier bi-encoder models can miss negative combinations or correlation because it was embedded separately but this will combine the two which in turn will reveal more to us. 
+ 
+Considerations
+Our first two bi-encoders models both have a maximum limit on length of tokens so we need to ensure that our data can fit or needs to be chunked to fit the requirements. 
+A common problem can be an imbalanced dataset which is a common problem in the real world. This is definitely something we need to keep an eye for in our training and testing on our models.
+We will want to use certain python libraries to incorporate TF-IDF as we evaluate these different grants to truly see how similar a grant is to Ardook among other grants. These libraries will also help us with accounting for stop words that we have mentioned above
+
 
 ### 3. Proposed data
 
