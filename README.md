@@ -130,6 +130,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 
 | Attempt / change | Worked? (Yes / Partly / No) | Evidence (output, metric, link) | What we learned / next step |
 | ---------------- | --------------------------- | ------------------------------- | --------------------------- |
+| deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B model | partly                   | pushed to repo under deepseek-baseline | this deepseek model relies on "thinking" time to extract relevant info from the grants which is a unique feature to be worked around during the training process, this deepseek model needs to be modified further to complete the grant matching aspect, either by combining it with another model or furthering this one's capabilities  |
 | [Attempt]        | [Status]                    | [Evidence]                      | [Learning]                  |
 
 ### Individual contributions during that week
@@ -138,6 +139,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | ------ | ------------------------------------ | --------------------------------- | --------------------------------- | ------------------- |
 | [Name] | [Specific contribution]              | [Status]                          | [Link]                            | [Next step]         |
 |Timothy | Tried finding new ways to get more real data onto our working spreadsheet. Investigated how to go about getting synthetic data that can be relevant to training| Result: Added 20 rows of data to our spreadsheet of grants| Evidence:Can be found in the uploaded spreadsheet on this README| Blocker: We need to start working on trying and training models. Will need to make synthetic data set to use in future week.|
+|Shreya | Tried to work with synthetic data to begin model experimentation, looked into potential model options based on our preliminary thoughts from last week and started implementing a deepseek approach| Result: got a somewhat functional model baseline| Evidence: notebook uploaded to repo| Blocker/next steps: Need to improve synthetic data--better prompts? Also need to better fit the model to the use cases, determine whether I should continue experimenting with this model or try a different approach|
 ---
 
 ## Week 7 — Evaluate: Results Checkpoint
@@ -171,6 +173,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | ------ | --------------- | --------------------------------- | -------- | ----------- |
 | [Name] | [Specific work] | [Status]                          | [Link]   | [Next step] |
 |Timothy| Worked with the sentence-transformers/all-MiniLM-L6-v2 model and trained on a synthetic dataset. Collected more grant data to our spreadsheet.| Result: the model is currently functioning just gives poor results| Evidence: Added TTP4SI_sentence-transformers/all-MiniLM-L6-v2.ipynb to repo.| Next Step:Try different models. Train the sentence-transformers/all-MiniLM-L6-v2 model on our synthetic data and the real grant data even though there is not as much of it|
+|Shreya| Worked with the deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B and explored its extraction capabilities. Training it on a synthetic dataset. | Result: the model is probably not the most optimal towards the use cases, it's capable of extraction, but needs more work/to be combined with other models for successful matching of grants to Ardook| Evidence: Added the Python notebook to the repo under deepseek-baseline.| Next Step: Try the  model in combination with other models, maybe Qwen. Further train the model on our synthetic data and the real grant data even though there is not as much of it|
 ---
 
 ## Week 8 — Stress-Test: Reliability on Hidden Data
