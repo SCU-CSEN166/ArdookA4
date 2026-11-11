@@ -147,8 +147,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | ---------------- | -------: | -------: | ------- |
 | Baseline         |  [Value] |  [Value] | [Notes] |
 | Current          |  [Value] |  [Value] | [Notes] |
-| sentence-transformers/all-MiniLM-L6-v2|F1,Recall,Precision ![My Screenshot](./images/precision-recall-f1-minilmtest1.png)
-  | Accuracy:50%. confusion matrix: [[49 0 9 0] [12 29 8 20] [2 16 11 14] [0 10 9 11]].| Notes:  The confusion matrix is ordered by weak, moderate, strong and excellent classifications. 200 synthetic samples used to train the model. 9 mislabeled as weak, 40 mislabeled as moderate, 32 mislabeled as strong, 19 mislabeled as excellent. Sums to 100 mislabeles =  50% accuracy = model is guessing|
+| sentence-transformers/all-MiniLM-L6-v2|F1,Recall,Precision ![My Screenshot](./precision-recall-f1-minilmtest1.png)| Accuracy:50%. confusion matrix: [[49 0 9 0] [12 29 8 20] [2 16 11 14] [0 10 9 11]].| Notes:  The confusion matrix is ordered by weak, moderate, strong and excellent classifications. 200 synthetic samples used to train the model. 9 mislabeled as weak, 40 mislabeled as moderate, 32 mislabeled as strong, 19 mislabeled as excellent. Sums to 100 mislabeles =  50% accuracy = model is guessing|
 ### Successes, failures, and interpretation
 
 | Example / category | Expected behavior | Actual behavior | Success or failure? | Likely reason |
