@@ -4,7 +4,7 @@
 **Challenge:** Ardook 
 **Team members:** Shreya Vishwanath, Thien Giap Do, Timothy Le, Yash Sanghvi  
 **Repository:** https://github.com/SCU-CSEN166/ArdookGrantProject 
-**Last updated:** 11/04/26
+**Last updated:** 11/10/26
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -34,25 +34,24 @@
 
 Proposed Technical Approach
 
-Solutions
 Initially, as we were brainstorming how to help Ardook target grants efficiently and effectively, our first intuition was the simple one. We can compare Ardook’s vision and purpose from their website and statements to various grants out there. The idea is to retrieve grants that share similar visions and purposes. Obviously, we couldn’t do exact word matching because that would simply be impossible and tedious. So our first and initial approach is to find similarities between Ardook and grants. For this, we would need to use hugging face models that are suited and equipped to find similarities between texts and documents given to it.
 Building off of the initial approach that we have, we also want to incorporate TF-IDF to retrieve grants that stand out among many grants especially to Ardook. Another consideration for this is to remove stop words that are common in the English language but have no real significance to our grant search for Ardook. 
 Something we can do to help our search is to build a bag of words that are specific to Ardook and what they are trying to accomplish. As we train our models on different data, we can add or subtract to that bag of words depending on the performance.
 In terms of using the dataset given to us from Ardook, we will need to clean that data and categorize it in a way that is helpful and useful for our models to interpret and train against.
 
 Models
-sentence-transformers/all-MiniLM-L6-v2
+- **sentence-transformers/all-MiniLM-L6-v2**
 This model from Hugging Face turns sentences and paragraphs into a compact vector space. Which it will do for synthetic data first and compare it to the vector space of our Ardook’s data and information.
 The way this model actually helps us is that it can measure similarities between documents and texts by using cosine similarity which is actually something I just learned in my data mining class. 
 A cool feature for this model as well is that it can catch similar words as we were hoping for in our solution because exact matching would not be feasible or effective at all.
 This is a great starter model for us because it is lightweight and easy to iterate and test with before moving on to bigger and complex models. But it will also give us a good sense of our data and how we can improve our training dataset.
 
-BAAI/bge-small-en-v1.5
+- **BAAI/bge-small-en-v1.5**
 This model is also a good option for our approach to solve our problem. It is different from the MiniLM because it is designed specifically for information retrieval.
 Instead of just passing all of Ardook’s information into a vector space, I would create an instruction + a query for Ardook. So it requires more details and thought behind our query to best maximize our retrieval. Then we can run it against our synthetical data then eventual real data.
 
 
-cross-encoder/ms-marco-MiniLM-L-6-v2
+- **cross-encoder/ms-marco-MiniLM-L-6-v2**
 The first two proposed models are both bi-encoders which means they produce separate embeddings for Ardook and grants. With this model, we can go beyond that with the ability to combine their data simultaneously. This is helpful because our earlier bi-encoder models can miss negative combinations or correlation because it was embedded separately but this will combine the two which in turn will reveal more to us. 
 
 Considerations
@@ -66,7 +65,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Dataset/source                                                                                                                           | Link or access instructions                                                                                                                                                                                            | Purpose                                   | Size / languages                 | Privacy or usage considerations                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Name]                                                                                                                                   | [URL](https://huggingface.co/datasets) or other instructions]                                                                                                                                                          | [Training/development/evaluation]         | [Details]                        | [Notes]                                                                                                                                          |
-| Provided skeleton spreadsheet of Ardook Data Grant Recommendations and manually added data found through NSF,NIH,Humanity AI and Google. | [https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512](https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512) | Used for training, testing and validation | Size:mutable as grants get found | Additional Notes: NSF and NIH grants tend to either have requirements of organizations being in the U.S or that the organization is STEM focused |
+| Provided skeleton spreadsheet of Ardook Data Grant Recommendations and manually added data found through google search for grants. | [https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512](https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512) | Used for training, testing and validation | Size:mutable as grants get found | Additional Notes: NSF and NIH grants tend to either have requirements of organizations being in the U.S or that the organization is STEM focused |
 |Synthetic dataset of grants formatted similarly to the provided Ardook Data Grant Recommendations spreadsheet|[https://docs.google.com/spreadsheets/d/1pDHV5oLXcrvqiCR492Pt_GJ0iT-nyBWuz3nXgMmGzRw/edit?gid=625416258#gid=625416258] ([url](https://docs.google.com/spreadsheets/d/1pDHV5oLXcrvqiCR492Pt_GJ0iT-nyBWuz3nXgMmGzRw/edit?gid=625416258#gid=625416258))| Used for training sentence-transformers/all-MiniLM-L6-v2|200 entries, 58 labeled weak, 69 moderate, 43 strong, 30 excellent|Additional Notes: All URLs in the spreadsheet are synthetic.|
 
 - **Data preparation:** [Cleaning, anonymization, annotation, splitting, deduplication, etc.]
@@ -148,7 +147,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | ---------------- | -------: | -------: | ------- |
 | Baseline         |  [Value] |  [Value] | [Notes] |
 | Current          |  [Value] |  [Value] | [Notes] |
-| sentence-transformers/all-MiniLM-L6-v2| Accuracy:50%| confusion matrix: [[49 0 9 0] [12 29 8 20] [2 16 11 14] [0 10 9 11]]| Notes: The confusion matrix is ordered by weak, moderate, strong and excellent classifications. 200 synthetic samples used to train the model. 9 mislabeled as weak, 40 mislabeled as moderate, 32 mislabeled as strong, 19 mislabeled as excellent. Sums to 100 mislabeles =  50% accuracy = model is guessing|
+| sentence-transformers/all-MiniLM-L6-v2|F1,Recall,Precision ![My Screenshot](./precision-recall-f1-minilmtest1.png)| Accuracy:50%. confusion matrix: [[49 0 9 0] [12 29 8 20] [2 16 11 14] [0 10 9 11]].| Notes:  The confusion matrix is ordered by weak, moderate, strong and excellent classifications. 200 synthetic samples used to train the model. 9 mislabeled as weak, 40 mislabeled as moderate, 32 mislabeled as strong, 19 mislabeled as excellent. Sums to 100 mislabeles =  50% accuracy = model is guessing|
 ### Successes, failures, and interpretation
 
 | Example / category | Expected behavior | Actual behavior | Success or failure? | Likely reason |
