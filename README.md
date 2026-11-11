@@ -54,7 +54,7 @@ Instead of just passing all of Ardook’s information into a vector space, I wou
 
 cross-encoder/ms-marco-MiniLM-L-6-v2
 The first two proposed models are both bi-encoders which means they produce separate embeddings for Ardook and grants. With this model, we can go beyond that with the ability to combine their data simultaneously. This is helpful because our earlier bi-encoder models can miss negative combinations or correlation because it was embedded separately but this will combine the two which in turn will reveal more to us. 
- 
+
 Considerations
 Our first two bi-encoders models both have a maximum limit on length of tokens so we need to ensure that our data can fit or needs to be chunked to fit the requirements. 
 A common problem can be an imbalanced dataset which is a common problem in the real world. This is definitely something we need to keep an eye for in our training and testing on our models.
@@ -96,7 +96,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Giap Do | Collecting feasible models from HuggingFace and brainstorm approaches | Found 4 potential models the team can test with against the sample data that Timothy has collected. | Evaluation of models. Will need to measure metrics of these models against the data that we have collected. I can use techniques that we have learned in class such as accuracy, precision, recall, and F-1 score to evaluate the performance of these models. However, I will also need to evaluate the performance against the data that we have found. Data could potentially be imbalanced. |
 | Timothy | Data Collection and Model Investigation | Added multiple entries to the spreadsheet for data collection. Beginning investigation on what models to use for implementation. Updated README with parts 3 and 5 and some of part 4. Went to go ask clarifying questions for the project in office hours. Scheduled outside of lab period meeting. | Next Task:Collect more data of grants. Find appropriate models for classifying what grants are worth applying to. |
 | Shreya | Data Collection and Model Investigation | Beginning investigation on what models to use for implementation. Updated README with part 1, 2. Attended outside of lab period meeting where we discussed data collection and model possibilities. | Next Task: Collect more data of grants. Begin implementing models/filling in gaps in pipeline. |
-| Yash Sanghvi | Synthetic data generation/evaluations| Beggining investigations on how to create trainable synthetic data with high fidelity and diversity. Looking at what data can actually help grant discovery and how to evaluate the data with the model. Working on system design to make the system run optimaly from end to end. |
+| Yash Sanghvi | Synthetic data generation/evaluations| Beggining investigations on how to create trainable synthetic data with high fidelity and diversity. Looking at what data can actually help grant discovery and how to evaluate the data with the model. Working on system design to make the system run optimaly from end to end. | Next Tasks: Train model with current data and then use synthetic data to get better accuracy. |
 
 ---
 
@@ -112,32 +112,26 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 - **Example 1:** Input: [non-sensitive example] → Output: [result]
 - **Example 2:** Input: [non-sensitive example] → Output: [result]
 
-### Fine Tuning Techniques
-- Utalize Lora back propogation techniques as discussed in class
-    - Forward propogation - Take x input and compare it to y input: y predicted = weight times the input
-    - Loss Function - use sometype of distance formula to calculate loss(square-loss/manhattan): 1/2(y^ - y)^2
-    - Back propogation - Using chain rules find which weight contributed to error: derivate of L / derivative of W
-    - Gradient Descent - Update model weights, loss function, and y predicted
-- By making small prebutions we can make the model perform better under different conditions.
 
-### Defending against adverial attacks
-- Adversial attacks are done by prompt injections, jailbreak attacks and more
-    - Create a loop for llms to generate some attacks and train you llm to defend against it.
-    - Test cases, prompt inject
-    - Classify whether or not a prompt is malicious before returning the input
 
 ### Attempts and outcomes
 
 | Attempt / change | Worked? (Yes / Partly / No) | Evidence (output, metric, link) | What we learned / next step |
 | ---------------- | --------------------------- | ------------------------------- | --------------------------- |
+| deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B model | partly                   | pushed to repo under deepseek-baseline | this deepseek model relies on "thinking" time to extract relevant info from the grants which is a unique feature to be worked around during the training process, this deepseek model needs to be modified further to complete the grant matching aspect, either by combining it with another model or furthering this one's capabilities  |
+| numind/NuExtract-2.0-2B, try 1: the AI answered all the form questions in one go | Partly | Caught 7 of 16 AI programs and 7 of 9 grants that only accept other countries(Claude AI) | it only marked a grant as AI when the text said AI was *needed*, so grants like "women-led AI startup" slipped through as leads. |
+| numind/NuExtract-2.0-2B, try 2: changed the question to "is this an AI program?" and gave the AI one more practice example | Partly | Caught 14 of 16 AI programs, but only 5 of 9 "other countries only" grants. It also made up a "nonprofits only" rule for 3 grants(Claude AI) | Asking a small AI too many things at once confuses it, and it copied details from our practice example. |
+| numind/NuExtract-2.0-2B, try 3: asked the AI question on its own, as a separate short question | Yes | Caught 16 of 16 AI programs and 7 of 9 "other countries only" grants (the other 2 were already ruled out for being AI programs). No good grant was ruled out by mistake. Final result: 10 leads, 1 conditional lead, 26 not leads(Claude AI) | A small AI does best with one simple question at a time. We kept this version. |
 | [Attempt]        | [Status]                    | [Evidence]                      | [Learning]                  |
 
 ### Individual contributions during that week
 
 | Member | What I personally implemented/tested | Result (worked / partly / failed) | Evidence (commit, PR, experiment) | Blocker / next step |
 | ------ | ------------------------------------ | --------------------------------- | --------------------------------- | ------------------- |
-| [Name] | [Specific contribution]              | [Status]                          | [Link]                            | [Next step]         |
+| Giap | Came up with ways to evaluate our models by having two different labels/classifiers for the quality of each grant for Ardook (Low, Moderate, High). Also including attributes that are relevant when evaluating grants such as: Entity, Theme, and Geography.  | Still need to train and test the different models using these classifiers and attributes      | https://github.com/SCU-CSEN166/ArdookA4/commit/0f61237efd8727cf7fae009d26fd37f3bab1130e                            | Need to train and test the models that I have gathered using these classifiers and labels      |
 |Timothy | Tried finding new ways to get more real data onto our working spreadsheet. Investigated how to go about getting synthetic data that can be relevant to training| Result: Added 20 rows of data to our spreadsheet of grants| Evidence:Can be found in the uploaded spreadsheet on this README| Blocker: We need to start working on trying and training models. Will need to make synthetic data set to use in future week.|
+|Shreya | Tried to work with synthetic data to begin model experimentation, looked into potential model options based on our preliminary thoughts from last week and started implementing a deepseek approach| Result: got a somewhat functional model baseline| Evidence: notebook uploaded to repo| Blocker/next steps: Need to improve synthetic data--better prompts? Also need to better fit the model to the use cases, determine whether I should continue experimenting with this model or try a different approach|
+| Yash | I tested three different ways of feeding the small model data and now it is working to the point that the model reads each grant and compares it with the ardook profile. | Result: worked (see the NuExtract rows in Attempts and outcomes) | Evidence: Model | Next step: Get synthetic data to train model off more. Take multiple models and see which one does the best job. |
 ---
 
 ## Week 7 — Evaluate: Results Checkpoint
@@ -171,6 +165,8 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | ------ | --------------- | --------------------------------- | -------- | ----------- |
 | [Name] | [Specific work] | [Status]                          | [Link]   | [Next step] |
 |Timothy| Worked with the sentence-transformers/all-MiniLM-L6-v2 model and trained on a synthetic dataset. Collected more grant data to our spreadsheet.| Result: the model is currently functioning just gives poor results| Evidence: Added TTP4SI_sentence-transformers/all-MiniLM-L6-v2.ipynb to repo.| Next Step:Try different models. Train the sentence-transformers/all-MiniLM-L6-v2 model on our synthetic data and the real grant data even though there is not as much of it|
+|Shreya| Worked with the deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B and explored its extraction capabilities. Training it on a synthetic dataset. | Result: the model is probably not the most optimal towards the use cases, it's capable of extraction, but needs more work/to be combined with other models for successful matching of grants to Ardook| Evidence: Added the Python notebook to the repo under deepseek-baseline.| Next Step: Try the  model in combination with other models, maybe Qwen. Further train the model on our synthetic data and the real grant data even though there is not as much of it|
+|Giap Do| https://docs.google.com/document/d/1vr0iFUjsuQhYT81XbbVmC1-Qxbxccuq271Xb2B7mFK0/edit?tab=t.0 |
 ---
 
 ## Week 8 — Stress-Test: Reliability on Hidden Data
