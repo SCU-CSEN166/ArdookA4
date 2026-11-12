@@ -143,8 +143,12 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 ### Evaluation setup
 
 - **Development data:** [Source, size, selection, annotations, link or access instructions]
-- **Metrics and rationale:** [Why these metrics reflect the intended use]
-- **Comparison:** [Baseline versus current approach, if different]
+  Source: synthetic_grants.csv
+  Size: includes 3,000 synthetic grant announcements
+  Selection & Annotations: Composed of grant information, theme, geography, and target entity, which are evaluated and come together to determine relevance of a grant.
+  Access: Included in repo under data folder
+- **Metrics and rationale:** Accuracy, per-class precision / recall / F1, macro-F1, a confusion matrix. These reflect intended use as they measure how many grants were properly classified, incorrectly classified, or neutrally incorrectly classified.
+- **Comparison:** Currently, the deepseek is performing better than the MiniLM model based on accuracy (62.7% vs. 50%)
 
 | System / version | Metric 1 | Metric 2 | Notes   |
 | ---------------- | -------: | -------: | ------- |
