@@ -87,6 +87,32 @@ How Ardook matches the criteria the tracked grants use:
 | Revenue size (caps / minimums) | → Open item 5 |
 | Funding type (grant, prize, loan, investment) | Has received cash grants and joined an investment-readiness program [3][5]. Preference → Open item 6 |
 
+### Machine-readable facts
+
+The screening code in `src/` reads this block. It restates the table and lead rules above; when Ardook answers an Open item, update both. `null` means unknown, so a grant that depends on it stays a conditional lead.
+
+```yaml
+operating_countries: [Armenia]
+planned_countries: [Georgia]          # Lead rule 2: conditional "if Ardook has launched in Tbilisi"
+eligible_regions:                     # Lead rule 1: calls that include Armenia
+  - Eastern Partnership
+  - South Caucasus
+  - post-Soviet
+  - Horizon Europe
+woman_led: true                       # founder & CEO is a woman [3]
+women_ownership_percent: null         # Open item 2
+legal_form: null                      # Open item 1 (nonprofit or company?)
+established_year: 2020                # Spyur [7]
+launched_year: 2022                   # [3][6][8]
+builds_ai: false                      # Ardook doesn't build AI
+annual_revenue_usd: null              # Open item 5
+already_applied:
+  - Women TechEU
+  - Tara's Circle
+  - Her Agenda Breakthrough Grant
+  - EchoHer Founder Fellowship
+```
+
 ## Keywords for matching
 
 mothers of children with disabilities · caregivers · single mothers · disability inclusion · inclusive employment · home-based / flexible work · women's economic empowerment · decent work · livelihoods · social enterprise · laundry / household services · Armenia · Yerevan · Gyumri · Georgia · Tbilisi · South Caucasus · Eastern Partnership · SDG 8 · SDG 10 · eco-friendly
