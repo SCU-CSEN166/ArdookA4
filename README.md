@@ -164,11 +164,12 @@ Working baseline: https://colab.research.google.com/drive/1jBrEaOzwwaEgq44S9PaTR
 - **Hidden-test metrics and leaderboard result:** [Results, when available]
 - **Difference from development results:** [Compare; do not assume the hidden set is identical]
 
-| Failure case / category | What went wrong | Possible cause | Severity / user impact | Proposed fix |
-| ----------------------- | --------------- | -------------- | ---------------------- | ------------ |
-| [Case 1]                | [Observation]   | [Hypothesis]   | [Impact]               | [Fix]        |
-| [Case 2]                | [Observation]   | [Hypothesis]   | [Impact]               | [Fix]        |
-| [Case 3]                | [Observation]   | [Hypothesis]   | [Impact]               | [Fix]        |
+| Failure case / category                                                         | What went wrong                           | Possible cause                                                                          | Severity / user impact                                                        | Proposed fix                                                               |
+| ------------------------------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| [Case 1]                                                                        | [Observation]                             | [Hypothesis]                                                                            | [Impact]                                                                      | [Fix]                                                                      |
+| [Case 2]                                                                        | [Observation]                             | [Hypothesis]                                                                            | [Impact]                                                                      | [Fix]                                                                      |
+| [Case 3]                                                                        | [Observation]                             | [Hypothesis]                                                                            | [Impact]                                                                      | [Fix]                                                                      |
+| Open Society Institute (women-led projects, with an anti-discrimination clause) | Predicted low when correct label was high | Wording like 'race, religion… age, or ability' may look like an eligibility restriction | This means that Ardook would miss a good grant which is what we want to avoid | need to train our model with more diverse words such as race and religions |
 
 ### Changes attempted after stress-testing
 
@@ -178,9 +179,14 @@ Working baseline: https://colab.research.google.com/drive/1jBrEaOzwwaEgq44S9PaTR
 
 ### Individual contributions during that week
 
-| Member | Work completed  | Result (worked / partly / failed) | Evidence | Next step   |
-| ------ | --------------- | --------------------------------- | -------- | ----------- |
-| [Name] | [Specific work] | [Status]                          | [Link]   | [Next step] |
+| Member | Work completed                                                             | Result (worked / partly / failed) | Evidence                                                                                         | Next step                               |
+| ------ | -------------------------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------ | --------------------------------------- |
+| [Name] | [Specific work]                                                            | [Status]                          | [Link]                                                                                           | [Next step]                             |
+| Giap   | trained the models on synthetic and ran it against real data that we found | partly                            | https://docs.google.com/document/d/1b6YQfAf3xKqR7u92MR-YTegd0-1f6HexaO3xFHWEZKQ/edit?usp=sharing | Label more grants, especially high ones |
+
+Ensure that our rules/requirements truly align with Ardook’s
+Review and potentially revise labels on real grant data for better testing
+|
 
 ---
 

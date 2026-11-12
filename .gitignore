@@ -3,3 +3,4 @@
 # Separate repo (SCU-TrustworthyAI/SynEval) cloned locally; not part of this project
 synEval/
 .venv/
+data/
