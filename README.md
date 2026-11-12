@@ -4,7 +4,7 @@
 **Challenge:** Ardook 
 **Team members:** Shreya Vishwanath, Thien Giap Do, Timothy Le, Yash Sanghvi  
 **Repository:** https://github.com/SCU-CSEN166/ArdookGrantProject 
-**Last updated:** 11/10/26
+**Last updated:** 11/12/26
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -202,6 +202,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 Ensure that our rules/requirements truly align with Ardook’s
 Review and potentially revise labels on real grant data for better testing
 |
+|Timothy| Collected more real data for our model to train on. Wanted to develop some sort of grant eligibility check but seems to be covered already by Yash. Also wanted to improve my sentence transformer but decided not to after Giap seemed to be working on it.| Meet with the team to discuss what I can do to progress the project and get better aligned. Will most likely just be collecting more real data as more real data can always be helpful| Collecting more grants has been working.| Spreadsheet of real grants has been updated:[https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512](https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512)|
 
 ---
 
