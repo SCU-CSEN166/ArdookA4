@@ -156,7 +156,11 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Current          |  [Value] |  [Value] | [Notes] |
 | sentence-transformers/all-MiniLM-L6-v2|F1,Recall,Precision ![My Screenshot](./precision-recall-f1-minilmtest1.png)| Accuracy:50%. confusion matrix: [[49 0 9 0] [12 29 8 20] [2 16 11 14] [0 10 9 11]].| Notes:  The confusion matrix is ordered by weak, moderate, strong and excellent classifications. 200 synthetic samples used to train the model. 9 mislabeled as weak, 40 mislabeled as moderate, 32 mislabeled as strong, 19 mislabeled as excellent. Sums to 100 mislabeles =  50% accuracy = model is guessing|
 | DeepSeek-R1-Distill-Qwen-1.5B-v2 |  <img width="325" height="105" alt="Screenshot 2026-11-12 at 12 37 44 PM" src="https://github.com/user-attachments/assets/c76c5d9f-e3f2-42d3-8bc3-c0b12bbae51d" /> | <img width="442" height="96" alt="Screenshot 2026-11-12 at 12 40 40 PM" src="https://github.com/user-attachments/assets/93e98665-452a-4535-a9a5-7f47447d4203" /> | Notes: Model is good at differentiating between Low relevance and High relevance, but misconstrues High/Low for Moderate. Thus, accuracy is 62.7%. Model is good for outputting all relevant events, but does not perform well in classifying High relevance grants. Could edit output to break it down into categories, so that it's outputting relevance for each category of the synthetic dataset, to make a looser classification. |
-| DeepSeek-R1-Distill-Qwen-1.5B-v3 |
+| DeepSeek-R1-Distill-Qwen-1.5B-v3 | <img width="466" height="59" alt="Screenshot 2026-11-12 at 1 57 56 PM" src="https://github.com/user-attachments/assets/d07a5ace-d21d-4d97-9596-b9205a9807e3" /> | <img width="408" height="103" alt="Screenshot 2026-11-12 at 1 59 00 PM" src="https://github.com/user-attachments/assets/a2782c25-508d-47b6-b9a1-fa3d566d94ae" />
+<img width="173" height="86" alt="Screenshot 2026-11-12 at 1 58 22 PM" src="https://github.com/user-attachments/assets/bd6a9999-bb9c-4a33-a619-a1019824fa3c" /> | <img width="444" height="99" alt="Screenshot 2026-11-12 at 1 59 24 PM" src="https://github.com/user-attachments/assets/326ac949-6936-41de-ab84-5a71fbb36406" />
+
+
+
 ### Successes, failures, and interpretation
 
 | Example / category | Expected behavior | Actual behavior | Success or failure? | Likely reason |
