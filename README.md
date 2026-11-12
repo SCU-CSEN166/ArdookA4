@@ -155,16 +155,18 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Baseline         |  [Value] |  [Value] | [Notes] |
 | Current          |  [Value] |  [Value] | [Notes] |
 | sentence-transformers/all-MiniLM-L6-v2|F1,Recall,Precision ![My Screenshot](./precision-recall-f1-minilmtest1.png)| Accuracy:50%. confusion matrix: [[49 0 9 0] [12 29 8 20] [2 16 11 14] [0 10 9 11]].| Notes:  The confusion matrix is ordered by weak, moderate, strong and excellent classifications. 200 synthetic samples used to train the model. 9 mislabeled as weak, 40 mislabeled as moderate, 32 mislabeled as strong, 19 mislabeled as excellent. Sums to 100 mislabeles =  50% accuracy = model is guessing|
-| DeepSeek-R1-Distill-Qwen-1.5B |  <img width="325" height="105" alt="Screenshot 2026-11-12 at 12 37 44 PM" src="https://github.com/user-attachments/assets/c76c5d9f-e3f2-42d3-8bc3-c0b12bbae51d" /> | <img width="442" height="96" alt="Screenshot 2026-11-12 at 12 40 40 PM" src="https://github.com/user-attachments/assets/93e98665-452a-4535-a9a5-7f47447d4203" /> | Notes: Model is good at differentiating between Low relevance and High relevance, but misconstrues High/Low for Moderate. Thus, accuracy is 62.7%. Model is good for outputting all relevant events, but does not perform well in classifying High relevance grants. Could edit output to break it down into categories, so that it's outputting relevance for each category of the synthetic dataset, to make a looser classification. |
+| DeepSeek-R1-Distill-Qwen-1.5B-v2 |  <img width="325" height="105" alt="Screenshot 2026-11-12 at 12 37 44 PM" src="https://github.com/user-attachments/assets/c76c5d9f-e3f2-42d3-8bc3-c0b12bbae51d" /> | <img width="442" height="96" alt="Screenshot 2026-11-12 at 12 40 40 PM" src="https://github.com/user-attachments/assets/93e98665-452a-4535-a9a5-7f47447d4203" /> | Notes: Model is good at differentiating between Low relevance and High relevance, but misconstrues High/Low for Moderate. Thus, accuracy is 62.7%. Model is good for outputting all relevant events, but does not perform well in classifying High relevance grants. Could edit output to break it down into categories, so that it's outputting relevance for each category of the synthetic dataset, to make a looser classification. |
+| DeepSeek-R1-Distill-Qwen-1.5B-v3 |
 ### Successes, failures, and interpretation
 
 | Example / category | Expected behavior | Actual behavior | Success or failure? | Likely reason |
 | ------------------ | ----------------- | --------------- | ------------------- | ------------- |
 | [Case]             | [Expected]        | [Observed]      | [Status]            | [Hypothesis]  |
 | Tested the sentence-transformers/all-MiniLM-L6-v2 model| Expected behavior: | Observed behavior: Model has 50% accuracy. Therefore it is guessing on the classifications| Failure-not worth using this model unless time for further refinement| Embeddings are blurring the eligibility facts together from our Ardook source of truths document. Training entirely on synthetic data may be leading to bad results.|
-- **What improved?** [Evidence]
-- **What did not improve?** [Evidence]
-- **Next experiment:** [Specific change and how you will measure it]
+| Tested the DeepSeek-R1-Distill-Qwen-1.5B-v3 model| Expected behavior: Correctly classify grants as Low, Moderate, or High relevance| Observed behavior: Model has 62.7% accuracy. Therefore it is not consistently accurate on classifications| Partial success- does not misclassify Lows as Highs or vice versa, but blends Moderates with both| Different methods needed for training? Training entirely on synthetic data may be leading to bad results.|
+- **What improved?** Methods of classification, progress made during thinking time of DeepSeek (more optimized)
+- **What did not improve?** 
+- **Next experiment:** Improve upon DeepSeek-v3 (intermediate model experiment) and see if possible to better evaluation metrics. Integrate into pipeline and evaluate overall results.
 
 ### Individual contributions during that week
 
@@ -172,7 +174,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | ------ | --------------- | --------------------------------- | -------- | ----------- |
 | [Name] | [Specific work] | [Status]                          | [Link]   | [Next step] |
 |Timothy| Worked with the sentence-transformers/all-MiniLM-L6-v2 model and trained on a synthetic dataset. Collected more grant data to our spreadsheet.| Result: the model is currently functioning just gives poor results| Evidence: Added TTP4SI_sentence-transformers/all-MiniLM-L6-v2.ipynb to repo.| Next Step:Try different models. Train the sentence-transformers/all-MiniLM-L6-v2 model on our synthetic data and the real grant data even though there is not as much of it|
-|Shreya| Worked with the deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B and explored its extraction capabilities. Training it on a synthetic dataset. | Result: the model is probably not the most optimal towards the use cases, it's capable of extraction, but needs more work/to be combined with other models for successful matching of grants to Ardook| Evidence: Added the Python notebook to the repo under deepseek-baseline.| Next Step: Modify the output of the model and retrain to improve classification abilities. Try the model in combination with other models via pipeline. Further train the model on our synthetic data and the real grant data.|
+|Shreya| Worked with the deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B and explored its extraction capabilities. Training it on a synthetic dataset. Worked through three variations of the model, and editing the thinking capabilities and the outputs per each variation. | Result: the model is capable of extraction and outputs valid evaluation metrics, but needs more work/to be combined with other models for more successful matching of grants to Ardook| Evidence: Added the Python notebook to the repo under deepseek-baseline.| Next Step: Modify the output of the model and retrain to improve classification abilities. Try the model in combination with other models via pipeline. Further train the model on our synthetic data and the real grant data.|
 |Giap Do| https://docs.google.com/document/d/1vr0iFUjsuQhYT81XbbVmC1-Qxbxccuq271Xb2B7mFK0/edit?tab=t.0 |
 ---
 
