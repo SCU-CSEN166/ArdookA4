@@ -171,6 +171,10 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 - **What did not improve?** 
 - **Next experiment:** Improve upon DeepSeek-v3 (intermediate model experiment) and see if possible to better evaluation metrics. Integrate into pipeline and evaluate overall results.
 
+Example success/failure cases with deepseek:
+<img width="634" height="524" alt="Screenshot 2026-11-12 at 2 07 26 PM" src="https://github.com/user-attachments/assets/0caa53ae-5cd3-49c8-b795-8d1ede0bf44c" />
+
+
 ### Individual contributions during that week
 
 | Member | Work completed  | Result (worked / partly / failed) | Evidence | Next step   |
