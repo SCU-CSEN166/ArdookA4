@@ -111,7 +111,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 - **How to run it:** [Commands, dependencies, configuration; refer to Setup below.]
 - **Model(s) and data actually used:** [Names, versions, links, and any changes from the plan.] The first model is deepseek-R1-Distill and can be found at this link https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B. The data being used to test and train at the moment is the the Ardook synthetic dataset included in the repo.
  
-- **Example 1:** Input:  → Output: [result]
+- **Example 1:** Input: local economic development in rural regions. Applications are accepted from organizations active in the regions of Georgia (the country). Any legally registered organization may apply. Grant size: €10,000. Closing date: 4 May 2026. Applications are reviewed on a rolling basis. → Output: Moderate
 - **Example 2:** Input: [non-sensitive example] → Output: [result]
 
 
