@@ -78,9 +78,11 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Metric / test                    | What it measures                                                                                   | How it will be calculated                                                                                             | Target / success criterion                                                                                  |
 | -------------------------------- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | [Metric - e.g Accuracy, F1, AoC] | [Quality dimension]                                                                                | [Method/ Formula]                                                                                                     | [Target]                                                                                                    |
-| F1                               | How well relevant, comparable information was extracted from the provided grant info               | compare the model's capability to what we're able to derive about a grant by reading it ourselves, F1 equation        | the model is able to identify the same relevant information that we are, calculated F1 value is high enough |
-| recall                           | whether the model correctly retrieves and outputs relevant grant, whether it drops relevant grants | compare the model's capability to what we're able to derive about a grant by reading it ourselves, recall equation    | the model is able to identify the same relevant grants that we are, calculated recall value is high enough  |
-| precision                        | whether the model suggests grants that Ardook would actually use                                   | compare the model's capability to what we're able to derive about a grant by reading it ourselves, precision equation | the model's evaluation of top grants is the same as ours, calculated precision value is high enough         |
+| F1                               | How well relevant, comparable information was extracted from the provided grant info               | compare the model's capability to what we're able to derive about a grant by reading it ourselves, F1 equation        | The model is able to identify the same relevant information that we are, calculated F1 value is high enough |
+| Recall                           | Whether the model correctly retrieves and outputs relevant grant, whether it drops relevant grants | compare the model's capability to what we're able to derive about a grant by reading it ourselves, recall equation    | The model is able to identify the same relevant grants that we are, calculated recall value is high enough  |
+| Precision                        | Whether the model suggests grants that Ardook would actually use                                   | compare the model's capability to what we're able to derive about a grant by reading it ourselves, precision equation | The model's evaluation of top grants is the same as ours, calculated precision value is high enough         |
+| Confusion matrix                        | Demonstrates TP, FP, TN, FN                               | Numerical values for each | our true positives and true negatives are more frequent/accurate than the false metrics         |
+
 
 - **Evaluation examples:** [How will you build or select a development set?] We have a set of grants that have been evaluated for eligibility by employees of Ardook, so we can use this as a development set and ensure that the model is first able to derive the same output and reach the same conclusions on eligibility that the non-profit did.
 - **Human verification:** [If relevant, who will check outputs and how?]
@@ -105,10 +107,11 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 
 ### Implementation status
 
-- **What runs end-to-end now?** [Describe exactly.]
+- **What runs end-to-end now?** We have nearly reached end-to-end capability with our baseline. Our system takes inputs in the form of grant information as well as criteria regarding best-fit grants for Ardook, and this information is passed through the models, which output relevance metrics. We also have a functional pipeline, which models will fit within. 
 - **How to run it:** [Commands, dependencies, configuration; refer to Setup below.]
-- **Model(s) and data actually used:** [Names, versions, links, and any changes from the plan.]
-- **Example 1:** Input: [non-sensitive example] → Output: [result]
+- **Model(s) and data actually used:** [Names, versions, links, and any changes from the plan.] The first model is deepseek-R1-Distill and can be found at this link https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B. The data being used to test and train at the moment is the the Ardook synthetic dataset included in the repo.
+ 
+- **Example 1:** Input:  → Output: [result]
 - **Example 2:** Input: [non-sensitive example] → Output: [result]
 
 
