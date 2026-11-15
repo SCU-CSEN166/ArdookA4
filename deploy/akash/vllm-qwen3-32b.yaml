@@ -1,0 +1,73 @@
+# Qwen3-32B behind vLLM's OpenAI-compatible API, on one 80 GB+ NVIDIA GPU rented on Akash.
+# Deployed by deploy/akash/akash_llm.py, which swaps in the API key at deploy time
+# (__VLLM_API_KEY__ is a placeholder; never commit a real key here). Console stores env values
+# encrypted, so the key isn't readable from the deployment afterwards.
+#
+# v0.18.0: the newest release whose standard build is CUDA 12.9 (later ones need CUDA 13 drivers, and
+# their -cu129 variants crash on startup loading torchcodec, seen on an Akash A100 on 2026-11-12).
+version: "2.0"
+
+services:
+  llm:
+    image: vllm/vllm-openai:v0.18.0
+    args:
+      - "Qwen/Qwen3-32B"
+      - "--served-model-name"
+      - "Qwen/Qwen3-32B"
+      - "--max-model-len"
+      - "8192"
+      - "--gpu-memory-utilization"
+      - "0.92"
+      - "--port"
+      - "8000"
+    env:
+      - "VLLM_API_KEY=__VLLM_API_KEY__"
+    params:
+      storage:
+        shm:
+          mount: /dev/shm
+    expose:
+      - port: 8000
+        as: 80
+        to:
+          - global: true
+
+profiles:
+  compute:
+    llm:
+      resources:
+        cpu:
+          units: 8
+        memory:
+          size: 96Gi
+        storage:
+          - name: default
+            size: 160Gi # ~66 GB of weights plus the ~20 GB image
+          - name: shm
+            size: 16Gi
+            attributes:
+              persistent: false
+              class: ram
+        gpu:
+          units: 1
+          attributes:
+            vendor:
+              nvidia:
+                - model: a100
+                  ram: 80Gi
+                - model: h100
+                  ram: 80Gi
+                - model: pro6000se
+                  ram: 96Gi
+  placement:
+    dcloud:
+      pricing:
+        llm:
+          denom: uact
+          amount: 100000 # a ceiling per block; the actual price is the bid we accept
+
+deployment:
+  llm:
+    dcloud:
+      profile: llm
+      count: 1

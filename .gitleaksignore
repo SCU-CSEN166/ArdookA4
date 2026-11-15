@@ -1,0 +1,4 @@
+# False positive in commit 1be626d: gitleaks reads a transformers import line (two class names)
+# as a token assignment. The line now carries an inline gitleaks:allow marker for later commits.
+# Format: commit:file:rule:line.
+1be626d350851dbb1e7219c9fd55f720c5b6737c:src/ardook_grants/extract.py:generic-api-key:117

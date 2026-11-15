@@ -78,6 +78,7 @@ How Ardook matches the criteria the tracked grants use:
 | Criterion | Ardook |
 | --- | --- |
 | Eligible country | Armenia ✅. Georgia is not yet operating. |
+| Eligible region (grants limited to part of a country) | Yerevan, Ejmiatsin (Armavir province), Abovyan (Kotayk province) ✅ [1]. Gyumri (Shirak) and Tbilisi are planned [2]. |
 | Woman founder / women-led | ✅ The founder & CEO is a woman [3]. Women ownership share → Open item 2 |
 | Legal form (nonprofit / company) | → Open item 1 |
 | Stage | ✅ Operating since 2022, revenue-generating, paying customers [1][2][3] |
@@ -87,6 +88,18 @@ How Ardook matches the criteria the tracked grants use:
 | Revenue size (caps / minimums) | → Open item 5 |
 | Funding type (grant, prize, loan, investment) | Has received cash grants and joined an investment-readiness program [3][5]. Preference → Open item 6 |
 
+### Theme ratings (used for Fit)
+
+How well a grant's focus suits Ardook. These are the team's judgments, not verified facts. They are based on Ardook's mission [1][2] and grouped from the team-reviewed phrase list in `notebooks/phrase_pools.csv`. The categories describe what a grant funds, not who it is for: "for women" alone doesn't make a grant a good fit.
+
+| Rating | Categories |
+| --- | --- |
+| Good (Ardook's mission) | jobs or income for mothers and caregivers · disability inclusion · women's economic empowerment and decent work · home-based or flexible work · social enterprises that employ women · reducing inequality |
+| Partial (related) | women entrepreneurs in any industry · small business growth · gender equality and women's rights · family well-being · poverty reduction and community development · social innovation and social ventures · workforce development and job training · eco-friendly business · social justice and equity · nonprofit capacity building · women's leadership development |
+| Bad (off-mission) | education and scholarships · science and research · AI and technology products · health and medicine · violence prevention · politics and policy · arts and culture · environment and conservation · LGBTQ+ programs · disaster relief and emergency response · legal advocacy · sports, religion or infrastructure |
+
+Fit combines this theme rating with how well Ardook matches the grant's organization requirements (location doesn't count): anything bad → Low, theme and organization both good → High, otherwise Moderate. This is the same rule the team's synthetic data uses.
+
 ### Machine-readable facts
 
 The screening code in `src/` reads this block. It restates the table and lead rules above; when Ardook answers an Open item, update both. `null` means unknown, so a grant that depends on it stays a conditional lead.
@@ -94,6 +107,17 @@ The screening code in `src/` reads this block. It restates the table and lead ru
 ```yaml
 operating_countries: [Armenia]
 planned_countries: [Georgia]          # Lead rule 2: conditional "if Ardook has launched in Tbilisi"
+operating_places:                     # towns and provinces it serves [1]; for grants limited to part of a country
+  - Yerevan
+  - Ejmiatsin
+  - Vagharshapat                      # Ejmiatsin's official name
+  - Armavir                           # Ejmiatsin's province
+  - Abovyan
+  - Kotayk                            # Abovyan's province
+planned_places:                       # [2]: Gyumri (Shirak province) and Tbilisi
+  - Gyumri
+  - Shirak
+  - Tbilisi
 eligible_regions:                     # Lead rule 1: calls that include Armenia
   - Eastern Partnership
   - South Caucasus
@@ -106,11 +130,52 @@ established_year: 2020                # Spyur [7]
 launched_year: 2022                   # [3][6][8]
 builds_ai: false                      # Ardook doesn't build AI
 annual_revenue_usd: null              # Open item 5
+stage: operating                      # operating since 2022, paying customers [1][2][3]
+not_eligible_as:                      # Ardook is a social enterprise [2], none of these
+  - student
+  - university or school
+  - government agency
+  - hospital or clinic
+accepted_funding_types: null          # Open item 6 (grants and prizes only, or loans/equity/in-kind too?)
+founder_identity: null                # only "woman" is known [3]; don't assume anything else
 already_applied:
   - Women TechEU
   - Tara's Circle
   - Her Agenda Breakthrough Grant
   - EchoHer Founder Fellowship
+theme_categories:                     # "Theme ratings (used for Fit)" above
+  good:
+    - jobs or income for mothers and caregivers
+    - disability inclusion
+    - women's economic empowerment and decent work
+    - home-based or flexible work
+    - social enterprises that employ women
+    - reducing inequality
+  partial:
+    - women entrepreneurs in any industry
+    - small business growth
+    - gender equality and women's rights
+    - family well-being
+    - poverty reduction and community development
+    - social innovation and social ventures
+    - workforce development and job training
+    - eco-friendly business
+    - social justice and equity
+    - nonprofit capacity building
+    - women's leadership development
+  bad:
+    - education and scholarships
+    - science and research
+    - AI and technology products
+    - health and medicine
+    - violence prevention
+    - politics and policy
+    - arts and culture
+    - environment and conservation
+    - LGBTQ+ programs
+    - disaster relief and emergency response
+    - legal advocacy
+    - sports, religion or infrastructure
 ```
 
 ## Keywords for matching
@@ -125,7 +190,7 @@ Facts not yet confirmed. Ask Ardook, then move each answer into the sections abo
 
 1. **Legal form and registration date.** LLC, NGO or foundation? Registered in 2020 or 2022? No public source states the legal form, though the README calls Ardook a "non-profit". This decides every nonprofit-only or company-only grant and every age limit.
 2. **Women ownership share** (some grants require ≥25% or ≥50%).
-3. **"Ardook Data".** The team spreadsheet evaluates most of its tracked grants (mostly AI programs) for "Ardook Data", described there as a "woman-led AI/physical-AI/data venture". No public trace of it was found (web search, 2026-10-29). What is it, and is it a separate legal entity? Until Ardook answers, this profile covers Ardook only.
+3. **"Ardook Data".** The team spreadsheet evaluates most of its tracked grants (mostly AI programs) for "Ardook Data", described there as a "woman-led AI/physical-AI/data venture". No public trace of it was found (web search, 2026-10-29). What is it, and is it a separate legal entity? Until Ardook answers, this profile covers Ardook only. What the sponsor's spreadsheet says about it is now in `ardook-data-profile.md` (2026-11-12); the TA's Week 8 hidden test was judged for Ardook Data.
 4. **Expansion status.** Has Gyumri opened? Has Tbilisi launched, and is there a Georgian legal entity? (The website already lists Georgian prices, a Georgian phone number and an Ardook Georgia Facebook page [1].)
 5. **Annual revenue** for the most recent year.
 6. **Which funding types count as leads:** grants and prizes only, or also loans, investment, and in-kind support?
