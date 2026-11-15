@@ -104,6 +104,17 @@ def pick_device() -> str:
     return "cpu"
 
 
+def pick_dtype(device: str):
+    """float32 on CPU; bfloat16 where supported (Apple MPS, newer NVIDIA); float16 on older GPUs like V100."""
+    import torch
+
+    if device == "cpu":
+        return torch.float32
+    if device == "cuda" and not torch.cuda.is_bf16_supported():
+        return torch.float16
+    return torch.bfloat16
+
+
 def parse_output(raw: str) -> dict:
     try:
         return json.loads(raw)
@@ -114,17 +125,18 @@ def parse_output(raw: str) -> dict:
 class NuExtractor:
     def __init__(self, model_name: str = MODEL_NAME, device: str | None = None):
         import torch
-        from transformers import AutoTokenizer, Qwen2VLForConditionalGeneration
+        from transformers import AutoTokenizer, Qwen2VLForConditionalGeneration  # gitleaks:allow (an import, not a key)
 
         self.torch = torch
         self.device = device or pick_device()
-        dtype = torch.float32 if self.device == "cpu" else torch.bfloat16
+        dtype = pick_dtype(self.device)
         # Text-only use, so the tokenizer replaces the image processor from the model card.
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = Qwen2VLForConditionalGeneration.from_pretrained(model_name, dtype=dtype)
         self.model.to(self.device).eval()
 
-    def _run(self, text: str, template: dict, examples: list[dict]) -> dict:
+    def run(self, text: str, template: dict, examples: list[dict]) -> dict:
+        """Fill one template from the text, guided by the in-context examples."""
         prompt = self.tokenizer.apply_chat_template(
             [{"role": "user", "content": text}],
             template=json.dumps(template, indent=2),
@@ -140,8 +152,8 @@ class NuExtractor:
         return parse_output(raw.strip())
 
     def extract(self, text: str) -> dict:
-        main = self._run(text, TEMPLATE, EXAMPLES)
-        ai = self._run(text, AI_TEMPLATE, AI_EXAMPLES)
+        main = self.run(text, TEMPLATE, EXAMPLES)
+        ai = self.run(text, AI_TEMPLATE, AI_EXAMPLES)
         if "_error" in main or "_error" in ai:
             return main if "_error" in main else ai
         return {**main, **ai}

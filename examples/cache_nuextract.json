@@ -1,0 +1,115 @@
+{
+ "applicants|ef607a5ebb6c|55fdfaad4e8d79cd": {
+  "answer": {
+   "applicant_countries": [
+    "Armenia",
+    "Georgia",
+    "Azerbaijan"
+   ],
+   "impact_countries": [],
+   "applicant_types": [
+    "nonprofit"
+   ],
+   "women_led_required": null,
+   "min_women_ownership_percent": null,
+   "max_company_age_years": null,
+   "max_annual_revenue_usd": null,
+   "award": "Up to €30,000",
+   "deadline": "2027-02-15",
+   "applicant_evidence": [
+    "Registered non-governmental organizations in Armenia, Georgia or Azerbaijan",
+    "projects creating home-based employment for caregivers of people with disabilities"
+   ]
+  },
+  "seconds": 15.46
+ },
+ "ai|3907c581baa4|55fdfaad4e8d79cd": {
+  "answer": {
+   "program_focus_is_ai_or_deep_tech": "no"
+  },
+  "seconds": 0.73
+ },
+ "requirements|0b9269f35a78|55fdfaad4e8d79cd": {
+  "answer": {
+   "funding_types": [
+    "grant"
+   ],
+   "stages_allowed": [],
+   "founder_identity_required": [],
+   "requirements_evidence": [
+    "Type: Grant"
+   ]
+  },
+  "seconds": 1.31
+ },
+ "theme|6e768b960fd5|55fdfaad4e8d79cd": {
+  "answer": {
+   "focus_areas": [
+    "disability inclusion",
+    "women's economic empowerment and decent work"
+   ],
+   "focus_evidence": [
+    "projects creating home-based employment for caregivers of people with disabilities"
+   ]
+  },
+  "seconds": 1.55
+ },
+ "applicants|ef607a5ebb6c|5af2c1387c7a44eb": {
+  "answer": {
+   "applicant_countries": [
+    "United States"
+   ],
+   "impact_countries": [],
+   "applicant_types": [
+    "for-profit company"
+   ],
+   "women_led_required": "yes",
+   "min_women_ownership_percent": 51,
+   "max_company_age_years": 5,
+   "max_annual_revenue_usd": null,
+   "award": "$10,000",
+   "deadline": "2027-01-31",
+   "applicant_evidence": [
+    "Woman-owned (at least 51%) for-profit small business based in the United States",
+    "U.S. business bank account",
+    "under 5 years old"
+   ]
+  },
+  "seconds": 4.14
+ },
+ "ai|3907c581baa4|5af2c1387c7a44eb": {
+  "answer": {
+   "program_focus_is_ai_or_deep_tech": "no"
+  },
+  "seconds": 0.72
+ },
+ "requirements|0b9269f35a78|5af2c1387c7a44eb": {
+  "answer": {
+   "funding_types": [
+    "grant"
+   ],
+   "stages_allowed": [
+    "seed"
+   ],
+   "founder_identity_required": [],
+   "requirements_evidence": [
+    "Woman-owned (at least 51%) for-profit small business based in the United States",
+    "U.S. business bank account",
+    "under 5 years old"
+   ]
+  },
+  "seconds": 2.17
+ },
+ "theme|6e768b960fd5|5af2c1387c7a44eb": {
+  "answer": {
+   "focus_areas": [
+    "women entrepreneurs in any industry",
+    "small business growth"
+   ],
+   "focus_evidence": [
+    "Woman-owned (at least 51%) for-profit small business based in the United States"
+   ]
+  },
+  "seconds": 1.69
+ }
+}

@@ -1,0 +1,11 @@
+grant_id,manual_label,confidence,reason,system_label,agree
+1,Not relevant,high,"Early-stage startups using technology ('digitizing for good'); Ardook is a laundry service, not a tech venture",Not relevant,yes
+2,Not relevant,medium-high,"Open to applicants from Ashtarak and villages in Aragatsotn; Ardook works in Yerevan, Ejmiatsin and Abovyan. Theme (women's economic empowerment) would fit",Relevant,no
+3,Relevant,low (depends on US),"Only if US-based grants count, as instructed for this test: women-owned for-profit, but the business must be formed in the US, the owner a US resident and revenue at least $75K (unknown). Strictly, Not relevant",Not relevant,no
+4,Not relevant,medium-high,"Ardook could apply (website, founded within 10 years), but AWS cloud credits don't fit a laundry service's needs",Relevant,no
+5,Relevant,low (depends on US),"Only if US-based grants count: needs a US-based for-profit with a woman founder; a consumer services track exists; nonprofits excluded. Strictly, Not relevant",Not relevant,no
+6,Not relevant,high,"SMEs must be registered and working in listed towns of Tavush, Lori, Shirak and Gegharkunik (not Gyumri or Yerevan). Strong theme fit (hiring women and people with disabilities), but Ardook can't apply",Relevant,no
+7,Relevant,medium,"Women-led, registered after 2019, under 7 years, operating business, no sector limit; fits. To confirm: a participating TiE chapter covers Armenia, women hold at least 33% equity",Relevant,yes
+8,Not relevant,high,Only organizations under 18 months old with under $30K raised; Ardook started in 2020-2022,Not relevant,yes
+9,Not relevant,medium,"CSOs registered 6 months to 5 years, working outside Yerevan, on human rights, civic topics and inclusion of vulnerable groups; Ardook is a revenue-earning enterprise (legal form unknown), registered in 2020, and not a civic/rights organisation",Relevant,no
+10,Not relevant,high,Women-led tech startups only; Ardook isn't a tech startup,Not relevant,yes
