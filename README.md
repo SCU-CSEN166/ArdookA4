@@ -40,25 +40,22 @@ Something we can do to help our search is to build a bag of words that are speci
 In terms of using the dataset given to us from Ardook, we will need to clean that data and categorize it in a way that is helpful and useful for our models to interpret and train against.
 
 Models
+
 - **sentence-transformers/all-MiniLM-L6-v2**
 This model from Hugging Face turns sentences and paragraphs into a compact vector space. Which it will do for synthetic data first and compare it to the vector space of our Ardook’s data and information.
 The way this model actually helps us is that it can measure similarities between documents and texts by using cosine similarity which is actually something I just learned in my data mining class. 
 A cool feature for this model as well is that it can catch similar words as we were hoping for in our solution because exact matching would not be feasible or effective at all.
 This is a great starter model for us because it is lightweight and easy to iterate and test with before moving on to bigger and complex models. But it will also give us a good sense of our data and how we can improve our training dataset.
-
 - **BAAI/bge-small-en-v1.5**
 This model is also a good option for our approach to solve our problem. It is different from the MiniLM because it is designed specifically for information retrieval.
 Instead of just passing all of Ardook’s information into a vector space, I would create an instruction + a query for Ardook. So it requires more details and thought behind our query to best maximize our retrieval. Then we can run it against our synthetical data then eventual real data.
-
-
 - **cross-encoder/ms-marco-MiniLM-L-6-v2**
-The first two proposed models are both bi-encoders which means they produce separate embeddings for Ardook and grants. With this model, we can go beyond that with the ability to combine their data simultaneously. This is helpful because our earlier bi-encoder models can miss negative combinations or correlation because it was embedded separately but this will combine the two which in turn will reveal more to us. 
+The first two proposed models are both bi-encoders which means they produce separate embeddings for Ardook and grants. With this model, we can go beyond that with the ability to combine their data simultaneously. This is helpful because our earlier bi-encoder models can miss negative combinations or correlation because it was embedded separately but this will combine the two which in turn will reveal more to us.
 
 Considerations
 Our first two bi-encoders models both have a maximum limit on length of tokens so we need to ensure that our data can fit or needs to be chunked to fit the requirements. 
 A common problem can be an imbalanced dataset which is a common problem in the real world. This is definitely something we need to keep an eye for in our training and testing on our models.
 We will want to use certain python libraries to incorporate TF-IDF as we evaluate these different grants to truly see how similar a grant is to Ardook among other grants. These libraries will also help us with accounting for stop words that we have mentioned above
-
 
 ### 3. Proposed data
 
@@ -82,7 +79,6 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | Recall                           | Whether the model correctly retrieves and outputs relevant grant, whether it drops relevant grants | compare the model's capability to what we're able to derive about a grant by reading it ourselves, recall equation    | The model is able to identify the same relevant grants that we are, calculated recall value is high enough  |
 | Precision                        | Whether the model suggests grants that Ardook would actually use                                   | compare the model's capability to what we're able to derive about a grant by reading it ourselves, precision equation | The model's evaluation of top grants is the same as ours, calculated precision value is high enough         |
 | Confusion matrix                        | Demonstrates TP, FP, TN, FN                               | Numerical values for each | our true positives and true negatives are more frequent/accurate than the false metrics         |
-
 
 - **Evaluation examples:** [How will you build or select a development set?] We have a set of grants that have been evaluated for eligibility by employees of Ardook, so we can use this as a development set and ensure that the model is first able to derive the same output and reach the same conclusions on eligibility that the non-profit did.
 - **Human verification:** [If relevant, who will check outputs and how?]
@@ -110,11 +106,8 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 - **What runs end-to-end now?** We have nearly reached end-to-end capability with our baseline. Our system takes inputs in the form of grant information as well as criteria regarding best-fit grants for Ardook, and this information is passed through the models, which output relevance metrics. We also have a functional pipeline, which models will fit within. 
 - **How to run it:** [Commands, dependencies, configuration; refer to Setup below.]
 - **Model(s) and data actually used:** [Names, versions, links, and any changes from the plan.] The first model is deepseek-R1-Distill and can be found at this link https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B. The data being used to test and train at the moment is the the Ardook synthetic dataset included in the repo.
- 
 - **Example 1:** Input: local economic development in rural regions. Applications are accepted from organizations active in the regions of Georgia (the country). Any legally registered organization may apply. Grant size: €10,000. Closing date: 4 May 2026. Applications are reviewed on a rolling basis. → Output: Moderate
 - **Example 2:** Input: [non-sensitive example] → Output: [result]
-
-
 
 ### Attempts and outcomes
 
@@ -134,6 +127,7 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 |Timothy | Tried finding new ways to get more real data onto our working spreadsheet. Investigated how to go about getting synthetic data that can be relevant to training| Result: Added 20 rows of data to our spreadsheet of grants| Evidence:Can be found in the uploaded spreadsheet on this README| Blocker: We need to start working on trying and training models. Will need to make synthetic data set to use in future week.|
 |Shreya | Tried to work with synthetic data to begin model experimentation, looked into potential model options based on our preliminary thoughts from last week and started implementing a deepseek approach| Result: got a somewhat functional model baseline| Evidence: notebook uploaded to repo| Blocker/next steps: Need to improve synthetic data--better prompts? Also need to better fit the model to the use cases, determine whether I should continue experimenting with this model or try a different approach|
 | Yash | I tested three different ways of feeding the small model data and now it is working to the point that the model reads each grant and compares it with the ardook profile. | Result: worked (see the NuExtract rows in Attempts and outcomes) | Evidence: Model | Next step: Get synthetic data to train model off more. Take multiple models and see which one does the best job. |
+
 ---
 
 ## Week 7 — Evaluate: Results Checkpoint
@@ -143,22 +137,20 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 ### Evaluation setup
 
 - **Development data:** [Source, size, selection, annotations, link or access instructions]
-  Source: synthetic_grants.csv
-  Size: includes 3,000 synthetic grant announcements
-  Selection & Annotations: Composed of grant information, theme, geography, and target entity, which are evaluated and come together to determine relevance of a grant.
-  Access: Included in repo under data folder
+Source: synthetic_grants.csv
+Size: includes 3,000 synthetic grant announcements
+Selection & Annotations: Composed of grant information, theme, geography, and target entity, which are evaluated and come together to determine relevance of a grant.
+Access: Included in repo under data folder
 - **Metrics and rationale:** Accuracy, per-class precision / recall / F1, macro-F1, a confusion matrix. These reflect intended use as they measure how many grants were properly classified, incorrectly classified, or neutrally incorrectly classified.
 - **Comparison:** Currently, the deepseek is performing better than the MiniLM model based on accuracy (62.7% vs. 50%)
 
-| System / version | Metric 1 | Metric 2 | Notes   |
-| ---------------- | -------: | -------: | ------- |
-| Baseline         |  [Value] |  [Value] | [Notes] |
-| Current          |  [Value] |  [Value] | [Notes] |
-| sentence-transformers/all-MiniLM-L6-v2|F1,Recall,Precision ![My Screenshot](./precision-recall-f1-minilmtest1.png)| Accuracy:50%. confusion matrix: [[49 0 9 0] [12 29 8 20] [2 16 11 14] [0 10 9 11]].| Notes:  The confusion matrix is ordered by weak, moderate, strong and excellent classifications. 200 synthetic samples used to train the model. 9 mislabeled as weak, 40 mislabeled as moderate, 32 mislabeled as strong, 19 mislabeled as excellent. Sums to 100 mislabeles =  50% accuracy = model is guessing|
-| DeepSeek-R1-Distill-Qwen-1.5B-v2 |  <img width="325" height="105" alt="Screenshot 2026-11-12 at 12 37 44 PM" src="https://github.com/user-attachments/assets/c76c5d9f-e3f2-42d3-8bc3-c0b12bbae51d" /> | <img width="442" height="96" alt="Screenshot 2026-11-12 at 12 40 40 PM" src="https://github.com/user-attachments/assets/93e98665-452a-4535-a9a5-7f47447d4203" /> | Notes: Model is good at differentiating between Low relevance and High relevance, but misconstrues High/Low for Moderate. Thus, accuracy is 62.7%. Model is good for outputting all relevant events, but does not perform well in classifying High relevance grants. Could edit output to break it down into categories, so that it's outputting relevance for each category of the synthetic dataset, to make a looser classification. |
-| DeepSeek-R1-Distill-Qwen-1.5B-v3 | <img width="408" height="103" alt="Screenshot 2026-11-12 at 1 59 00 PM" src="https://github.com/user-attachments/assets/a2782c25-508d-47b6-b9a1-fa3d566d94ae" /> | <img width="444" height="99" alt="Screenshot 2026-11-12 at 1 59 24 PM" src="https://github.com/user-attachments/assets/326ac949-6936-41de-ab84-5a71fbb36406" /> | <img width="173" height="86" alt="Screenshot 2026-11-12 at 1 58 22 PM" src="https://github.com/user-attachments/assets/bd6a9999-bb9c-4a33-a619-a1019824fa3c" />  <img width="466" height="59" alt="Screenshot 2026-11-12 at 1 57 56 PM" src="https://github.com/user-attachments/assets/d07a5ace-d21d-4d97-9596-b9205a9807e3" />
-
-
+| System / version                       | Metric 1                                                                                                                 | Metric 2                                                                                                                 | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------- | -----------------------------------------------------------------------------------------------------------------------: | -----------------------------------------------------------------------------------------------------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Baseline                               | [Value]                                                                                                                  | [Value]                                                                                                                  | [Notes]                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Current                                | [Value]                                                                                                                  | [Value]                                                                                                                  | [Notes]                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| sentence-transformers/all-MiniLM-L6-v2 | F1,Recall,Precision ![My Screenshot](./precision-recall-f1-minilmtest1.png)                                              | Accuracy:50%. confusion matrix: [[49 0 9 0] [12 29 8 20] [2 16 11 14] [0 10 9 11]].                                      | Notes: The confusion matrix is ordered by weak, moderate, strong and excellent classifications. 200 synthetic samples used to train the model. 9 mislabeled as weak, 40 mislabeled as moderate, 32 mislabeled as strong, 19 mislabeled as excellent. Sums to 100 mislabeles = 50% accuracy = model is guessing                                                                                                                          |
+| DeepSeek-R1-Distill-Qwen-1.5B-v2       | ![Screenshot 2026-11-12 at 12 37 44 PM](https://github.com/user-attachments/assets/c76c5d9f-e3f2-42d3-8bc3-c0b12bbae51d) | ![Screenshot 2026-11-12 at 12 40 40 PM](https://github.com/user-attachments/assets/93e98665-452a-4535-a9a5-7f47447d4203) | Notes: Model is good at differentiating between Low relevance and High relevance, but misconstrues High/Low for Moderate. Thus, accuracy is 62.7%. Model is good for outputting all relevant events, but does not perform well in classifying High relevance grants. Could edit output to break it down into categories, so that it's outputting relevance for each category of the synthetic dataset, to make a looser classification. |
+| DeepSeek-R1-Distill-Qwen-1.5B-v3       | ![Screenshot 2026-11-12 at 1 59 00 PM](https://github.com/user-attachments/assets/a2782c25-508d-47b6-b9a1-fa3d566d94ae)  | ![Screenshot 2026-11-12 at 1 59 24 PM](https://github.com/user-attachments/assets/326ac949-6936-41de-ab84-5a71fbb36406)  | ![Screenshot 2026-11-12 at 1 58 22 PM](https://github.com/user-attachments/assets/bd6a9999-bb9c-4a33-a619-a1019824fa3c) ![Screenshot 2026-11-12 at 1 57 56 PM](https://github.com/user-attachments/assets/d07a5ace-d21d-4d97-9596-b9205a9807e3)                                                                                                                                                                                         |
 
 ### Successes, failures, and interpretation
 
@@ -167,22 +159,23 @@ We will want to use certain python libraries to incorporate TF-IDF as we evaluat
 | [Case]             | [Expected]        | [Observed]      | [Status]            | [Hypothesis]  |
 | Tested the sentence-transformers/all-MiniLM-L6-v2 model| Expected behavior: | Observed behavior: Model has 50% accuracy. Therefore it is guessing on the classifications| Failure-not worth using this model unless time for further refinement| Embeddings are blurring the eligibility facts together from our Ardook source of truths document. Training entirely on synthetic data may be leading to bad results.|
 | Tested the DeepSeek-R1-Distill-Qwen-1.5B-v3 model| Expected behavior: Correctly classify grants as Low, Moderate, or High relevance| Observed behavior: Model has 62.7% accuracy. Therefore it is not consistently accurate on classifications| Partial success- does not misclassify Lows as Highs or vice versa, but blends Moderates with both| Different methods needed for training? Training entirely on synthetic data may be leading to bad results.|
+
 - **What improved?** Methods of classification, progress made during thinking time of DeepSeek (more optimized)
 - **What did not improve?** 
 - **Next experiment:** Improve upon DeepSeek-v3 (intermediate model experiment) and see if possible to better evaluation metrics. Integrate into pipeline and evaluate overall results.
 
 Example success/failure cases with deepseek:
-<img width="634" height="524" alt="Screenshot 2026-11-12 at 2 07 26 PM" src="https://github.com/user-attachments/assets/0caa53ae-5cd3-49c8-b795-8d1ede0bf44c" />
-
+![Screenshot 2026-11-12 at 2 07 26 PM](https://github.com/user-attachments/assets/0caa53ae-5cd3-49c8-b795-8d1ede0bf44c)
 
 ### Individual contributions during that week
 
-| Member | Work completed  | Result (worked / partly / failed) | Evidence | Next step   |
-| ------ | --------------- | --------------------------------- | -------- | ----------- |
-| [Name] | [Specific work] | [Status]                          | [Link]   | [Next step] |
-|Timothy| Worked with the sentence-transformers/all-MiniLM-L6-v2 model and trained on a synthetic dataset. Collected more grant data to our spreadsheet.| Result: the model is currently functioning just gives poor results| Evidence: Added TTP4SI_sentence-transformers/all-MiniLM-L6-v2.ipynb to repo.| Next Step:Try different models. Train the sentence-transformers/all-MiniLM-L6-v2 model on our synthetic data and the real grant data even though there is not as much of it|
-|Shreya| Worked with the deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B and explored its extraction capabilities. Training it on a synthetic dataset. Worked through three variations of the model, and editing the thinking capabilities and the outputs per each variation. | Result: the model is capable of extraction and outputs valid evaluation metrics, but needs more work/to be combined with other models for more successful matching of grants to Ardook| Evidence: Added the Python notebook to the repo under deepseek-baseline.| Next Step: Modify the output of the model and retrain to improve classification abilities. Try the model in combination with other models via pipeline. Further train the model on our synthetic data and the real grant data.|
-|Giap Do| https://docs.google.com/document/d/1vr0iFUjsuQhYT81XbbVmC1-Qxbxccuq271Xb2B7mFK0/edit?tab=t.0 |
+| Member  | Work completed                                                                                                                                                                                                                                                                         | Result (worked / partly / failed)                                                                                                                                                      | Evidence                                                                     | Next step                                                                                                                                                                                                                      |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Yash    | Improved the grant-matching pipeline using Qwen3-4B and Qwen3-32B models(Cloud GPU). Added eligibility checks, evaluated performance on real grant data, and improved the macro-F1 score from 0.40 to 0.58. Worked on reducing incorrect grant ratings and improving overall accuracy. | The model works end to end and got an 80% accuracy on the hidden test!                                                                                                                 | hidden_test_resultsresults/pipeline_comparison.csvevaluation/evaluate.py   | Strengthen the models reasoning and make sure that it works for all grants added. Create an eval system to check how it is doing and make the model more accurate                                                              |
+| Timothy | Worked with the sentence-transformers/all-MiniLM-L6-v2 model and trained on a synthetic dataset. Collected more grant data to our spreadsheet.                                                                                                                                         | Result: the model is currently functioning just gives poor results                                                                                                                     | Evidence: Added TTP4SI_sentence-transformers/all-MiniLM-L6-v2.ipynb to repo. | Next Step:Try different models. Train the sentence-transformers/all-MiniLM-L6-v2 model on our synthetic data and the real grant data even though there is not as much of it                                                    |
+| Shreya  | Worked with the deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B and explored its extraction capabilities. Training it on a synthetic dataset. Worked through three variations of the model, and editing the thinking capabilities and the outputs per each variation.                        | Result: the model is capable of extraction and outputs valid evaluation metrics, but needs more work/to be combined with other models for more successful matching of grants to Ardook | Evidence: Added the Python notebook to the repo under deepseek-baseline.     | Next Step: Modify the output of the model and retrain to improve classification abilities. Try the model in combination with other models via pipeline. Further train the model on our synthetic data and the real grant data. |
+| Giap Do | https://docs.google.com/document/d/1vr0iFUjsuQhYT81XbbVmC1-Qxbxccuq271Xb2B7mFK0/edit?tab=t.0                                                                                                                                                                                           |                                                                                                                                                                                        |                                                                              |                                                                                                                                                                                                                                |
+
 ---
 
 ## Week 8 — Stress-Test: Reliability on Hidden Data
