@@ -160,8 +160,8 @@ Access: Included in repo under data folder
 | Tested the sentence-transformers/all-MiniLM-L6-v2 model| Expected behavior: | Observed behavior: Model has 50% accuracy. Therefore it is guessing on the classifications| Failure-not worth using this model unless time for further refinement| Embeddings are blurring the eligibility facts together from our Ardook source of truths document. Training entirely on synthetic data may be leading to bad results.|
 | Tested the DeepSeek-R1-Distill-Qwen-1.5B-v3 model| Expected behavior: Correctly classify grants as Low, Moderate, or High relevance| Observed behavior: Model has 62.7% accuracy. Therefore it is not consistently accurate on classifications| Partial success- does not misclassify Lows as Highs or vice versa, but blends Moderates with both| Different methods needed for training? Training entirely on synthetic data may be leading to bad results.|
 
-- **What improved?** Methods of classification, progress made during thinking time of DeepSeek (more optimized)
-- **What did not improve?** 
+- **What improved?** Methods of classification, progress made during thinking time of DeepSeek (more optimized), success of Qwen 3 models
+- **What did not improve?** Trained models with incomplete datasets, which came to light during lab stress-tests, was able to revise testing
 - **Next experiment:** Improve upon DeepSeek-v3 (intermediate model experiment) and see if possible to better evaluation metrics. Integrate into pipeline and evaluate overall results.
 
 Example success/failure cases with deepseek:
