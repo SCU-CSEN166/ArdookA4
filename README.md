@@ -183,21 +183,21 @@ Example success/failure cases with deepseek:
 **Deliverable during Week 9 Lab:** Hidden-test results (as provided by the TA), analysis of at least three important failure cases, and a prioritized improvement plan.
 
 - **Submitted system version / commit:** [Commit hash]
-- **Hidden-test metrics and leaderboard result:** [Results, when available]
+- **Hidden-test metrics and leaderboard result:** Results in UPDATED_hidden_test files
 - **Difference from development results:** [Compare; do not assume the hidden set is identical]
 
 | Failure case / category                                                         | What went wrong                           | Possible cause                                                                          | Severity / user impact                                                        | Proposed fix                                                               |
 | ------------------------------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| [Case 1]                                                                        | [Observation]                             | [Hypothesis]                                                                            | [Impact]                                                                      | [Fix]                                                                      |
-| [Case 2]                                                                        | [Observation]                             | [Hypothesis]                                                                            | [Impact]                                                                      | [Fix]                                                                      |
-| [Case 3]                                                                        | [Observation]                             | [Hypothesis]                                                                            | [Impact]                                                                      | [Fix]                                                                      |
+| D-Prize Global| Predicted good, when it actually should've been bad         | Our model was trained on just Ardook, not Ardook data                                                                           | It ruled out certain AI/data related grants                                                                    | Retrain model with correct information, worked when we did this with 90% accuracy                                    |
+| People in Need            | Predicted good when correct label was bad         | deepseek focused on three specific metrics, based on the training and synthetic data, but the geography metric which was weighted highly, was less relevant when using the stress test data which caused inconsistencies in the data                                                                           | Incorrectly classified lines during stress test                                 | Train and test the model on different metrics         |
 | Open Society Institute (women-led projects, with an anti-discrimination clause) | Predicted low when correct label was high | Wording like 'race, religion… age, or ability' may look like an eligibility restriction | This means that Ardook would miss a good grant which is what we want to avoid | need to train our model with more diverse words such as race and religions |
 
 ### Changes attempted after stress-testing
 
 | Change   | Worked? (Yes / Partly / No) | Evidence | Keep, revise, or revert? |
 | -------- | --------------------------- | -------- | ------------------------ |
-| [Change] | [Status]                    | [Result] | [Decision]               |
+| Retrain model with revised data| yes   | Accuracy jumped significantly | Keep  |
+| Redo focus areas for deepseek | partly   | Accuracy somewhat increased | TBD  |
 
 ### Individual contributions during that week
 
@@ -206,6 +206,7 @@ Example success/failure cases with deepseek:
 | [Name] | [Specific work]                                                            | [Status]                          | [Link]                                                                                           | [Next step]                             |
 | Giap   | trained the models on synthetic and ran it against real data that we found. Found that distilbert performed the best on Timothy's grants| partly                            | https://docs.google.com/document/d/1b6YQfAf3xKqR7u92MR-YTegd0-1f6HexaO3xFHWEZKQ/edit?usp=sharing + https://drive.google.com/file/d/16HHhnCuDFsk0EMgNEC_9djVogBM0SJWK/view?usp=sharing| Label more grants, especially high ones | Ensure that our rules/requirements truly align with Ardook’s. Review and potentially revise labels on real grant data for better testing|
 |Timothy| Collected more real data for our model to train on. Wanted to develop some sort of grant eligibility check but seems to be covered already by Yash. Also wanted to improve my sentence transformer but decided not to after Giap seemed to be working on it.| Meet with the team to discuss what I can do to progress the project and get better aligned. Will most likely just be collecting more real data as more real data can always be helpful| Collecting more grants has been working.| Spreadsheet of real grants has been updated:[https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512](https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512)|
+| Shreya | Trained deepseek model further after results and inconsistencies demonstrated by stress-test, looked into pipeline integrations, prepared for presentation to Ardook founder      | Deepseek is partially functionally and a viable option, but might be disregarded when considered against the models my teammates are working on    | [[Link]](https://colab.research.google.com/drive/1X5xSc_8qY359JNlRZtch28DljBRPhC6F?usp=sharing)              | Focus on pipeline integrations, potentially help build a front-end, focus on ethical implications section for README       |
 
 ---
 
