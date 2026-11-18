@@ -4,7 +4,7 @@
 **Challenge:** Ardook 
 **Team members:** Shreya Vishwanath, Thien Giap Do, Timothy Le, Yash Sanghvi  
 **Repository:** https://github.com/SCU-CSEN166/ArdookGrantProject 
-**Last updated:** 11/12/26
+**Last updated:** 11/18/26
 
 > **How to use this README:** Maintain this single file throughout the project. Complete the Week 5 project plan first, then update the appropriate weekly section before each milestone. Be specific and honest: describe what you attempted, what worked, what did not work, and what evidence supports your conclusions. For every week, document each member's actual contribution. If a task was not completed, explain the blocker and next step. Do not include private or sensitive data in this public README.
 
@@ -241,7 +241,8 @@ Example success/failure cases with deepseek:
 
 | Member | Final implementation / evaluation / documentation contribution | Result (worked / partly / failed) | Evidence | Reflection / remaining work |
 | ------ | -------------------------------------------------------------- | --------------------------------- | -------- | --------------------------- |
-| [Name] | [Specific work]                                                | [Status]                          | [Link]   | [Reflection]                |Timothy| Continued to collect more real grant data for our model to train on| Model results seem to be improving due to using real data rather than synthetic| Spreadsheet of real grants has been updated:[https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512](https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512)| Reflection: While getting real grants was difficult to find, especially ones that fit Ardook excellently, I believe that it made the difference in our model performance. By being trained on real data it also gives me the confidence for it be a trustworthy system. It also took a long time to get such a substantial amount of real grants for Ardook and I hope that on top of using our system, they can take a look at the spreadsheet I have been compiling over the projects duration and apply to the ones that were deemed strong and excellent.|
+| [Name] | [Specific work]                                                | [Status]                          | [Link]   | [Reflection]                |
+|Timothy| Continued to collect more real grant data for our model to train on| Model results seem to be improving due to using real data rather than synthetic| Spreadsheet of real grants has been updated:[https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512](https://docs.google.com/spreadsheets/d/1P0SwjN2LDN-CFEmBdHkXG3UDChT_4o2h/edit?gid=865612512#gid=865612512)| Reflection: While getting real grants was difficult to find, especially ones that fit Ardook excellently, I believe that it made the difference in our model performance. By being trained on real data it also gives me the confidence for it be a trustworthy system. It also took a long time to get such a substantial amount of real grants for Ardook and I hope that on top of using our system, they can take a look at the spreadsheet I have been compiling over the projects duration and apply to the ones that were deemed strong and excellent.|
 
 ### Final submission checklist
 
