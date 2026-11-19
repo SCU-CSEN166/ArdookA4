@@ -2,7 +2,7 @@
 
   NuExtractBackend  numind/NuExtract-2.0-2B, the extraction model from Week 6 (laptop, ~4 GB)
   LLMBackend        any chat model on Hugging Face; default Qwen/Qwen3-4B (~8 GB in bf16, fits an 18 GB Mac)
-  APIBackend        any OpenAI-compatible API; default AkashML's Llama 3.3 70B (needs $AKASHML_API_KEY)
+  APIBackend        any OpenAI-compatible API; default Qwen3-32B on our Akash server (the pipeline's default)
 
 Both are loaded lazily, so cached runs (--rules-only) and tests never import torch.
 The cache is a JSON file per backend+model, keyed by question group, its version and the grant text,
@@ -10,6 +10,7 @@ so changing a question or a grant re-asks only what changed.
 """
 
 import hashlib
+import http.client
 import json
 import os
 import re
@@ -24,7 +25,16 @@ from .profile import REPO_ROOT
 
 DEFAULT_LLM = "Qwen/Qwen3-4B"
 AKASHML_URL = "https://api.akashml.com/v1"
-DEFAULT_API_MODEL = "meta-llama/Llama-3.3-70B-Instruct"  # pinned; check GET /v1/models before changing
+# The project's model: Qwen3-32B on our own Akash GPU (deploy/akash/akash_llm.py writes its URL and key to .env).
+# It replaced NuExtract-2B as the default in Week 9: NuExtract invented "nonprofit only" and misread year limits.
+DEFAULT_API_MODEL = "Qwen/Qwen3-32B"
+OWN_SERVER_URL_ENV, OWN_SERVER_KEY_ENV = "AKASH_LLM_URL", "AKASH_LLM_KEY"
+
+
+def default_api_endpoint() -> tuple[str, str]:
+    """(base URL, env var holding the key): our Akash server if .env has its URL, else AkashML."""
+    url = read_secret(OWN_SERVER_URL_ENV)
+    return (url, OWN_SERVER_KEY_ENV) if url else (AKASHML_URL, "AKASHML_API_KEY")
 
 LLM_INSTRUCTIONS = """Fill in the JSON template using only the grant listing. Don't guess or use outside knowledge.
 
@@ -151,11 +161,13 @@ class APIBackend:
             raise APIError(f"No API key: set ${self.api_key_env} or add a {self.api_key_env}=... line to .env")
         return key
 
-    def generate(self, system: str, user: str, max_new_tokens: int = 512) -> str:
+    def generate(self, system: str, user: str, max_new_tokens: int = 512, temperature: float = 0.0,
+                 seed: int | None = None) -> str:
         body = json.dumps({
             "model": self.model_name,
             "messages": [{"role": "system", "content": system}, {"role": "user", "content": user}],
-            "temperature": 0,
+            "temperature": temperature,
+            **({"seed": seed} if seed is not None else {}),
             "max_completion_tokens": max_new_tokens,
             **self.extra,
         }).encode()
@@ -179,7 +191,8 @@ class APIBackend:
                     time.sleep(min(wait, 60))
                     continue
                 raise APIError(f"API error {e.code}: {detail}")
-            except (urllib.error.URLError, TimeoutError) as e:
+            # OSError covers URLError, dropped connections and "Can't assign requested address" after the laptop sleeps.
+            except (OSError, http.client.HTTPException) as e:
                 print(f"  network error ({e}), retrying ...")
                 time.sleep(2 ** attempt)
         raise APIError(f"API still failing after {self.max_retries} tries")

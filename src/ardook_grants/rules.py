@@ -51,6 +51,7 @@ COUNTRY_ALIASES = {
     r"\bamerica\b": "united states",
     r"\bunited states of america\b": "united states",
     r"\buk\b|\bu\.k\.": "united kingdom",
+    r"\bsf\b": "san francisco",
 }
 
 
@@ -65,6 +66,9 @@ def classify_location(location: str, profile: dict) -> str:
     """Return 'eligible', 'planned', 'unclear' or 'other' for one extracted location."""
     s = _canonical_place(location)
     if any(_canonical_place(c) in s for c in profile["operating_countries"]):
+        return "eligible"
+    # A state or city written where a country was expected ("California", "SF"): eligible if the org works there.
+    if any(_place_match(location, [p]) for p in profile.get("operating_places") or []):
         return "eligible"
     if any(t in s for t in GLOBAL_TERMS) or any(_norm(r) in s for r in profile.get("eligible_regions", [])):
         return "eligible"
@@ -81,13 +85,15 @@ def _screen_locations(locations: list, profile: dict, kind: str, v: Verdict) -> 
     classes = {loc: classify_location(loc, profile) for loc in locations}
     found = set(classes.values())
     listed = ", ".join(locations)
+    name = profile.get("name", "Ardook")
+    home = " / ".join(profile.get("operating_countries") or [name])
     if "eligible" in found:
-        v.matches.append(f"{kind} includes Armenia ({listed})")
+        v.matches.append(f"{kind} includes where {name} works ({listed})")
     elif "unclear" in found:
         unclear = ", ".join(loc for loc, c in classes.items() if c == "unclear")
-        v.geo_conditions.append(f"if Armenia counts under '{unclear}'")
+        v.geo_conditions.append(f"if {home} counts under '{unclear}'")
     elif "planned" in found:
-        v.geo_conditions.append("if Ardook has launched in Tbilisi")
+        v.geo_conditions.append("if Ardook has launched in Tbilisi")  # only Ardook's profile has a planned country
     else:
         v.geo_reasons.append(f"{kind} limited to {listed}")
 
