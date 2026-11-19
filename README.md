@@ -263,34 +263,75 @@ Example success/failure cases with deepseek:
 
 ### Requirements
 
-[Python version, libraries, compute requirements, model access]
+- **Python:** 3.12 (what CI uses; 3.10+ works). Libraries in `requirements.txt`: torch, transformers, pandas, openpyxl, pyyaml, scikit-learn.
+- **Models** (public on Hugging Face, no token needed): [`Qwen/Qwen3-32B`](https://huggingface.co/Qwen/Qwen3-32B) for the final system, and [`sentence-transformers/all-MiniLM-L6-v2`](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) for the judge's retrieval (runs on CPU).
+- **Compute:**
+  - *Replay* (re-scores the answers Qwen3-32B gave in our runs, saved in `reproduce/bundle/cache/`): any CPU, about 2 minutes. Gives exactly our numbers.
+  - *Live* (reruns the model): Linux with an NVIDIA GPU and vLLM 0.18.0. An 80 GB GPU (A100 80GB, H100) runs Qwen3-32B in bf16, which is exactly our setup. A 40 GB GPU runs Qwen's 4-bit `Qwen/Qwen3-32B-AWQ`. Weights are 66 GB (bf16) or 20 GB (AWQ) of disk.
+  - Google Colab (an A100 or H100 runtime for live mode) and SCU's WAVE HPC are both supported; see [`reproduce/README.md`](reproduce/README.md).
+- **Data:** the labeled sets are in `reproduce/bundle/data/`. The TA's hidden-test files aren't in the repository.
 
 ### Installation
 
 ```bash
-# Add installation commands here
+git clone https://github.com/SCU-CSEN166/ArdookA4.git
+cd ArdookA4
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+mkdir -p data && cp reproduce/bundle/data/*.csv data/   # data/ is git-ignored; the shared labeled sets live in the bundle
 ```
 
 ### Run the system
 
 ```bash
-# Add an example command here
+# Easiest (Colab, WAVE or a laptop): open reproduce/reproduce.ipynb and run all cells.
+# MODE = "replay" needs no GPU; MODE = "live" serves Qwen3-32B with vLLM. See reproduce/README.md.
+
+# Command line, with a Qwen3-32B server running (your own vLLM, or deploy/akash/akash_llm.py up / lease / wait):
+# step 1, eligibility checklist
+python src/run_pipeline.py --input data/real_grants.csv --labeled-only --profile ardook-data \
+    --backend api --model Qwen/Qwen3-32B --base-url <server URL> --api-key-env <env var holding the key> --workers 8
+# step 2, retrieval-augmented Fit judge (16 similar rated grants as examples)
+python src/run_judge.py --input data/real_grants.csv --labeled-only --profile ardook-data --k 16 \
+    --base-url <server URL> --api-key-env <env var holding the key>
 ```
+
+Each step writes `results.csv`, `shortlist.csv` and `trace.jsonl` to a folder in `outputs/`. Final Fit = Low if the checklist rules the grant out, otherwise the judge's Fit.
 
 ### Run evaluation
 
 ```bash
-# Add an example evaluation command here
+# Final system (checklist eligibility + judge Fit) against the labels
+python evaluation/combined_eval.py --eligibility-run outputs/real_grants_api_qwen3-32b_ardook-data \
+    --fit-run outputs/real_grants_judge_k16_v1_ardook-data
+# Compare every run on the real grants; writes results/pipeline_comparison.csv
+python evaluation/evaluate.py
+# TA hidden test (needs the TA's files in hiddenTest/)
+python evaluation/hidden_test.py --eligibility-run <checklist run folder> --fit-run <judge run folder> \
+    --labels hiddenTest/ardook_hidden_test_labels.xlsx
+# Unit tests
+pytest -q
 ```
+
+The expected scores of the final system are in `reproduce/bundle/expected_results.csv` (e.g. held-out synthetic set: 3-tier accuracy 0.755, relevant accuracy 0.865).
 
 ### Repository structure
 
 ```text
-project/
+ArdookA4/
 ├── README.md
 ├── requirements.txt
 ├── src/
+│   ├── ardook_grants/       # checklist, eligibility rules, Fit judge, data loading, metrics
+│   ├── run_pipeline.py      # step 1: eligibility checklist
+│   ├── run_judge.py         # step 2: retrieval-augmented Fit judge
+│   └── make_synthetic_ardook_data.py
+├── evaluation/              # evaluate.py, combined_eval.py, hidden_test.py
+├── reproduce/               # reproduce.ipynb, bundled data and saved answers, WAVE scripts
+├── deploy/akash/            # renting a GPU on Akash and serving Qwen3-32B
+├── docs/                    # ardook-profile.md, ardook-data-profile.md
+├── results/                 # metrics tables
+├── notebooks/               # earlier similarity and fine-tuning experiments
 ├── tests/
-├── evaluation/
 └── examples/
 ```

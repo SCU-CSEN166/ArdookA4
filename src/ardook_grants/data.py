@@ -144,6 +144,21 @@ def load_synthetic(path: Path, split: str | None = None) -> list[dict]:
     return grants
 
 
+def load_synthetic_facts(path: Path, split: str | None = None) -> list[dict]:
+    """data/synthetic_ardook_data.csv (src/make_synthetic_ardook_data.py): labels fixed by the facts drawn."""
+    df = pd.read_csv(path, dtype=str, keep_default_na=False)
+    if split:
+        df = df[df["split"] == split]
+    grants = []
+    for i, row in enumerate(df.itertuples(index=False)):
+        program = re.search(r"^Program:\s*(.+)$", row.text, re.M)
+        grants.append({"id": i + 1, "program": program.group(1).strip() if program else row.text[:70], "text": row.text,
+                       "deadline": "", "sheet_fit": row.label, "gold_fit": row.label, "decisive": row.decisive,
+                       "closed": False})
+    check_no_leakage(grants)
+    return grants
+
+
 def load_generic_csv(path: Path, text_columns: list[str] | None = None, label_column: str | None = None,
                      program_column: str | None = None) -> list[dict]:
     """Any other CSV (e.g. the TA's hidden test set). Text comes from `text_columns`, or a 'text' column."""
@@ -194,4 +209,6 @@ def load_any(path: Path, split: str | None = None, text_columns: list[str] | Non
         return load_tracker(path, label_rows)
     if {"text", "label", "theme", "entity"} <= set(columns):
         return load_synthetic(path, split)
+    if {"text", "label", "decisive", "split"} <= set(columns):
+        return load_synthetic_facts(path, split)
     return load_generic_csv(path)

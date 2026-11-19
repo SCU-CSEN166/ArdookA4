@@ -79,6 +79,15 @@ WORD_GUARDS = {
     "founder_identity_required": r"black|latin|hispanic|minorit|of color|indigenous|native|lgbt|queer|veteran"
                                  r"|immigrant|refugee|ethnic|racial|race|bipoc|asian|arab",
 }
+# Applicant types that rule a grant out on their own. Small models often answer "nonprofit" for any
+# impact-flavored grant (Women TechEU, Tara's Circle, Amber Grant), so the listing must say it.
+APPLICANT_TYPE_WORDS = {
+    "nonprofit": r"non-?profit|not-for-profit|501\s*\(?c\)?|charit|\bngos?\b|non-?governmental|civil society|\bcsos?\b",
+    "student": r"student|undergraduate|graduate|phd|enrolled",
+    "university or school": r"universit|college|school|academic|research institut",
+    "government agency": r"government|municipal|public agenc|ministr",
+    "hospital or clinic": r"hospital|clinic|health (?:system|provider)",
+}
 NON_GRANT_WORDS = {"loan": r"loan|lend|repay|interest", "equity investment": r"equity|invest|stake|shares",
                    "in-kind or credits": r"credit|in-kind|in kind|services|software|cloud"}
 
@@ -378,6 +387,13 @@ def apply_word_guards(facts: dict, text: str) -> list[str]:
         if facts.get(name) and not re.search(pattern, t):
             problems.append(f"{name}: dropped {facts[name]} (no such wording in the grant)")
             facts[name] = []
+    types = facts.get("applicant_types") or []
+    for kind, pattern in APPLICANT_TYPE_WORDS.items():
+        if kind in types and not re.search(pattern, t):
+            problems.append(f"applicant_types: dropped {kind} (no such wording in the grant)")
+            types = [x for x in types if x != kind]
+    if "applicant_types" in facts:
+        facts["applicant_types"] = types
     funding = facts.get("funding_types") or []
     kept = [f for f in funding if f not in NON_GRANT_WORDS or re.search(NON_GRANT_WORDS[f], t)]
     if kept != funding:

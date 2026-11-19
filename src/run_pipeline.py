@@ -1,9 +1,9 @@
 """Run the full grant pipeline: checklist answers -> eligibility rules -> Fit -> explanation.
 
 Usage (from the repo root):
-  python src/run_pipeline.py --input data/real_grants.csv                    # NuExtract-2B on this machine
-  python src/run_pipeline.py --input data/real_grants.csv --backend llm      # Qwen/Qwen3-4B (or --model ...)
-  python src/run_pipeline.py --input data/real_grants.csv --backend api      # AkashML Llama 3.3 70B ($AKASHML_API_KEY)
+  python src/run_pipeline.py --input data/real_grants.csv                    # Qwen3-32B on our Akash server (default)
+  python src/run_pipeline.py --input data/real_grants.csv --backend llm      # Qwen/Qwen3-4B on this machine
+  python src/run_pipeline.py --input data/real_grants.csv --backend nuextract   # Week 6 baseline only (NuExtract-2B)
   python src/run_pipeline.py --input data/real_grants.csv --rules-only       # reuse cached answers, no model
   python src/run_pipeline.py --input data/real_grants.csv --no-geography     # skip the location rules
   python src/run_pipeline.py --input data/real_grants.csv --backend llm --direct   # baseline: model rates Fit directly
@@ -22,7 +22,7 @@ from collections import Counter
 from pathlib import Path
 
 from ardook_grants.backends import (AKASHML_URL, DEFAULT_API_MODEL, DEFAULT_LLM, NUEXTRACT_MODEL, AnswerCache,
-                                    APIBackend, APIError, LLMBackend, NuExtractBackend, slug)
+                                    APIBackend, APIError, LLMBackend, NuExtractBackend, default_api_endpoint, slug)
 from ardook_grants.checklist import build_groups
 from ardook_grants.data import load_any
 from ardook_grants.metrics import fit_scores, format_scores
@@ -71,12 +71,14 @@ def main() -> None:
     parser.add_argument("--split", help="synthetic data only: train, val or test")
     parser.add_argument("--text-columns", nargs="+", help="generic CSV: columns that make up the grant text")
     parser.add_argument("--label-column", help="generic CSV: column holding the Fit label")
-    parser.add_argument("--backend", choices=["nuextract", "llm", "api"], default="nuextract",
-                        help="nuextract / llm run on this machine; api calls a hosted model (default: AkashML)")
+    parser.add_argument("--backend", choices=["api", "llm", "nuextract"], default="api",
+                        help="api: Qwen3-32B on our Akash server (default); llm: Qwen3-4B on this machine; "
+                             "nuextract: the Week 6 baseline, kept only to reproduce old results")
     parser.add_argument("--model", help=f"model name (defaults: {NUEXTRACT_MODEL}, {DEFAULT_LLM}, {DEFAULT_API_MODEL})")
-    parser.add_argument("--base-url", default=AKASHML_URL, help="api only: OpenAI-compatible base URL")
-    parser.add_argument("--api-key-env", default="AKASHML_API_KEY", help="api only: env var (or .env line) holding the key")
-    parser.add_argument("--no-thinking", action="store_true", help="api only: turn off Qwen3 thinking (vLLM servers)")
+    parser.add_argument("--base-url", help="api only: OpenAI-compatible base URL (default: AKASH_LLM_URL in .env, else AkashML)")
+    parser.add_argument("--api-key-env", help="api only: env var (or .env line) holding the key (default matches --base-url)")
+    parser.add_argument("--no-thinking", action="store_true",
+                        help="api only: turn off Qwen3 thinking (always on for our own vLLM server)")
     parser.add_argument("--workers", type=int, default=1, help="api only: questions asked in parallel")
     parser.add_argument("--rules-only", action="store_true", help="use cached answers only; don't load a model")
     parser.add_argument("--no-geography", action="store_true", help="turn off the location rules")
@@ -93,7 +95,10 @@ def main() -> None:
 
     model = args.model or {"llm": DEFAULT_LLM, "api": DEFAULT_API_MODEL}.get(args.backend, NUEXTRACT_MODEL)
     if args.backend == "api":
-        backend = APIBackend(model, args.base_url, args.api_key_env, no_thinking=args.no_thinking)
+        url, key_env = default_api_endpoint()
+        base_url, key_env = args.base_url or url, args.api_key_env or key_env
+        no_thinking = args.no_thinking or base_url != AKASHML_URL  # our vLLM server: thinking off, as in every run so far
+        backend = APIBackend(model, base_url, key_env, no_thinking=no_thinking)
     else:
         backend = LLMBackend(model) if args.backend == "llm" else NuExtractBackend(model)
     cache = AnswerCache(args.cache or REPO_ROOT / "outputs" / "cache" / f"{args.backend}__{slug(model)}.json")
