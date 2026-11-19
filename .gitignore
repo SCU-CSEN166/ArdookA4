@@ -11,3 +11,10 @@ outputs/
 .env
 # TA hidden-test files (grants, labels, PDF); kept local, not shared in the repo
 hiddenTest/
+
+# The reproduction kit's shared labeled sets (data/ above would otherwise ignore them too)
+!reproduce/bundle/data/
+# Made by reproduce/ (reproduce.ipynb live mode, wave/setup_env.sh): virtualenvs and model weights
+.vllm-env/
+.repro-env/
+.hf-cache/

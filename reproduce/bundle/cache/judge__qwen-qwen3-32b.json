@@ -1,0 +1,3348 @@
+{
+ "judge|5b370baaa6a9-t0.0-s0|018d8aba78392112": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "deep-tech requirement may disqualify unless Ardook Data can prove technical novelty"
+  },
+  "seconds": 0.0
+ },
+ "judge|d9c936b03d84-t0.0-s0|37a0080ccaa8f908": {
+  "answer": {
+   "fit": "High",
+   "reason": "Theme (core): women-led, seed-stage venture with a defined MVP and measurable social/economic/environmental impact"
+  },
+  "seconds": 0.0
+ },
+ "judge|dbada5840e40-t0.0-s0|384e4a6e5aa34a36": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "related to women entrepreneurs but depends on unknown facts about the application fee and newsletter subscription requirements"
+  },
+  "seconds": 0.0
+ },
+ "judge|47316e50e5d5-t0.0-s0|a65e2205c86ec365": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "Theme (core): woman-led business, but revenue threshold may disqualify a new Ardook Data entity"
+  },
+  "seconds": 0.0
+ },
+ "judge|dec02e86bc4b-t0.0-s0|1894024c19446a46": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|a1a1da59f0a7-t0.0-s0|1da36b9d60d7684a": {
+  "answer": {
+   "fit": "High",
+   "reason": "Theme (core): women entrepreneurs building a business with impact/leadership/service criteria"
+  },
+  "seconds": 0.0
+ },
+ "judge|56d8c2905554-t0.0-s0|8ca3ddf6007eb499": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have ≥$500 revenue and ≥6 months operating, which may disqualify a new Ardook Data entity"
+  },
+  "seconds": 0.0
+ },
+ "judge|7cfcdc6e29b1-t0.0-s0|a9e71624090bb59e": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): proposed activity must benefit women, girls and/or families"
+  },
+  "seconds": 0.0
+ },
+ "judge|7738c759e5ed-t0.0-s0|d70189ea9089bb05": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type (nonprofit-only)"
+  },
+  "seconds": 0.0
+ },
+ "judge|88a3ced77c3d-t0.0-s0|afc07e40833518cf": {
+  "answer": {
+   "fit": "High",
+   "reason": "Early-stage women-led venture with impact focus; no conflicting requirements"
+  },
+  "seconds": 0.0
+ },
+ "judge|f623c4b59a3b-t0.0-s0|a05056f0e6d4820b": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): impact-first model with proven solutions and growth"
+  },
+  "seconds": 0.0
+ },
+ "judge|723d16084f4c-t0.0-s0|6f3b249ddc0177e8": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: must be a U.S. 501(c)(3) (Ardook Data is for-profit)"
+  },
+  "seconds": 0.0
+ },
+ "judge|74c880c1c294-t0.0-s0|ce9a9e62f61b5ae6": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "AI + women-led venture fits, but cash amount and eligibility details are not verified"
+  },
+  "seconds": 0.0
+ },
+ "judge|6acacc848049-t0.0-s0|9ba8db0684a067f2": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): innovative California small businesses using strategic technologies including AI"
+  },
+  "seconds": 0.0
+ },
+ "judge|126c260395b9-t0.0-s0|f7ce3d90d9deee81": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "AI startup program aligns with mission, but no cash grant and unknown if MVP/prototype requirement is met"
+  },
+  "seconds": 0.0
+ },
+ "judge|27cdd1b67630-t0.0-s0|80283de64bc43ed3": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "AI/data impact venture aligns with mission, but amount and eligibility not verified"
+  },
+  "seconds": 0.0
+ },
+ "judge|a50a56ba5832-t0.0-s0|4abfb2ab0debc722": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "Potential alignment with AI-for-good theme; concern: eligibility criteria and funding details not verified"
+  },
+  "seconds": 0.0
+ },
+ "judge|4be9aaacb411-t0.0-s0|12244ce0dacddb62": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "unknown if Ardook Data meets typical Seed–Series A/traction requirements"
+  },
+  "seconds": 0.0
+ },
+ "judge|6138d4e5853d-t0.0-s0|73a48f79f04f9a91": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: Nonprofits/social enterprises/academic institutions only"
+  },
+  "seconds": 0.0
+ },
+ "judge|e2939f857621-t0.0-s0|b964512bd8b66ad2": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "Women-led and agentic AI align, but location requirement (London) may disqualify a U.S.-based entity."
+  },
+  "seconds": 0.0
+ },
+ "judge|6f5365f9ca13-t0.0-s0|46f67c60498aae83": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): emerging tech/GenAI/agents, but no explicit focus on social or economic impact"
+  },
+  "seconds": 0.0
+ },
+ "judge|ac7916ac19e3-t0.0-s0|d6e1f0f48d5972c5": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to rural communities in Georgia, Nebraska, or Texas"
+  },
+  "seconds": 0.0
+ },
+ "judge|df294dcf59b6-t0.0-s0|9ae9486dca25d7e4": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "Theme (adjacent): civic engagement, but not core to Ardook Data's mission of women's economic empowerment through AI/data"
+  },
+  "seconds": 0.0
+ },
+ "judge|bb5b8341f8ca-t0.0-s0|1060798720e07b3b": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "AI-for-social-impact alignment is strong, but eligibility criteria and funding details are not verified"
+  },
+  "seconds": 0.0
+ },
+ "judge|6c13c55536d9-t0.0-s0|ba810fce15b2da1e": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "AI-for-impact alignment; concern: No current open call or funding details verified"
+  },
+  "seconds": 0.0
+ },
+ "judge|20501a4a41ea-t0.0-s0|e7d9963dad5fb546": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type: typically nonprofit/digital-impact ecosystem"
+  },
+  "seconds": 0.0
+ },
+ "judge|b8fec3c2dd3c-t0.0-s0|97fe9354b41abf93": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "AI + social-impact narrative fits; concern: Direct cash funding not verified"
+  },
+  "seconds": 0.0
+ },
+ "judge|3ae452fdd3b6-t0.0-s0|c76a4db53c98e70b": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "Theme (adjacent): mother-founder focus with revenue requirements that may disqualify a new Ardook Data entity"
+  },
+  "seconds": 0.0
+ },
+ "judge|05b6f7946cb5-t0.0-s0|76bd149d7f861b0d": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have been in operation for a minimum of three years"
+  },
+  "seconds": 0.0
+ },
+ "judge|eef9d434d22e-t0.0-s0|0dcd526f43867db4": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|0a29c2e1d73b-t0.0-s0|642964ac70094cba": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led startups based in California using AI to address social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|5e44b446cdf3-t0.0-s0|0d32435e4d3e7691": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type: only accredited universities or research institutes are eligible"
+  },
+  "seconds": 0.0
+ },
+ "judge|daf9ce740835-t0.0-s0|3274d0414772ced1": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type: open to government agencies and municipalities only"
+  },
+  "seconds": 0.0
+ },
+ "judge|1d5cb754a7d2-t0.0-s0|8add2a7a622ad3cb": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|70727dfc9f0a-t0.0-s0|821e4b76e4a850ae": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): wildlife and forest conservation"
+  },
+  "seconds": 0.0
+ },
+ "judge|411c7f038e79-t0.0-s0|de879da06a555292": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|8ff6c33594e2-t0.0-s0|06e2b7585f336fbe": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): for-profit, women-owned California-based startups building early-stage software or SaaS technology solutions"
+  },
+  "seconds": 0.0
+ },
+ "judge|f7e49b534156-t0.0-s0|8045dcad14435230": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: business must be at least three years old, which a new Ardook Data entity cannot meet"
+  },
+  "seconds": 0.0
+ },
+ "judge|9f2e15352755-t0.0-s0|96e507a099ac193c": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|dba902a59101-t0.0-s0|b9f2d221281f6eab": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-founded technology startups"
+  },
+  "seconds": 0.0
+ },
+ "judge|1a58e70ecaaf-t0.0-s0|1472dc62dc9eb0ce": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): startups applying AI to social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|14ed484c8834-t0.0-s0|ddd2c9822bd6c25b": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|25a41f732ad0-t0.0-s0|ec50b17b0125e3d1": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage technology startups building software or SaaS products"
+  },
+  "seconds": 0.0
+ },
+ "judge|e0ac764545b3-t0.0-s0|f0b6c941fcd55dc5": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-owned technology startups in the San Francisco Bay Area"
+  },
+  "seconds": 0.0
+ },
+ "judge|e8d94bc2004e-t0.0-s0|d23dbd79bea062f4": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to companies based in Ontario, Canada"
+  },
+  "seconds": 0.0
+ },
+ "judge|218d6b06489b-t0.0-s0|204cd73c747bc9bb": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): community development in low-income neighborhoods"
+  },
+  "seconds": 0.0
+ },
+ "judge|4048e02a7160-t0.0-s0|14b1e87e16353889": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|80b7bc4232e2-t0.0-s0|938c075592226712": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distributing proven poverty interventions (bed nets, water filters) in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|c02f374a4457-t0.0-s0|279c1c10f6fa464d": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: registered 501(c)(3) nonprofit organizations only"
+  },
+  "seconds": 0.0
+ },
+ "judge|9af9f1ef4150-t0.0-s0|5e8af6a5dbcb3946": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): community development projects in low-income neighborhoods"
+  },
+  "seconds": 0.0
+ },
+ "judge|ff6d0c6db6ea-t0.0-s0|27b9fbeaf18d6520": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): pre-revenue and early-stage startups within the data and analytics software sector"
+  },
+  "seconds": 0.0
+ },
+ "judge|b636e26e83b6-t0.0-s0|95756c426a0bfe5a": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|c82154d1f70f-t0.0-s0|f066ce65bd46df47": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): startups applying AI to social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|73f0e1de338c-t0.0-s0|9eda31db892fa413": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|c890967a2f72-t0.0-s0|7785961a26821e58": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): for-profit startups developing data and analytics software solutions"
+  },
+  "seconds": 0.0
+ },
+ "judge|1770ddcd79ae-t0.0-s0|2dd73937b7dca6cc": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led technology startups"
+  },
+  "seconds": 0.0
+ },
+ "judge|9c40272f3c38-t0.0-s0|730d474334de066b": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "stage: requires at least a prototype or MVP, which Ardook Data has not yet proven"
+  },
+  "seconds": 0.0
+ },
+ "judge|df9b064a25ff-t0.0-s0|3087754963c4a906": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|9dc4ae23463b-t0.0-s0|eb487e6390b80ff4": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|bd1874183f31-t0.0-s0|a9199bff6eb75063": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): wildlife and forest conservation"
+  },
+  "seconds": 0.0
+ },
+ "judge|d72cc41574ef-t0.0-s0|7c199b2eafdfff66": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: open only to businesses registered in Kenya"
+  },
+  "seconds": 0.0
+ },
+ "judge|3a89ea4720f9-t0.0-s0|6029026c19116ead": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|6a43c8f21271-t0.0-s0|2cda66050f100819": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: minimum annual revenue of $75,000"
+  },
+  "seconds": 0.0
+ },
+ "judge|14f0e1bafadc-t0.0-s0|e7c6befdfdcbbc5e": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type: registered companies must operate as social enterprises, which does not align with Ardook Data's for-profit AI/data venture model"
+  },
+  "seconds": 0.0
+ },
+ "judge|e4e19e43e75d-t0.0-s0|c6c604dcd57cf61a": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|dc39c883ed36-t0.0-s0|d5fbb6950f22cb8c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: open only to businesses registered in Kenya"
+  },
+  "seconds": 0.0
+ },
+ "judge|aaca903b9b75-t0.0-s0|73b4e10e136ac7d2": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-owned technology startups in the U.S."
+  },
+  "seconds": 0.0
+ },
+ "judge|5b285522d93d-t0.0-s0|b83490a24f0660b9": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to businesses located in New York City"
+  },
+  "seconds": 0.0
+ },
+ "judge|762c362114cc-t0.0-s0|7286dd114a78fc91": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based community programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|d21055a3dfe5-t0.0-s0|eb006059740d414e": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies"
+  },
+  "seconds": 0.0
+ },
+ "judge|9923efcf879a-t0.0-s0|6bc625649bbc4e3b": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): funds tuition scholarships for undergraduate students"
+  },
+  "seconds": 0.0
+ },
+ "judge|5a6ceb2651ba-t0.0-s0|7901d2dbefbab785": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led technology startups"
+  },
+  "seconds": 0.0
+ },
+ "judge|42cce9faefc2-t0.0-s0|7c7f7643938f5a79": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): farming cooperatives and agricultural extension"
+  },
+  "seconds": 0.0
+ },
+ "judge|848f4a0c4361-t0.0-s0|b9dac8413a354abd": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|e183348e0da5-t0.0-s0|680e1eeadd984a35": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-owned startups in California leveraging AI for social or economic impact"
+  },
+  "seconds": 0.0
+ },
+ "judge|d16c81a98a93-t0.0-s0|d578ab73ce98f882": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have at least three years of operating history"
+  },
+  "seconds": 0.0
+ },
+ "judge|4ccf410afa63-t0.0-s0|3bb0e29dfb07834c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): farming cooperatives and agricultural extension"
+  },
+  "seconds": 0.0
+ },
+ "judge|9a20f11338d1-t0.0-s0|a9ac05720f22fce9": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distributing tuition scholarships for undergraduate students"
+  },
+  "seconds": 0.0
+ },
+ "judge|20673b9bd464-t0.0-s0|9432f45c952bec32": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have at least 10 full-time employees"
+  },
+  "seconds": 0.0
+ },
+ "judge|80e4668ae8aa-t0.0-s0|650c822b2e7bddf5": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): funds will be used to provide tuition scholarships for undergraduate students"
+  },
+  "seconds": 0.0
+ },
+ "judge|38d9ea0d2742-t0.0-s0|3755c300e43be86e": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|7597ffd7f95d-t0.0-s0|f4fca3b9b75702ca": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to companies based in Ontario, Canada"
+  },
+  "seconds": 0.0
+ },
+ "judge|3766a7fb28d5-t0.0-s0|c7c38c3f9a0b82c4": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy initiatives"
+  },
+  "seconds": 0.0
+ },
+ "judge|d08488b6a9b6-t0.0-s0|0a518d29a6a5beda": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|9ef185b811cc-t0.0-s0|35c120e04cb65be5": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant (off): individual undergraduate students only"
+  },
+  "seconds": 0.0
+ },
+ "judge|1f4efcdcbe49-t0.0-s0|6803d9359acf5624": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): community health clinics and medical care"
+  },
+  "seconds": 0.0
+ },
+ "judge|4598080b9f27-t0.0-s0|ff7cf0553164a70b": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led, early-stage companies developing data and analytics software"
+  },
+  "seconds": 0.0
+ },
+ "judge|09bb53c6b27d-t0.0-s0|8fecf1e93b8e6e12": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|ce6e34cfb536-t0.0-s0|19262280d15308cd": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|22764ad6c696-t0.0-s0|185ca5646fd35791": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage technology startups building software or SaaS products"
+  },
+  "seconds": 0.0
+ },
+ "judge|0b6a04559c34-t0.0-s0|7ce4166b77017cf7": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to companies based in Texas"
+  },
+  "seconds": 0.0
+ },
+ "judge|43a16a9d2e5d-t0.0-s0|cb68b5c355e7fc00": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|374877d967bf-t0.0-s0|e0274af3f5c223c7": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies"
+  },
+  "seconds": 0.0
+ },
+ "judge|dcce7b9b85e1-t0.0-s0|12fc400894f18059": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): tuition scholarships for undergraduate students"
+  },
+  "seconds": 0.0
+ },
+ "judge|b452fbc40d6c-t0.0-s0|0a57b33bf2511b93": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|8d8eec24ba00-t0.0-s0|2851732990b7b0cd": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distributing proven poverty interventions (bed nets, water filters) in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|42c78b291ed2-t0.0-s0|434c80aaa8d850aa": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: registered 501(c)(3) nonprofit organization only"
+  },
+  "seconds": 0.0
+ },
+ "judge|9d7931542646-t0.0-s0|cb6ee0caf22dd245": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: open to government agencies and municipalities only"
+  },
+  "seconds": 0.0
+ },
+ "judge|d4314778dc66-t0.0-s0|c3ec2502691e9739": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geographic restriction (based in India, not U.S.)"
+  },
+  "seconds": 0.0
+ },
+ "judge|bb45476d7c24-t0.0-s0|fe8fedcec5455710": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distributing proven poverty interventions (bed nets, water filters) in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|0431f5ec5bd8-t0.0-s0|8b0a6be4ef0c1c29": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|64d9222665fb-t0.0-s0|c630bcfb78766c25": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|1e2a26868d8e-t0.0-s0|3540db1b2707e3fa": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-founded technology startups"
+  },
+  "seconds": 0.0
+ },
+ "judge|8defafde79f0-t0.0-s0|0c8be09c196c3d02": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): community health clinics and medical care"
+  },
+  "seconds": 0.0
+ },
+ "judge|76e26256c682-t0.0-s0|8fb734b2597df022": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|6bf18b8cb14f-t0.0-s0|211068c7a3b12d09": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|e8d64b93158e-t0.0-s0|5608f55c0955d502": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies"
+  },
+  "seconds": 0.0
+ },
+ "judge|14e0753417f8-t0.0-s0|fc3250b2a3a8b160": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage technology startups building software or SaaS products"
+  },
+  "seconds": 0.0
+ },
+ "judge|058ee315a965-t0.0-s0|5c9f03ee7317d7fe": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|c618a231b9dc-t0.0-s0|b63589191e4b66f7": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: requires at least 10 full-time employees, which a new venture cannot meet"
+  },
+  "seconds": 0.0
+ },
+ "judge|0a18c544ecfa-t0.0-s0|ec24e4c7217438ee": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based community programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|baef23684e67-t0.0-s0|91b68080f7b30acf": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based community programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|cad28e16582c-t0.0-s0|b47cd0efb3c4bfa5": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|d41ae46d4dcf-t0.0-s0|aeaeb07049c7d90c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have been in operation for at least three years"
+  },
+  "seconds": 0.0
+ },
+ "judge|dd6725289f25-t0.0-s0|9869b4ad9babe795": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type: limited to government agencies and municipalities"
+  },
+  "seconds": 0.0
+ },
+ "judge|ea99d7f11164-t0.0-s0|faf99bd41a0d3ea5": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led early-stage technology startups"
+  },
+  "seconds": 0.0
+ },
+ "judge|68fd2c78f829-t0.0-s0|c55fc8691b5a8e34": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distributing evidence-based poverty interventions (bed nets, water filters) in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|b05174dd4b02-t0.0-s0|bc9893df9309b266": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies"
+  },
+  "seconds": 0.0
+ },
+ "judge|8cadfee7333c-t0.0-s0|7ee58cd905d59ce5": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): undergraduate tuition scholarships"
+  },
+  "seconds": 0.0
+ },
+ "judge|ed46cddd2ddd-t0.0-s0|8b7e4a9a2e681a97": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "requirement: applicants must be affiliated with accredited universities or research institutes"
+  },
+  "seconds": 0.0
+ },
+ "judge|ffb8219bdde3-t0.0-s0|f07ac7f9c68e638f": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-owned, early-stage technology startups based in California"
+  },
+  "seconds": 0.0
+ },
+ "judge|a6c31477890d-t0.0-s0|3e3f394aeadfa630": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): tuition scholarships for undergraduate students"
+  },
+  "seconds": 0.0
+ },
+ "judge|5a43fa4ec6f2-t0.0-s0|16bf8393ef3752d1": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off-mission): wildlife and forest conservation"
+  },
+  "seconds": 0.0
+ },
+ "judge|4b158b8f85e1-t0.0-s0|9782166419df0d5c": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|3815175800b5-t0.0-s0|aa74c21fe29f659b": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|465081b0c2d5-t0.0-s0|c64a42c41b61a2ce": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): community development projects in low-income neighborhoods"
+  },
+  "seconds": 0.0
+ },
+ "judge|6c7702ac6da4-t0.0-s0|eab048a0018b342c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): startups focusing on community health clinics or medical care"
+  },
+  "seconds": 0.0
+ },
+ "judge|c40feacde012-t0.0-s0|59282832aa730bbc": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs aimed at underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|dd3ea5693abd-t0.0-s0|43e38d802dff146e": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type: registered charities and NGOs only (no companies)"
+  },
+  "seconds": 0.0
+ },
+ "judge|fe854f731b8a-t0.0-s0|82d05268e6409f2a": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: individual undergraduate students only"
+  },
+  "seconds": 0.0
+ },
+ "judge|19446bb9f1b8-t0.0-s0|6b6a3a935a71ae04": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|189627339023-t0.0-s0|d1e14beda20f6184": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): funds arts and cultural festivals"
+  },
+  "seconds": 0.0
+ },
+ "judge|872acbcc24c3-t0.0-s0|0668b0f5db3bbe3a": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies"
+  },
+  "seconds": 0.0
+ },
+ "judge|99a5ec93a327-t0.0-s0|9cc9e715065f9cd5": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|67a25735dd25-t0.0-s0|6bf450bc3c0bc52a": {
+  "answer": {
+   "fit": "Low",
+   "reason": "revenue requirement ($250,000 minimum annual revenue) rules out a new, pre-revenue Ardook Data entity"
+  },
+  "seconds": 0.0
+ },
+ "judge|f95309899eb8-t0.0-s0|876d88f3c0c78023": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: individual undergraduate students only"
+  },
+  "seconds": 0.0
+ },
+ "judge|fcabe59c455d-t0.0-s0|be2b9d6aa9fda2fa": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|5f538564defc-t0.0-s0|6a0679124a153463": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|839414b84a3a-t0.0-s0|dacafb69040d4355": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|0a9ccfcc2905-t0.0-s0|9f1c366d8b2d7d28": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): distribution of proven poverty interventions in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|c30885406fd2-t0.0-s0|1f9b731ffc1e2fac": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-founded technology startups"
+  },
+  "seconds": 0.0
+ },
+ "judge|414d78dc86e7-t0.0-s0|bcbb1458555cbb68": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|22ff6ba81f98-t0.0-s0|d25a294131c8339b": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distributing proven poverty interventions (bed nets, water filters) in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|d59f08d989c5-t0.0-s0|7670720cd059adee": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based community programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|92e7eba8634b-t0.0-s0|1ad467154c2b4d53": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: registered 501(c)(3) nonprofit organizations only"
+  },
+  "seconds": 0.0
+ },
+ "judge|a6f17d59bec8-t0.0-s0|664fdd2efad69b96": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): farming cooperatives and agricultural extension"
+  },
+  "seconds": 0.0
+ },
+ "judge|fa0297c04f18-t0.0-s0|2b3d8f0df097c45d": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based community programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|86c1249d8dd2-t0.0-s0|08d8f758dedf33bd": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type: open only to 501(c)(3) nonprofit organizations"
+  },
+  "seconds": 0.0
+ },
+ "judge|ac8c813fb033-t0.0-s0|15daae7a23f82c5f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: applicants must have at least three years of operating history"
+  },
+  "seconds": 0.0
+ },
+ "judge|d47b55991f00-t0.0-s0|ef7f20e3945c62c6": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): community health clinics and medical care"
+  },
+  "seconds": 0.0
+ },
+ "judge|3f72fdfaac98-t0.0-s0|58b98fc7c46d6dac": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distributing proven poverty interventions (bed nets, water filters) in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|fbf15a97061d-t0.0-s0|4742921279e0e0bc": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|1c6400c9096e-t0.0-s0|d9a253a81e93b108": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: registered 501(c)(3) nonprofit organizations only"
+  },
+  "seconds": 0.0
+ },
+ "judge|41cc9172ff19-t0.0-s0|81da503ab4242214": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|e9bc165ad8f3-t0.0-s0|ccc4de8acc421ce2": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|d8bdba2d08e4-t0.0-s0|f5bdbbab7f4bafe4": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): for-profit data and analytics software startups in the Bay Area with a women-led priority"
+  },
+  "seconds": 0.0
+ },
+ "judge|6146a614c5d5-t0.0-s0|cd0dba8c4ea5a26c": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-owned early-stage companies developing commercial AI and machine learning products"
+  },
+  "seconds": 0.0
+ },
+ "judge|f782ffd8e769-t0.0-s0|3d6c97eb1f08326f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "revenue requirement: must have at least $75,000 in annual revenue"
+  },
+  "seconds": 0.0
+ },
+ "judge|ca44a147f398-t0.0-s0|061a2adb0923d255": {
+  "answer": {
+   "fit": "Low",
+   "reason": "location: the program is open only to companies based in Ontario, Canada"
+  },
+  "seconds": 0.0
+ },
+ "judge|7d8b44538b5d-t0.0-s0|031c2bd3b6c64e1f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): wildlife and forest conservation"
+  },
+  "seconds": 0.0
+ },
+ "judge|a46274ee8e9f-t0.0-s0|f9c41acd71a10361": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|9e9bc4873ebf-t0.0-s0|31971327c0cd2898": {
+  "answer": {
+   "fit": "Low",
+   "reason": "core requirements: applicants must demonstrate a commitment to offering tuition scholarships for undergraduate students"
+  },
+  "seconds": 0.0
+ },
+ "judge|405d78722459-t0.0-s0|6319e8bfd8f5473f": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): startups applying AI to social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|de462f04d743-t0.0-s0|0b93c484fa78bd09": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies based in California and owned by women"
+  },
+  "seconds": 0.0
+ },
+ "judge|cdc054a9f111-t0.0-s0|2a805370b87c7ecf": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): arts and cultural festivals"
+  },
+  "seconds": 0.0
+ },
+ "judge|914e9ee98a17-t0.0-s0|ca2c4bc48d366008": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|846645ff4613-t0.0-s0|875758a90bfa1544": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: registered 501(c)(3) nonprofit organizations only"
+  },
+  "seconds": 0.0
+ },
+ "judge|0b5bbb5df590-t0.0-s0|46ed069dffda6ea5": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): farming cooperatives and agricultural extension"
+  },
+  "seconds": 0.0
+ },
+ "judge|9939611b11e0-t0.0-s0|80c32b58a65e2131": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have at least 10 full-time employees"
+  },
+  "seconds": 0.0
+ },
+ "judge|89776c6dd267-t0.0-s0|39f4f32f472270e8": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies"
+  },
+  "seconds": 0.0
+ },
+ "judge|7f169221fb52-t0.0-s0|cf6a5bb0615f8d12": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: registered 501(c)(3) nonprofit organizations only"
+  },
+  "seconds": 0.0
+ },
+ "judge|09c5acd8ecfc-t0.0-s0|74b307f40010f030": {
+  "answer": {
+   "fit": "Low",
+   "reason": "location (Ontario, Canada)"
+  },
+  "seconds": 0.0
+ },
+ "judge|2e1e25c96b38-t0.0-s0|1f3edd87cac731b5": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|2be02cf02173-t0.0-s0|100769119de9face": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|b0f698a22b72-t0.0-s0|484fdec39f41fc3e": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies led by women"
+  },
+  "seconds": 0.0
+ },
+ "judge|8e0fd5e6e948-t0.0-s0|4f76ada3f4d3d3d2": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|8831ff8875b0-t0.0-s0|4056f336cfb08d40": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies"
+  },
+  "seconds": 0.0
+ },
+ "judge|3bbb009b0513-t0.0-s0|fb043314fb3afaa5": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to companies based in Texas"
+  },
+  "seconds": 0.0
+ },
+ "judge|5ae5c3cd9274-t0.0-s0|a0d5d10c869af1e0": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: requires businesses to have been operating for at least three years"
+  },
+  "seconds": 0.0
+ },
+ "judge|a6fe68f3f73f-t0.0-s0|da00491d5d30bb7e": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led for-profit startups building software or SaaS products"
+  },
+  "seconds": 0.0
+ },
+ "judge|478ef10518ec-t0.0-s0|a7ef2be92c16d677": {
+  "answer": {
+   "fit": "Low",
+   "reason": "revenue requirement: minimum annual revenue of $250,000"
+  },
+  "seconds": 0.0
+ },
+ "judge|612dbcd5c0b6-t0.0-s0|8509d583569edb26": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage technology startups building software or SaaS products and women-led companies"
+  },
+  "seconds": 0.0
+ },
+ "judge|74444fdc03e3-t0.0-s0|7c0f815c04e9cfee": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|9f382c5ff174-t0.0-s0|be64471d3b6e935f": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies"
+  },
+  "seconds": 0.0
+ },
+ "judge|938fd85b98fa-t0.0-s0|ca20b77eb0ac1ebe": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|685411cc2953-t0.0-s0|a347905124c04be6": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|ec1a61a4dbb6-t0.0-s0|913fa0ad6671fd38": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): for-profit, women-led California startups working in data and analytics software"
+  },
+  "seconds": 0.0
+ },
+ "judge|2b6f195f233d-t0.0-s0|33cbb42bf2f73bcd": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): farming cooperatives and agricultural extension"
+  },
+  "seconds": 0.0
+ },
+ "judge|6ac811e2e670-t0.0-s0|3c042e940f1861ec": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|205883292adc-t0.0-s0|168fd3f672ffdea4": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): community development projects in low-income neighborhoods"
+  },
+  "seconds": 0.0
+ },
+ "judge|4ee3ca3569d7-t0.0-s0|b89fe6e14a9632f2": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to companies based in Texas"
+  },
+  "seconds": 0.0
+ },
+ "judge|0cc6c858349e-t0.0-s0|44642262dbcdf13b": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|cfc2133fdc6f-t0.0-s0|22fc32884ef15fbb": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distribution of proven poverty interventions (bed nets, water filters) in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|f9ec3a28560a-t0.0-s0|2b9ed2d3f565c1fe": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): for-profit startups applying AI to address social or economic challenges"
+  },
+  "seconds": 0.0
+ },
+ "judge|8253d20d38b8-t0.0-s0|813d8fb96ff54504": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|2126f0284370-t0.0-s0|9d08a4ea9f10bb17": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage technology startups building software or SaaS products"
+  },
+  "seconds": 0.0
+ },
+ "judge|9d07a03617e0-t0.0-s0|1fa24f770626513c": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|edb78b8e2fc3-t0.0-s0|7cee2c20b0f526f8": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): community development projects in low-income neighborhoods"
+  },
+  "seconds": 0.0
+ },
+ "judge|94aa551fe95e-t0.0-s0|bf20a22467409206": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): community development projects in low-income neighborhoods"
+  },
+  "seconds": 0.0
+ },
+ "judge|42dc70aeb1aa-t0.0-s0|31426afd18b520d7": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|1f05527bcfc7-t0.0-s0|fcefaf5b26a52fef": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): startups applying AI to social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|20d357f497b6-t0.0-s0|d7549593ff558b64": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): women entrepreneurs in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|fb861760d27e-t0.0-s0|96dc6316d301c486": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type: registered charities and NGOs only"
+  },
+  "seconds": 0.0
+ },
+ "judge|fda985621470-t0.0-s0|74b22714e40416a4": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: requires a minimum of three years of operating history, which a new Ardook Data entity cannot meet"
+  },
+  "seconds": 0.0
+ },
+ "judge|326d40cb7c38-t0.0-s0|55dfbb799fd2079c": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|5619a673f9ab-t0.0-s0|c066c63ea11b9b98": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|9d0bf5a24ff1-t0.0-s0|ba840ec3d11ff6f4": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): funds faith-based community programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|32b1a2be9029-t0.0-s0|6085fa7af4ecaff3": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|297eb0cb88b5-t0.0-s0|90ad3d6e0692d7d5": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): startups applying AI to social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|9d442d759efb-t0.0-s0|e607c2c9b93f0569": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|863ff7da7250-t0.0-s0|ee7abc5ca85c4de8": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to businesses located in New York City"
+  },
+  "seconds": 0.0
+ },
+ "judge|499ecbcd14f7-t0.0-s0|9bb561374e214f5c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off-mission): focused on farming cooperatives or agricultural extension, which is not aligned with Ardook Data's AI/data mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|6e1f14e2fda2-t0.0-s0|0c2dae725860d98c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: only for organizations registered in India"
+  },
+  "seconds": 0.0
+ },
+ "judge|a3998e2289c7-t0.0-s0|32a6b09ac43804a5": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: only for organizations registered in India"
+  },
+  "seconds": 0.0
+ },
+ "judge|f825943e76f0-t0.0-s0|705c29b7b55e422a": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to businesses located in New York City"
+  },
+  "seconds": 0.0
+ },
+ "judge|2544c2090c71-t0.0-s0|dde29e847c254dc8": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): community development projects in low-income neighborhoods"
+  },
+  "seconds": 0.0
+ },
+ "judge|1e843a409d22-t0.0-s0|ca953913e0d349d0": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-founded or co-founded technology startups at pre-revenue or early-stage"
+  },
+  "seconds": 0.0
+ },
+ "judge|9e0844cd9e9f-t0.0-s0|c72cd3ba37206161": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises creating jobs, not directly aligned with AI/data focus"
+  },
+  "seconds": 0.0
+ },
+ "judge|19db42eb54c1-t0.0-s0|65e1b8ac4762d49e": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): distributing proven poverty interventions such as bed nets and water filters in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|0f39d0463a37-t0.0-s0|53358bc7a382ce24": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distributing proven poverty interventions (bed nets, water filters) in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|f7da85e87537-t0.0-s0|ae270c3f1f335bc3": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): tuition scholarships for undergraduate students"
+  },
+  "seconds": 0.0
+ },
+ "judge|337f36fb1818-t0.0-s0|fd220177ef354dd7": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|40a8251a8c09-t0.0-s0|55aac846533fd948": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type: accredited universities or research institutes only"
+  },
+  "seconds": 0.0
+ },
+ "judge|b568d4cd3c88-t0.0-s0|8c46bf82ef1ebb7e": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): main-street small businesses (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|c2f51aa061b1-t0.0-s0|65f75cb0c75553ef": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|ea957632034e-t0.0-s0|aa20133edd91ed09": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|bf0adb006f96-t0.0-s0|a1bc888c7ff647fb": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-owned small businesses developing AI-based solutions to social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|029a3eeef9a9-t0.0-s0|27c7bca7152f8048": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distribution of proven poverty interventions (bed nets, water filters) in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|42bb23e74f1c-t0.0-s0|d397664f14c12b4e": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|cbccae009bd9-t0.0-s0|7454deec5f420653": {
+  "answer": {
+   "fit": "Low",
+   "reason": "location: must be based in the United Kingdom"
+  },
+  "seconds": 0.0
+ },
+ "judge|58b7e2656a87-t0.0-s0|a4d6fabd8893fa0e": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): startups applying AI to social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|ee4248a87bc5-t0.0-s0|79b51cf1c99517ff": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|86e6321c8a25-t0.0-s0|3a95c484d30b4b1b": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): farming cooperatives and agricultural extension"
+  },
+  "seconds": 0.0
+ },
+ "judge|3d219ba6391c-t0.0-s0|edfffb0b1d02758e": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|a62bc1e2bbf7-t0.0-s0|461de1b39ec4f14f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): farming cooperatives and agricultural extension"
+  },
+  "seconds": 0.0
+ },
+ "judge|6650deca6629-t0.0-s0|4347fc5e1ce1c111": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): startups applying AI to social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|15d0a93034aa-t0.0-s0|3dfe61f6d5ebb217": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|0195a99f7c2d-t0.0-s0|72e73d5c1f841b1e": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): farming cooperatives and agricultural extension"
+  },
+  "seconds": 0.0
+ },
+ "judge|3c01ffb9f31a-t0.0-s0|2ebf178653cf020e": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-founded technology startups"
+  },
+  "seconds": 0.0
+ },
+ "judge|01b29e971b11-t0.0-s0|47d762f245d003bb": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|5b7cf53515a6-t0.0-s0|a9c8469c08ec3e60": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|34c130eb5665-t0.0-s0|9e03453a38b605d7": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): startups applying AI to social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|3c5d7c656226-t0.0-s0|f3053825b5dbc2c0": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: registered charities and NGOs only (no companies)"
+  },
+  "seconds": 0.0
+ },
+ "judge|e00f80178fe2-t0.0-s0|cdc9c0eacfe3233a": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led founders and early-stage companies across any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|69062f396150-t0.0-s0|26a8130b5db90793": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): wildlife and forest conservation"
+  },
+  "seconds": 0.0
+ },
+ "judge|f55ed251baff-t0.0-s0|d3ab5103e99e880c": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|813be38db363-t0.0-s0|c082bc3f813a56de": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|0b389f8ca1a4-t0.0-s0|595b37f761dd95aa": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): arts and cultural festivals"
+  },
+  "seconds": 0.0
+ },
+ "judge|4e199756cacb-t0.0-s0|f7c1580ca8a85775": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): farming cooperatives and agricultural extension"
+  },
+  "seconds": 0.0
+ },
+ "judge|d67671bfcf91-t0.0-s0|65b88eb8df8b223c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: government agencies and municipalities only (not for-profit or for-profit companies)"
+  },
+  "seconds": 0.0
+ },
+ "judge|aaaa2261027a-t0.0-s0|8fe9661a9bb3c23c": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage technology startups building software or SaaS products"
+  },
+  "seconds": 0.0
+ },
+ "judge|10b1f6fcfc37-t0.0-s0|d624d6f7ccb85e69": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have been operating for at least three years, which rules out an early-stage Ardook Data entity"
+  },
+  "seconds": 0.0
+ },
+ "judge|8a538df0258f-t0.0-s0|c5ff0a28af4c260f": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led early-stage startups building commercial AI and machine-learning products"
+  },
+  "seconds": 0.0
+ },
+ "judge|2c15ea707a18-t0.0-s0|5c291c379d9ade8c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: accredited universities or research institutes only"
+  },
+  "seconds": 0.0
+ },
+ "judge|72d553c681a6-t0.0-s0|7e99859f7e8aef03": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|600a44b7d713-t0.0-s0|ba10918b6462bf8f": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): community development projects in low-income neighborhoods"
+  },
+  "seconds": 0.0
+ },
+ "judge|3f52bd4cba55-t0.0-s0|110f92f0345ae209": {
+  "answer": {
+   "fit": "Low",
+   "reason": "revenue requirement ($75,000 annual revenue) rules out a new Ardook Data entity"
+  },
+  "seconds": 0.0
+ },
+ "judge|88eda387c462-t0.0-s0|e95df12b3f7d5822": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based community programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|deb019408f54-t0.0-s0|45152c22404f1858": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): arts and cultural festivals"
+  },
+  "seconds": 0.0
+ },
+ "judge|7d9d26cc0b7f-t0.0-s0|62152fb119dfe563": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): startups applying AI to social or economic problems"
+  },
+  "seconds": 0.0
+ },
+ "judge|27823249e29d-t0.0-s0|cf167eef3d65140f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based community programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|9cf2acc7231b-t0.0-s0|f538d09a5ddbada4": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): main-street small businesses that want to grow (retail, food, services)"
+  },
+  "seconds": 0.0
+ },
+ "judge|3bcb97dc56ec-t0.0-s0|2de0cf33fa88dbc0": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage technology startups building software or SaaS products"
+  },
+  "seconds": 0.0
+ },
+ "judge|14b572dc44cc-t0.0-s0|0284b2c31327689d": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|54454024e255-t0.0-s0|b7b8941e2573af0b": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): civic engagement and local democracy projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|cb3a36a989fd-t0.0-s0|2ef83cf213a68185": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): for-profit startups with a prototype or MVP working on software or SaaS products"
+  },
+  "seconds": 0.0
+ },
+ "judge|83d3b53e3909-t0.0-s0|cb80e67dae3756e0": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|b092b5d9faee-t0.0-s0|7ba672239af639ad": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led, early-stage startups focused on community development projects in low-income neighborhoods"
+  },
+  "seconds": 0.0
+ },
+ "judge|001521f8634c-t0.0-s0|5c5a61072f6235ec": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: open only to businesses registered in Kenya"
+  },
+  "seconds": 0.0
+ },
+ "judge|068b02f5bc41-t0.0-s0|b8e40c98c9a290d7": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based community programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|0ba1397e4917-t0.0-s0|c60b71a70256d3a3": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|3df82e76ee9a-t0.0-s0|a9f8a7ac439d0697": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): digital-skills training programs for underserved communities"
+  },
+  "seconds": 0.0
+ },
+ "judge|0d3700740132-t0.0-s0|4fc08e32e10d8cb2": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data and analytics software companies led by women in the United States"
+  },
+  "seconds": 0.0
+ },
+ "judge|fb91f3497b66-t0.0-s0|3dde37819c9dcdb3": {
+  "answer": {
+   "fit": "Low",
+   "reason": "requirement: at least 10 full-time employees"
+  },
+  "seconds": 0.0
+ },
+ "judge|9b9e7e9d57d7-t0.0-s0|ee5f3e2baa1d6eb3": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): distributing proven poverty interventions (bed nets, water filters) in low-income countries"
+  },
+  "seconds": 0.0
+ },
+ "judge|45ae4c8b09f8-t0.0-s0|e63a829d18239b01": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): social enterprises in any sector that create jobs"
+  },
+  "seconds": 0.0
+ },
+ "judge|6f3910ee982f-t0.0-s0|8132b03072bb50b0": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building ventures in any industry and early-stage for-profit startups based in California"
+  },
+  "seconds": 0.0
+ },
+ "judge|90956914ed9f-t0.0-s0|e71b156c3f0b07ea": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): arts and cultural festivals"
+  },
+  "seconds": 0.0
+ },
+ "judge|ddf351913d33-t0.0-s0|6dcfaf9ee6321a73": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: the business must have been in operation for at least 5 years"
+  },
+  "seconds": 0.0
+ },
+ "judge|c72344cf5f80-t0.0-s0|233f3752f48d95b3": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage fintech and data-infrastructure ventures"
+  },
+  "seconds": 0.0
+ },
+ "judge|2023ab594193-t0.0-s0|b0c32e44e545fbcc": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): coral reef restoration"
+  },
+  "seconds": 0.0
+ },
+ "judge|069b660385da-t0.0-s0|de981e6462ca1e60": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): local tourism and hospitality businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|4f0d49c2ba4e-t0.0-s0|a6c59d9f1be9ce4c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): youth sports leagues"
+  },
+  "seconds": 0.0
+ },
+ "judge|680c009636e5-t0.0-s0|3ba0d91897d06efb": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-owned for-profit startups in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|fe2ecabf940d-t0.0-s0|5c42f6c3845b6706": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): youth employment partnerships between schools and businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|93ae0008c18e-t0.0-s0|0a3fd4cc65d46de0": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): e-commerce focus is not core to Ardook Data's AI/data mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|234eb9cf5055-t0.0-s0|268abaabace72d12": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): computer-vision and robotics startups, not AI/data for social impact"
+  },
+  "seconds": 0.0
+ },
+ "judge|a4b339f0e819-t0.0-s0|d07c32b649357cc5": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): K-12 teacher training solutions"
+  },
+  "seconds": 0.0
+ },
+ "judge|8aa2ec19672b-t0.0-s0|55256ea7f130149f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to companies based in Florida"
+  },
+  "seconds": 0.0
+ },
+ "judge|81b47dcdb000-t0.0-s0|7f5226467bfce85e": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-founded for-profit consumer startups seeking growth capital"
+  },
+  "seconds": 0.0
+ },
+ "judge|43df80b3ccc3-t0.0-s0|f5f4d21b5a9b18b4": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): youth sports leagues"
+  },
+  "seconds": 0.0
+ },
+ "judge|18f4ac1efe9a-t0.0-s0|ef57cc003f9de43b": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): rural broadband and connectivity projects for faith-based organizations"
+  },
+  "seconds": 0.0
+ },
+ "judge|7a6d072e1f56-t0.0-s0|2b815163c0c59e96": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "related but not core (fintech and data-infrastructure are not explicitly core to Ardook Data's AI/data product mission)"
+  },
+  "seconds": 0.0
+ },
+ "judge|6df3af21678c-t0.0-s0|bf9b9bf2d24de468": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): must propose a museum exhibition"
+  },
+  "seconds": 0.0
+ },
+ "judge|5d22970ba48c-t0.0-s0|25b0f970d7ff3804": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): cooperatives and employee-owned business models"
+  },
+  "seconds": 0.0
+ },
+ "judge|b381569527b2-t0.0-s0|78c32348fb18d977": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): cooperatives and employee-owned businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|614f6887ceda-t0.0-s0|66c14f38f4c1f47e": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (partial): consumer-facing businesses in any industry, with a focus on women founders, but not specifically AI or tech-focused"
+  },
+  "seconds": 0.0
+ },
+ "judge|7cadc783329d-t0.0-s0|99deed4dcbbbb56c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "location: the grant is limited to Nigerian startups and small companies"
+  },
+  "seconds": 0.0
+ },
+ "judge|09a85126dd25-t0.0-s0|257064668835868d": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): maternal health programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|56e169655727-t0.0-s0|4e64181f5d42d382": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based organizations"
+  },
+  "seconds": 0.0
+ },
+ "judge|ae875ea8cfd2-t0.0-s0|a7883ff55dd1c905": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): generative-AI tools for small businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|66990201525d-t0.0-s0|100c4e4a12f336c3": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|45e8a4ce4927-t0.0-s0|dce077a4b9427ec8": {
+  "answer": {
+   "fit": "Low",
+   "reason": "industry restriction: limited to tourism or hospitality, which is off-mission for an AI/data venture"
+  },
+  "seconds": 0.0
+ },
+ "judge|7e019ccdb993-t0.0-s0|bc0aa6473d8bed84": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): supports cooperatives and employee-owned businesses, not explicitly focused on technology or AI"
+  },
+  "seconds": 0.0
+ },
+ "judge|bbfb3f87a678-t0.0-s0|75b2ec6fc68e65b3": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): computer-vision and robotics startups"
+  },
+  "seconds": 0.0
+ },
+ "judge|99b224b4991d-t0.0-s0|f653bf80383b17dd": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): early-stage computer-vision and robotics startups (not AI/data or SaaS core to Ardook Data's mission)"
+  },
+  "seconds": 0.0
+ },
+ "judge|3dc954e0d129-t0.0-s0|19f3b4daf0602848": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): e-commerce brands, not core to AI/data mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|b745c8d5393a-t0.0-s0|fc53a0d7331e202b": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): maternal health initiatives"
+  },
+  "seconds": 0.0
+ },
+ "judge|52038a5ef197-t0.0-s0|a6e789d4fbe1bac9": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: only for organizations based in Chicago"
+  },
+  "seconds": 0.0
+ },
+ "judge|f826efd97db7-t0.0-s0|25ae0b02432a0b06": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): coral reef restoration projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|5b107b3090dd-t0.0-s0|cb11d8ed053feec0": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): museum exhibitions"
+  },
+  "seconds": 0.0
+ },
+ "judge|659241d30afd-t0.0-s0|6b4c68eaf4db87a1": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "location: open to Northern California, but Ardook Data is based in the Bay Area, which is a subset of Northern California, but the listing does not confirm Bay Area eligibility explicitly"
+  },
+  "seconds": 0.0
+ },
+ "judge|7a68cebb8e56-t0.0-s0|4b9bf71171cbbfed": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): legal aid to refugees"
+  },
+  "seconds": 0.0
+ },
+ "judge|fe7b67d42766-t0.0-s0|ff74509d922a7b39": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): fintech or data-infrastructure for faith-based organizations"
+  },
+  "seconds": 0.0
+ },
+ "judge|704eb3367b62-t0.0-s0|5b2b81a6dcb85b22": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: requires a minimum of five years in operation, which a new Ardook Data entity cannot meet"
+  },
+  "seconds": 0.0
+ },
+ "judge|4abf34b3ac5e-t0.0-s0|4c7c341a2e833c53": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): K-12 teacher training solutions"
+  },
+  "seconds": 0.0
+ },
+ "judge|cb71d057a0ba-t0.0-s0|6f264d98208086ae": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme: museum exhibitions is off-mission for an AI/data venture"
+  },
+  "seconds": 0.0
+ },
+ "judge|e5cdbc32e19a-t0.0-s0|7445aaac10d57d4b": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): U.S.-based companies in local tourism and hospitality, not core to AI/data venture"
+  },
+  "seconds": 0.0
+ },
+ "judge|f85ffbe9685e-t0.0-s0|ab22cdfcf393ac20": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): cooperatives and employee-owned businesses in Northern California"
+  },
+  "seconds": 0.0
+ },
+ "judge|1f28c268ff62-t0.0-s0|eb4e7c0cd547490d": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|c200924caf76-t0.0-s0|b79014783d66097f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have been in business for at least five years"
+  },
+  "seconds": 0.0
+ },
+ "judge|13c214b6049e-t0.0-s0|7daa1c267ab5764c": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): youth employment partnerships between companies and schools"
+  },
+  "seconds": 0.0
+ },
+ "judge|25e211798c15-t0.0-s0|2aa349fa8f9874ba": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): tourism and hospitality businesses, which are not core to Ardook Data's AI/data mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|9fd3d6453279-t0.0-s0|b5006f18709bed73": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): fintech and data-infrastructure ventures"
+  },
+  "seconds": 0.0
+ },
+ "judge|9279cbd74bef-t0.0-s0|571b246505a02166": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: businesses must have been in operation for at least five years"
+  },
+  "seconds": 0.0
+ },
+ "judge|cc2561e59775-t0.0-s0|8d1e3abfafa8ef1c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): coral reef restoration"
+  },
+  "seconds": 0.0
+ },
+ "judge|535742043f16-t0.0-s0|47c884a9873b9c05": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to companies based in Florida"
+  },
+  "seconds": 0.0
+ },
+ "judge|1a44cd30ce71-t0.0-s0|42273b03d195dee9": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): youth employment partnerships between companies and schools"
+  },
+  "seconds": 0.0
+ },
+ "judge|50eea336485b-t0.0-s0|df49e3f2264b0653": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led startups developing computer-vision and robotics technologies"
+  },
+  "seconds": 0.0
+ },
+ "judge|1bcfdbc226b8-t0.0-s0|5f5494e9f787344e": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant type: only public schools and school districts are eligible, which does not match Ardook Data's for-profit company structure"
+  },
+  "seconds": 0.0
+ },
+ "judge|e67e11c89cc0-t0.0-s0|a6e491463f7e19b3": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): focused on coral reef restoration, which is off-mission for an AI/data venture"
+  },
+  "seconds": 0.0
+ },
+ "judge|1906a9d83a78-t0.0-s0|9b27b925c0ef826e": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): cooperative or employee-owned businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|8bc279841aca-t0.0-s0|d61754ff8e3c6c4b": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|de9031289c7f-t0.0-s0|2a42dff1a6dd527b": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|fab1916870b8-t0.0-s0|f9c6d7d0b048ccc6": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): rural broadband and connectivity"
+  },
+  "seconds": 0.0
+ },
+ "judge|14bfbb827f02-t0.0-s0|caab2f736270e570": {
+  "answer": {
+   "fit": "Low",
+   "reason": "requirement: minimum of 25 employees"
+  },
+  "seconds": 0.0
+ },
+ "judge|cbf75f166bbb-t0.0-s0|0dfc5f2d670c89f4": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): for-profit, women-led startups across all industries"
+  },
+  "seconds": 0.0
+ },
+ "judge|1a92a6e5ca69-t0.0-s0|76eb522f6c21f567": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): computer-vision and robotics, not core AI/SaaS but related to technology and women-led startups"
+  },
+  "seconds": 0.0
+ },
+ "judge|7be2d39bad23-t0.0-s0|09f257e40db1f16b": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): K-12 teacher training initiatives"
+  },
+  "seconds": 0.0
+ },
+ "judge|568914c3e7f8-t0.0-s0|5177afc9939c46b2": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: minimum of 25 employees required"
+  },
+  "seconds": 0.0
+ },
+ "judge|39ffa6d21ec1-t0.0-s0|233462e72da43912": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must be at least five years in business"
+  },
+  "seconds": 0.0
+ },
+ "judge|28cadf1ed6f0-t0.0-s0|25065633d0585c45": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): operates a youth sports league"
+  },
+  "seconds": 0.0
+ },
+ "judge|9702e7c3990a-t0.0-s0|b7bccc97b20b07b3": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): e-commerce brands, which is related but not core to AI/data ventures"
+  },
+  "seconds": 0.0
+ },
+ "judge|99a2d85f40e6-t0.0-s0|4869f17d3303296c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): funds are intended to support youth sports leagues"
+  },
+  "seconds": 0.0
+ },
+ "judge|73728fd68550-t0.0-s0|3314268d9b9e00e8": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): cooperatives and employee-owned business models"
+  },
+  "seconds": 0.0
+ },
+ "judge|7a2957824842-t0.0-s0|26ea431a0f400f09": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): innovative museum exhibitions"
+  },
+  "seconds": 0.0
+ },
+ "judge|883dde80f928-t0.0-s0|7073bfca1c9a6851": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|e1af2084b9d1-t0.0-s0|11fd263e053c197f": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): youth employment partnerships between companies and schools"
+  },
+  "seconds": 0.0
+ },
+ "judge|cf8bef49d8d5-t0.0-s0|d55e9c30b971b26d": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have at least 25 employees"
+  },
+  "seconds": 0.0
+ },
+ "judge|e754445d477e-t0.0-s0|dba872e7fe01aedb": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-founded startups in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|b6f90782dca6-t0.0-s0|e233634786bcb872": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage for-profit AI/tech startups in the Bay Area"
+  },
+  "seconds": 0.0
+ },
+ "judge|18f26ba10f01-t0.0-s0|a5c3900d50d6d5db": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): e-commerce brands, not core AI/tech or women entrepreneurs in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|a65c3aa5962e-t0.0-s0|f4068b9b5d7ae5f1": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): museum exhibitions"
+  },
+  "seconds": 0.0
+ },
+ "judge|a51a6c0c99b3-t0.0-s0|8a5b895c456e6217": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage technology startups with a female founder building computer-vision and robotics products"
+  },
+  "seconds": 0.0
+ },
+ "judge|752dd8fa69f6-t0.0-s0|82081d6ec3ab662e": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): youth sports leagues"
+  },
+  "seconds": 0.0
+ },
+ "judge|df37c811a7ed-t0.0-s0|dc5c01439bc13d8e": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): U.S.-based, early-stage, women-led company in a technology field"
+  },
+  "seconds": 0.0
+ },
+ "judge|fd0a50e424a6-t0.0-s0|6fad1ef2d4e4a074": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): consumer startups in any industry, not specifically AI/data or women's economic empowerment"
+  },
+  "seconds": 0.0
+ },
+ "judge|45bf6e2d1b02-t0.0-s0|df0f2f6c034ef653": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage data-infrastructure ventures"
+  },
+  "seconds": 0.0
+ },
+ "judge|c5c067d71e9a-t0.0-s0|0694763d433d159e": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): local tourism and hospitality businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|9d9ac4b5a5b3-t0.0-s0|25813bb7075533b6": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): museum exhibitions"
+  },
+  "seconds": 0.0
+ },
+ "judge|d4a9ad356a02-t0.0-s0|a5c167761d5e1669": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must be in business for at least five years"
+  },
+  "seconds": 0.0
+ },
+ "judge|69257996f8cf-t0.0-s0|f8468f98dd73e94c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "location: businesses must be located in Florida"
+  },
+  "seconds": 0.0
+ },
+ "judge|087b208afd6a-t0.0-s0|5c62dd1fa87829dd": {
+  "answer": {
+   "fit": "Low",
+   "reason": "requirement: must have been in business for at least 5 years"
+  },
+  "seconds": 0.0
+ },
+ "judge|e1a2e87ed300-t0.0-s0|86cb743aeb3c26f7": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): youth employment partnerships between companies and schools"
+  },
+  "seconds": 0.0
+ },
+ "judge|189c2fdc5868-t0.0-s0|8286c58bdc88a819": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects for underserved regions"
+  },
+  "seconds": 0.0
+ },
+ "judge|024784cdf024-t0.0-s0|915fd380ceed84c5": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: minimum of 25 employees required"
+  },
+  "seconds": 0.0
+ },
+ "judge|9eeb7b8aaaf6-t0.0-s0|f95801e7b49594f2": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based organizations"
+  },
+  "seconds": 0.0
+ },
+ "judge|a367dfe89983-t0.0-s0|5a2d2a997d37c2ca": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): early-stage businesses in tourism and hospitality owned by women, but not core to AI/data mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|b157e6e9643a-t0.0-s0|447435975a576b3b": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|364d4e094c8f-t0.0-s0|50742b588a82e52d": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): generative-AI tools for small businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|2aaea0393175-t0.0-s0|95aa0eaf4db8c58a": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): maternal health programs, which are not aligned with Ardook Data's mission or focus areas"
+  },
+  "seconds": 0.0
+ },
+ "judge|0261fc001954-t0.0-s0|21e9783e44a10120": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): fintech and data-infrastructure ventures"
+  },
+  "seconds": 0.0
+ },
+ "judge|19e93f3076f7-t0.0-s0|94d6e4a9a2f92ee5": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data-infrastructure ventures and women-owned for-profit companies in Northern California"
+  },
+  "seconds": 0.0
+ },
+ "judge|f1e6954719b6-t0.0-s0|5853e6ec6ffacaa2": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): refugee legal aid is not core to Ardook Data's mission but meets some eligibility criteria"
+  },
+  "seconds": 0.0
+ },
+ "judge|984b1d74de7d-t0.0-s0|3469a5c52c383cb4": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): funds must be used to establish or expand youth sports leagues"
+  },
+  "seconds": 0.0
+ },
+ "judge|30c1813cbd3f-t0.0-s0|ddb29e0e1abc8482": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): coral reef restoration initiatives"
+  },
+  "seconds": 0.0
+ },
+ "judge|462b9a1ae321-t0.0-s0|2565194995cd8bdb": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "related but not core: funds generative-AI tools without a specific focus on social impact or women-led ventures"
+  },
+  "seconds": 0.0
+ },
+ "judge|59de36692c5a-t0.0-s0|025fd53aa9138df9": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have a minimum of 25 employees"
+  },
+  "seconds": 0.0
+ },
+ "judge|9de32060c3f8-t0.0-s0|bf4af0640325bbba": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): K-12 teacher training initiatives"
+  },
+  "seconds": 0.0
+ },
+ "judge|c6d224bb5fa8-t0.0-s0|2047206009041d54": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-owned startups building generative-AI tools align with AI and women entrepreneur themes"
+  },
+  "seconds": 0.0
+ },
+ "judge|fb403f3d42bd-t0.0-s0|6319bf8cc8a5b4d3": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): maternal health programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|0022962a56bc-t0.0-s0|69354623e9f3d966": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): partnerships between companies and schools to support youth employment"
+  },
+  "seconds": 0.0
+ },
+ "judge|30d2721f8bb6-t0.0-s0|2f54f6bd47568569": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): funds are intended for the development or curation of museum exhibitions"
+  },
+  "seconds": 0.0
+ },
+ "judge|66ba3000ce4b-t0.0-s0|afc285f1f89b2a41": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: tribal governments only"
+  },
+  "seconds": 0.0
+ },
+ "judge|d918ee0dcae1-t0.0-s0|d678f9840f559297": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): technological solutions for coral reef restoration"
+  },
+  "seconds": 0.0
+ },
+ "judge|779ac9f334c4-t0.0-s0|ec0be7095dbc58be": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): funds must be used for coral reef restoration"
+  },
+  "seconds": 0.0
+ },
+ "judge|841990bff177-t0.0-s0|d2f8fa3203baab14": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): local tourism and hospitality businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|23f4222917b1-t0.0-s0|609c6638475b604d": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|97a2ecea0731-t0.0-s0|4fbb74a99da42a90": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off-mission): rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|d2ba82db0e7d-t0.0-s0|2bb4c0d710b8028e": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have raised at least $2 million in venture funding"
+  },
+  "seconds": 0.0
+ },
+ "judge|9b3480e1047b-t0.0-s0|ed792cd1b1c18049": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): local tourism or hospitality business"
+  },
+  "seconds": 0.0
+ },
+ "judge|93cd18a6e303-t0.0-s0|75c569e89878b4d8": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off-mission): youth employment partnerships between companies and schools"
+  },
+  "seconds": 0.0
+ },
+ "judge|e3bec1c58960-t0.0-s0|4ce5bcc949f67871": {
+  "answer": {
+   "fit": "Low",
+   "reason": "requirement (employee count): applicants must have a minimum of 25 employees"
+  },
+  "seconds": 0.0
+ },
+ "judge|7acce1a0adba-t0.0-s0|47b66f9f6f0396ef": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|c6718a32f390-t0.0-s0|b65a26cd9a154ec6": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): data-infrastructure ventures with a female founder"
+  },
+  "seconds": 0.0
+ },
+ "judge|9e23289cb86c-t0.0-s0|b56d0ac634a0e570": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): maternal health programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|e4c20c04cac3-t0.0-s0|d2e2b367683effa1": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): e-commerce brands, not explicitly technology or AI-focused"
+  },
+  "seconds": 0.0
+ },
+ "judge|c087b9ac7d1a-t0.0-s0|c5442f278b935931": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): K-12 teacher training"
+  },
+  "seconds": 0.0
+ },
+ "judge|24ca849e758d-t0.0-s0|e38a9833a60edd88": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects for public schools"
+  },
+  "seconds": 0.0
+ },
+ "judge|d5cbf3feb609-t0.0-s0|9cefd1e56204c360": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: companies must have a minimum of $1 million annual revenue"
+  },
+  "seconds": 0.0
+ },
+ "judge|9d9497e98312-t0.0-s0|dd68265c24ea5c45": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: minimum venture funding requirement of $2 million"
+  },
+  "seconds": 0.0
+ },
+ "judge|9c442a37defa-t0.0-s0|139ab9b0525a4962": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): operates youth sports leagues"
+  },
+  "seconds": 0.0
+ },
+ "judge|a961fe5b47f9-t0.0-s0|a9144ae1fee2c330": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): improving rural broadband access and connectivity"
+  },
+  "seconds": 0.0
+ },
+ "judge|42aae31b9242-t0.0-s0|39ea66dca58dc313": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): tourism and hospitality, not core to AI/data or women's economic empowerment"
+  },
+  "seconds": 0.0
+ },
+ "judge|7c28124d0d0c-t0.0-s0|5fe467b63e5f28e6": {
+  "answer": {
+   "fit": "Low",
+   "reason": "location: the program is restricted to Nigerian startups, and the organization is based in the United States"
+  },
+  "seconds": 0.0
+ },
+ "judge|10cd182fb04b-t0.0-s0|d0b8460928929d2f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): museum exhibitions"
+  },
+  "seconds": 0.0
+ },
+ "judge|a5ebdfe0070b-t0.0-s0|3bf18f591dbac4e0": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): cooperatives or employee-owned businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|718b9c5b7845-t0.0-s0|9781b7b8d9b3e33f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "revenue requirement (€1M annual revenue) rules out a new Ardook Data entity"
+  },
+  "seconds": 0.0
+ },
+ "judge|76d8636c4d34-t0.0-s0|be469a9ff05e2117": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|98c612a4dc0b-t0.0-s0|75271d1fe812d7ff": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): cooperatives or employee-owned businesses with a focus on inclusive business practices"
+  },
+  "seconds": 0.0
+ },
+ "judge|a0f96e8359c1-t0.0-s0|28335f1600116446": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): women-led cooperatives or employee-owned enterprises"
+  },
+  "seconds": 0.0
+ },
+ "judge|b751dd072e54-t0.0-s0|df65777209c026fb": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): cooperative ownership structures and community-oriented business practices"
+  },
+  "seconds": 0.0
+ },
+ "judge|61192f0ec67c-t0.0-s0|b7736e4bed3b71c4": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): development and deployment of generative-AI tools by small businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|c96da7cd1451-t0.0-s0|158e16feeb0a7dcb": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): funds maternal health programs, which is not aligned with Ardook Data's mission or focus areas"
+  },
+  "seconds": 0.0
+ },
+ "judge|523412b7c0d7-t0.0-s0|a06397d80eba5f36": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): tourism or hospitality business"
+  },
+  "seconds": 0.0
+ },
+ "judge|ef4896f77ae2-t0.0-s0|c9f3f8fe63895c1b": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based youth employment partnerships"
+  },
+  "seconds": 0.0
+ },
+ "judge|674e62d4188c-t0.0-s0|391f0da834241709": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): generative-AI tools for small businesses, women-led, for-profit, U.S.-based"
+  },
+  "seconds": 0.0
+ },
+ "judge|f314134c2c2c-t0.0-s0|885122c798150183": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off-mission): cooperatives or employee-owned businesses (not aligned with AI/data venture or women's economic empowerment core mission)"
+  },
+  "seconds": 0.0
+ },
+ "judge|a8d0f849ef50-t0.0-s0|3fa221013afadef4": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|8311a2e50520-t0.0-s0|85480f067757c3a5": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband or connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|d17d38515965-t0.0-s0|588c6f08db124d1a": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): partnerships with schools to advance youth employment opportunities"
+  },
+  "seconds": 0.0
+ },
+ "judge|acec5e27b7c4-t0.0-s0|0163050d1887ff46": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to businesses located in Chicago"
+  },
+  "seconds": 0.0
+ },
+ "judge|3ef28a320b99-t0.0-s0|1b7e1ff86985cd4c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must be at least five years in business"
+  },
+  "seconds": 0.0
+ },
+ "judge|a8d6fe1a64bb-t0.0-s0|fc612a1e9c08ec68": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: public schools and school districts only"
+  },
+  "seconds": 0.0
+ },
+ "judge|8caf11c2e993-t0.0-s0|458e918af347bd1c": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|ca9997f4021c-t0.0-s0|86cdbc444a408baf": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): e-commerce brands are related but not core to Ardook Data's AI/data mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|9e6c5b902cd6-t0.0-s0|e66f023c1f6c0dd1": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women-led startups adopting AI tools, U.S.-based, and early-stage"
+  },
+  "seconds": 0.0
+ },
+ "judge|ada964da4c75-t0.0-s0|7ea06ffb1692a969": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): applicants must be faith-based organizations"
+  },
+  "seconds": 0.0
+ },
+ "judge|a9adb60f63cd-t0.0-s0|6f97f0601c7751d4": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): youth employment partnerships between businesses and schools"
+  },
+  "seconds": 0.0
+ },
+ "judge|7aca9dca4327-t0.0-s0|09340aaeeaceed28": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): museum exhibitions"
+  },
+  "seconds": 0.0
+ },
+ "judge|91b5fbaed7b3-t0.0-s0|6de32168aa658ebd": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage computer-vision and robotics startups, women-owned"
+  },
+  "seconds": 0.0
+ },
+ "judge|f41e844d696f-t0.0-s0|ceb53040f6131731": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): youth employment partnerships between companies and schools"
+  },
+  "seconds": 0.0
+ },
+ "judge|72de1f3ae15c-t0.0-s0|bf810e1a7b5cbf0c": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): cooperatives and employee-owned business models"
+  },
+  "seconds": 0.0
+ },
+ "judge|42501e595d42-t0.0-s0|c1a4b45bdadf0e7d": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): youth employment partnerships between companies and schools"
+  },
+  "seconds": 0.0
+ },
+ "judge|e32ebfb2691a-t0.0-s0|685f3f37119e02cb": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): computer-vision and robotics are adjacent to AI but not explicitly core to Ardook Data's AI/data product focus"
+  },
+  "seconds": 0.0
+ },
+ "judge|c1cb54ea148c-t0.0-s0|ff9cd0f14013f1e0": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): supporting museum exhibitions"
+  },
+  "seconds": 0.0
+ },
+ "judge|69dcb2afacd3-t0.0-s0|68471e9067cd7d7c": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): tourism and hospitality sector"
+  },
+  "seconds": 0.0
+ },
+ "judge|0aa5b7d8c6d7-t0.0-s0|6310878645b124bb": {
+  "answer": {
+   "fit": "Low",
+   "reason": "the requirement of at least 5 years in business rules out Ardook Data, which is an early-stage venture"
+  },
+  "seconds": 0.0
+ },
+ "judge|07e1feebeeb2-t0.0-s0|77d618852781736d": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): maternal health programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|07d1a5d264c3-t0.0-s0|17fd8b087d74207f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: requires companies to be at least five years old, which a new Ardook Data entity cannot meet"
+  },
+  "seconds": 0.0
+ },
+ "judge|805388f887d9-t0.0-s0|521a482acecee79f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): legal aid for refugees"
+  },
+  "seconds": 0.0
+ },
+ "judge|24c616aca9cf-t0.0-s0|0ee6b171a8ee64bd": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): cooperative or employee-owned business structure"
+  },
+  "seconds": 0.0
+ },
+ "judge|18d795788feb-t0.0-s0|f671c0d1ffeaa37e": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have a minimum of $1 million in annual revenue"
+  },
+  "seconds": 0.0
+ },
+ "judge|8240216f4a67-t0.0-s0|c369f85208606b9c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: minimum annual revenue of $1 million required"
+  },
+  "seconds": 0.0
+ },
+ "judge|bf80af8cee70-t0.0-s0|0ee78534d85f90c9": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|934fb87e4d93-t0.0-s0|a19e12d88d0521b5": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): for-profit companies developing AI tools, women-led, and open to idea-stage founders"
+  },
+  "seconds": 0.0
+ },
+ "judge|314bca9e5b3f-t0.0-s0|f5b726f3b7a5704d": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): computer-vision and robotics technologies are not core to Ardook Data's AI/data product mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|cc3994fde5c8-t0.0-s0|49d3f26d3c166e2a": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): faith-based organizations and rural broadband projects are not aligned with Ardook Data's mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|760ad67275ac-t0.0-s0|610b1ecf1f47b34c": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): cooperatives or employee-owned businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|46138bb22594-t0.0-s0|b661162dcf4e5dbe": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: must operate in Brazil (not U.S.-based)"
+  },
+  "seconds": 0.0
+ },
+ "judge|6256426bfaee-t0.0-s0|60db47bcdf8edef2": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): local tourism and hospitality businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|4c899a045c7b-t0.0-s0|d929c9c05bf622d7": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): legal aid to refugees"
+  },
+  "seconds": 0.0
+ },
+ "judge|3dd3ed2ffdd2-t0.0-s0|47e9b7c59958af32": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "location: limited to companies based in San Francisco or Oakland, which may or may not align with Ardook Data's Bay Area status"
+  },
+  "seconds": 0.0
+ },
+ "judge|2ea7a64c9ec2-t0.0-s0|3b31f887a814fb01": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): youth sports leagues"
+  },
+  "seconds": 0.0
+ },
+ "judge|67155050d0ea-t0.0-s0|6da43124f0e31aa6": {
+  "answer": {
+   "fit": "Low",
+   "reason": "requirement: minimum of 25 employees"
+  },
+  "seconds": 0.0
+ },
+ "judge|7dd679bb9835-t0.0-s0|66addc3ad8389307": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): e-commerce brands, not directly aligned with AI/data or social impact focus"
+  },
+  "seconds": 0.0
+ },
+ "judge|7882f962d2b1-t0.0-s0|d6caaecb6422beb5": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: limited to Nigerian-based startups (Ardook Data is California-based)"
+  },
+  "seconds": 0.0
+ },
+ "judge|40e4872818c0-t0.0-s0|c25db97229cd53e8": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): e-commerce brands, not core to AI/data mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|bdcf8ed02bea-t0.0-s0|06d5230fc839ebf2": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): rural broadband and connectivity projects for public schools, which is not aligned with Ardook Data's AI/data venture mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|6eeead758ef3-t0.0-s0|c9563f76d4fe06b6": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have a minimum of 25 employees"
+  },
+  "seconds": 0.0
+ },
+ "judge|e405feb5e262-t0.0-s0|4a6d8c12cbb58c75": {
+  "answer": {
+   "fit": "Low",
+   "reason": "location: must be based in Nigeria"
+  },
+  "seconds": 0.0
+ },
+ "judge|f216b9a47f74-t0.0-s0|bea8f98cab02e614": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): e-commerce brands, which is not core to Ardook Data's AI/data mission"
+  },
+  "seconds": 0.0
+ },
+ "judge|c6e88d803a7a-t0.0-s0|c45a4154d205f5b6": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): funds rural broadband and connectivity projects"
+  },
+  "seconds": 0.0
+ },
+ "judge|ca55303f4ae7-t0.0-s0|f7ed635d63fb5236": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): funds are awarded to cooperatives and employee-owned businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|80ae46495da4-t0.0-s0|d5cb7b8ff566c102": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage startups building AI/tech products, with a focus on women ownership and no minimum revenue requirement"
+  },
+  "seconds": 0.0
+ },
+ "judge|870f9e96d918-t0.0-s0|a867fe2fb56040e7": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): AI and machine-learning startups building commercial products"
+  },
+  "seconds": 0.0
+ },
+ "judge|6243201bb7dc-t0.0-s0|f93c14ba86d7da03": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): cooperatives and employee-owned businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|3c2699311475-t0.0-s0|b3b5499e60808208": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): local tourism and hospitality businesses"
+  },
+  "seconds": 0.0
+ },
+ "judge|781a2d9cb7c1-t0.0-s0|2319f137236c7ec3": {
+  "answer": {
+   "fit": "Moderate",
+   "reason": "theme (adjacent): developing solutions for coral reef restoration"
+  },
+  "seconds": 0.0
+ },
+ "judge|4e402aeccafc-t0.0-s0|f6311982ffbd3a3c": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): fintech and data-infrastructure ventures"
+  },
+  "seconds": 0.0
+ },
+ "judge|2b8663765486-t0.0-s0|7955862a47223d1f": {
+  "answer": {
+   "fit": "Low",
+   "reason": "stage: must have a minimum of 25 employees"
+  },
+  "seconds": 0.0
+ },
+ "judge|a6bb0c78e80d-t0.0-s0|3f94b5338c93b0a4": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): women entrepreneurs building a business in any industry"
+  },
+  "seconds": 0.0
+ },
+ "judge|7c1a0b643d11-t0.0-s0|3bdb965363b06328": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): tourism or hospitality sectors"
+  },
+  "seconds": 0.0
+ },
+ "judge|f44e0e9869a6-t0.0-s0|d9849bb184b89cdd": {
+  "answer": {
+   "fit": "Low",
+   "reason": "industry (off): tourism and hospitality sector"
+  },
+  "seconds": 0.0
+ },
+ "judge|574cbf5a0cb6-t0.0-s0|fbe835cb6f81f2b0": {
+  "answer": {
+   "fit": "Low",
+   "reason": "applicant: public schools and school districts only (no startups)"
+  },
+  "seconds": 0.0
+ },
+ "judge|ffd32b2a59b1-t0.0-s0|8158fb8cbeec77ad": {
+  "answer": {
+   "fit": "Low",
+   "reason": "theme (off): maternal health programs"
+  },
+  "seconds": 0.0
+ },
+ "judge|1c640d3e29a6-t0.0-s0|226a687ebe88e490": {
+  "answer": {
+   "fit": "Low",
+   "reason": "geo: only for organizations registered in Germany"
+  },
+  "seconds": 0.0
+ },
+ "judge|5cba3f876d5f-t0.0-s0|07902e71a70755a4": {
+  "answer": {
+   "fit": "High",
+   "reason": "theme (core): early-stage fintech and data-infrastructure ventures"
+  },
+  "seconds": 0.0
+ }
+}

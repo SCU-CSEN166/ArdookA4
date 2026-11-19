@@ -1,0 +1,10 @@
+dataset,system,n,3-tier accuracy,3-tier macro F1,relevant accuracy,relevant precision,relevant recall,relevant F1
+real,checklist alone,28,0.5,0.321,0.893,1.0,0.893,0.943
+real,RAG judge alone,28,0.429,0.32,0.786,1.0,0.786,0.88
+real,final system,28,0.429,0.325,0.75,1.0,0.75,0.857
+synthetic_test,checklist alone,250,0.472,0.468,0.676,0.63,1.0,0.773
+synthetic_test,RAG judge alone,250,0.948,0.943,0.96,0.944,0.986,0.965
+synthetic_test,final system,250,0.94,0.934,0.952,0.957,0.957,0.957
+synthetic_alt_test,checklist alone,200,0.515,0.518,0.695,0.644,0.963,0.772
+synthetic_alt_test,RAG judge alone,200,0.765,0.738,0.885,0.912,0.869,0.89
+synthetic_alt_test,final system,200,0.755,0.725,0.865,0.926,0.813,0.866

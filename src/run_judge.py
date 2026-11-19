@@ -47,6 +47,8 @@ def main() -> None:
     parser.add_argument("--api-key-env", help="default matches --base-url")
     parser.add_argument("--workers", type=int, default=16)
     parser.add_argument("--rules-only", action="store_true", help="cached answers only")
+    parser.add_argument("--limit", type=int, help="only the first N grants (after --labeled-only)")
+    parser.add_argument("--cache", type=Path, help="answer cache file (default: outputs/cache/judge__<model>.json)")
     parser.add_argument("--out", type=Path)
     args = parser.parse_args()
 
@@ -55,6 +57,7 @@ def main() -> None:
     rows = profile.get("labeled_sheet_rows") or [38, None]
     grants = load_any(args.input, args.split, label_rows=(rows[0], rows[1]))
     grants = [g for g in grants if g.get("gold_fit")] if args.labeled_only else grants
+    grants = grants[: args.limit] if args.limit else grants
 
     sponsor_rows = (rows[0], rows[1] or 10**6)
     pool = default_pool(args.profile, SPONSOR_CSV if args.pool != "synthetic" else Path("-"),
@@ -62,7 +65,7 @@ def main() -> None:
     retriever = Retriever(pool) if args.k > 0 else None
     url, key_env = default_api_endpoint()
     backend = APIBackend(args.model, args.base_url or url, args.api_key_env or key_env, no_thinking=not args.thinking)
-    cache = AnswerCache(REPO_ROOT / "outputs" / "cache" / f"judge__{slug(args.model)}.json")
+    cache = AnswerCache(args.cache or REPO_ROOT / "outputs" / "cache" / f"judge__{slug(args.model)}.json")
     judge = Judge(backend, cache, judge_profile_text(profile_path), retriever, args.k, args.votes, args.temperature,
                   thinking=args.thinking)
     print(f"{len(grants)} grants, pool of {len(pool)} rated examples, k={args.k}, votes={args.votes}")
