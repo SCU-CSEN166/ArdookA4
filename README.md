@@ -225,10 +225,10 @@ Example success/failure cases with deepseek:
 - **One meaningful failure:** We kept getting compilation errors despite us following A1's instructions exactly.
 - **One actionable recommendation:** fine-tune-cross.py needs to be able to parse the files more efficiently to avoid the compilation errors, might need cleaner instructions in their README on how to run the model
 - **Feedback received from another team:**
-1. More streamlined instructions, include how to toggle between WAVE 
-2. Needs more explanation on how to find the output data as it is nested within folders
-3. Tag our written step-by-step instructions at the top of the running instructions
-4. Code yields an eligibility column as well as empty eligibility metric columns in the output file, take these out
+  1. More streamlined instructions, include how to toggle between WAVE 
+  2. Needs more explanation on how to find the output data as it is nested within folders
+  3. Tag our written step-by-step instructions at the top of the running instructions
+  4. Code yields an eligibility column as well as empty eligibility metric columns in the output file, take these out
 
 ### Responsible AI assessment
 
