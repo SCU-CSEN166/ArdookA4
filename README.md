@@ -243,7 +243,8 @@ Example success/failure cases with deepseek:
 
 | Feedback / issue | Change made | Worked? (Yes / Partly / No) | Evidence         | Remaining limitation |
 | ---------------- | ----------- | --------------------------- | ---------------- | -------------------- |
-| [Issue]          | [Change]    | [Status]                    | [Link or metric] | [Limitation]         |
+| Improve instructions espcially for running on WAVE | [Change made]  | [Status] | [Link or metric] | [Limitation] |
+| Edit output file columns to get rid of or fill in redundant columns (eligibility, etc.) | [Change made]  | [Status] | [Link or metric] | [Limitation] |
 
 ### Individual contributions during that week
 
