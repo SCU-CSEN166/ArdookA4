@@ -32,9 +32,9 @@ The model is picked from GPU memory: **≥ 70 GB** serves `Qwen/Qwen3-32B` in bf
 
 ## Google Colab
 
-1. Upload `reproduce.ipynb` to Colab (*File → Upload notebook*), or open it from GitHub (*File → Open notebook → GitHub*, tick *Include private repos*).
+1. Open it from GitHub (*File → Open notebook → GitHub*, search `SCU-CSEN166/ArdookA4`, pick `reproduce/reproduce.ipynb`), or upload the file (*File → Upload notebook*).
 2. For live mode pick *Runtime → Change runtime type → A100 or H100 GPU* (Colab Pro or pay-as-you-go) and set `MODE = "live"` in the first cell. Replay mode works on any runtime.
-3. *Runtime → Run all*. The repository is private, so the second cell asks for a GitHub token with read access to it (or leave it blank and upload a `.zip` of the repository).
+3. *Runtime → Run all*. The second cell clones the repository (if it is ever made private, it asks for a GitHub token or a `.zip` instead).
 
 Colab deletes everything when the runtime ends, so each new session downloads the weights again (66 GB for bf16, 20 GB for AWQ: roughly 5–15 minutes).
 
@@ -43,7 +43,7 @@ Colab deletes everything when the runtime ends, so each new session downloads th
 From the repository root on the **login node** (it has internet):
 
 ```bash
-git clone https://github.com/SCU-CSEN166/ArdookGrantProject.git && cd ArdookGrantProject
+git clone https://github.com/SCU-CSEN166/ArdookA4.git && cd ArdookA4
 export HF_HOME=/path/with/100GB/free/hf-cache        # your scratch or project space, not $HOME
 bash reproduce/wave/setup_env.sh                      # one time: .repro-env/ and .vllm-env/ (about 10 GB)
 REPRO_PREFETCH_MODEL=Qwen/Qwen3-32B bash reproduce/wave/setup_env.sh   # optional: download weights now, in case GPU nodes have no internet

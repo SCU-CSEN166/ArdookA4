@@ -274,8 +274,8 @@ Example success/failure cases with deepseek:
 ### Installation
 
 ```bash
-git clone https://github.com/SCU-CSEN166/ArdookGrantProject.git
-cd ArdookGrantProject
+git clone https://github.com/SCU-CSEN166/ArdookA4.git
+cd ArdookA4
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 mkdir -p data && cp reproduce/bundle/data/*.csv data/   # data/ is git-ignored; the shared labeled sets live in the bundle
@@ -318,7 +318,7 @@ The expected scores of the final system are in `reproduce/bundle/expected_result
 ### Repository structure
 
 ```text
-ArdookGrantProject/
+ArdookA4/
 ├── README.md
 ├── requirements.txt
 ├── src/
