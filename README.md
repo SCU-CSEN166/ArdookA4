@@ -225,8 +225,10 @@ Example success/failure cases with deepseek:
 - **One meaningful failure:** Followed A1's instructions, but instructions were unspecific at times and even though we cloned the repo, we were missing necessary input files that the instructions didn't specify to download as well as an issue with the input columns and the way the code parses them.
 - **One actionable recommendation:** [Specific fix]
 - **Feedback received from another team:**
-1. Too many methods/avenues provided to run code, focus on one to yield more streamlined instructions
-2. 
+1. More streamlined instructions, include how to toggle between WAVE 
+2. Needs more explanation on how to find the output data as it is nested within folders
+3. Tag our written step-by-step instructions at the top of the running instructions
+4. Code yields an eligibility column as well as empty eligibility metric columns in the output file, take these out
 
 ### Responsible AI assessment
 
