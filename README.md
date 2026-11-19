@@ -221,9 +221,9 @@ Example success/failure cases with deepseek:
 ### Peer testing
 
 - **Team evaluated:** A1
-- **One thing that worked well:** [Evidence]
-- **One meaningful failure:** Followed A1's instructions, but instructions were unspecific at times and even though we cloned the repo, we were missing necessary input files that the instructions didn't specify to download as well as an issue with the input columns and the way the code parses them.
-- **One actionable recommendation:** [Specific fix]
+- **One thing that worked well:** Data outputted is clean and easy to read, model yields sufficient accuracy
+- **One meaningful failure:** We kept getting compilation errors despite us following A1's instructions exactly.
+- **One actionable recommendation:** fine-tune-cross.py needs to be able to parse the files more efficiently to avoid the compilation errors, might need cleaner instructions in their README on how to run the model
 - **Feedback received from another team:**
 1. More streamlined instructions, include how to toggle between WAVE 
 2. Needs more explanation on how to find the output data as it is nested within folders
