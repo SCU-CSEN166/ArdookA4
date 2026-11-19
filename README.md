@@ -51,6 +51,10 @@ This model is also a good option for our approach to solve our problem. It is di
 Instead of just passing all of Ardook’s information into a vector space, I would create an instruction + a query for Ardook. So it requires more details and thought behind our query to best maximize our retrieval. Then we can run it against our synthetical data then eventual real data.
 - **cross-encoder/ms-marco-MiniLM-L-6-v2**
 The first two proposed models are both bi-encoders which means they produce separate embeddings for Ardook and grants. With this model, we can go beyond that with the ability to combine their data simultaneously. This is helpful because our earlier bi-encoder models can miss negative combinations or correlation because it was embedded separately but this will combine the two which in turn will reveal more to us.
+- **deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B**
+This model requires a thinking process, which slows it down, but allows it to output reasoning behind decisions made in model evaluation. This could be useful for our results, especially more moderate or neutral examples, to pinpoint the highlights of each grant alongside the result. 
+- **Qwen-3B**
+
 
 Considerations
 Our first two bi-encoders models both have a maximum limit on length of tokens so we need to ensure that our data can fit or needs to be chunked to fit the requirements. 
@@ -216,11 +220,13 @@ Example success/failure cases with deepseek:
 
 ### Peer testing
 
-- **Team evaluated:** [Team ID]
+- **Team evaluated:** A1
 - **One thing that worked well:** [Evidence]
-- **One meaningful failure:** [Reproduction steps or example]
+- **One meaningful failure:** Followed A1's instructions, but instructions were unspecific at times and even though we cloned the repo, we were missing necessary input files that the instructions didn't specify to download as well as an issue with the input columns and the way the code parses them.
 - **One actionable recommendation:** [Specific fix]
-- **Feedback received from another team:** [Summary]
+- **Feedback received from another team:**
+1. Too many methods/avenues provided to run code, focus on one to yield more streamlined instructions
+2. 
 
 ### Responsible AI assessment
 
@@ -284,7 +290,7 @@ mkdir -p data && cp reproduce/bundle/data/*.csv data/   # data/ is git-ignored; 
 ### Run the system
 
 ```bash
-# Easiest (Colab, WAVE or a laptop): open reproduce/reproduce.ipynb and run all cells.
+# Easiest (WAVE): open reproduce/reproduce.ipynb and run all cells.
 # MODE = "replay" needs no GPU; MODE = "live" serves Qwen3-32B with vLLM. See reproduce/README.md.
 
 # Command line, with a Qwen3-32B server running (your own vLLM, or deploy/akash/akash_llm.py up / lease / wait):
