@@ -12,11 +12,11 @@
 
 ### Data access and privacy
 
-[Explain where authorized data can be accessed. Do not commit personal information, private WhatsApp exports, API keys, credentials, or restricted grant/application records. Use synthetic or anonymized examples in the README.]
+Data can be accessed through the Final Copy of Ardook Grant Data file located in the repository. No restricted or personal information can be found in the data records.
 
 ### Known limitations
 
-[Keep a list of what the system cannot reliably do.]
+As we near week 10, the system is fully functional and can take an input of grant data, evaluate Ardook and Ardook Data's eligibility for each grant and output a file detailing the findings of its evaluation and the reasoning behind each evaluation. The system gives each grant a rating, from ineligible, moderate, eligible, or excellent.
 
 ## Week 5 — Scope: Project Plan
 
