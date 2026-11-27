@@ -187,9 +187,9 @@ Example success/failure cases with deepseek:
 
 **Deliverable during Week 9 Lab:** Hidden-test results (as provided by the TA), analysis of at least three important failure cases, and a prioritized improvement plan.
 
-- **Submitted system version / commit:** [Commit hash]
+- **Submitted system version / commit:** The system version can be found in the reproduce file.
 - **Hidden-test metrics and leaderboard result:** Results in UPDATED_hidden_test files
-- **Difference from development results:** [Compare; do not assume the hidden set is identical]
+- **Difference from development results:** Our model mislabeled one of the grants provided, yielding a 90% accuracy in this stress test.
 
 | Failure case / category                                                         | What went wrong                           | Possible cause                                                                          | Severity / user impact                                                        | Proposed fix                                                               |
 | ------------------------------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
@@ -265,7 +265,7 @@ Example success/failure cases with deepseek:
 - [ ] Responsible AI considerations and human oversight are discussed
 - [ ] Every team member's contributions are documented for every week
 
-**Final commit / release:** [Commit hash or tag]
+**Final commit / release:** [Final version](./reproducable)
 
 ---
 
