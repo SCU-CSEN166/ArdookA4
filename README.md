@@ -53,7 +53,8 @@ Instead of just passing all of Ardook’s information into a vector space, I wou
 The first two proposed models are both bi-encoders which means they produce separate embeddings for Ardook and grants. With this model, we can go beyond that with the ability to combine their data simultaneously. This is helpful because our earlier bi-encoder models can miss negative combinations or correlation because it was embedded separately but this will combine the two which in turn will reveal more to us.
 - **deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B**
 This model requires a thinking process, which slows it down, but allows it to output reasoning behind decisions made in model evaluation. This could be useful for our results, especially more moderate or neutral examples, to pinpoint the highlights of each grant alongside the result. 
-- **Qwen-3B**
+- **Qwen3-4B and Qwen3-32B**
+These models offer strong reasoning skills and the ability to process heavy workloads. They can be used to parse through lengthy sections of grant information to find the relevant sections. Users of these models say that they can occasionally miss details, but with enough training and refinement, they could be a viable option for this project. 
 
 
 Considerations
