@@ -18,6 +18,10 @@ Data can be accessed through the Final Copy of Ardook Grant Data file located in
 
 As we near week 10, the system is fully functional and can take an input of grant data, evaluate Ardook and Ardook Data's eligibility for each grant and output a file detailing the findings of its evaluation and the reasoning behind each evaluation. The system gives each grant a rating, from ineligible, moderate, eligible, or excellent.
 
+### AI disclosure
+
+AI tools were used to write code and run the models and pipelines used in this project.
+
 ## Week 5 — Scope: Project Plan
 
 **Deliverable during Week 6 Lab:** A project plan (write in this README file) describing your problem formulation, proposed approach, each team member's responsibilities, proposed baseline models with Hugging Face links, proposed evaluation metrics, proposed data with links, and goals for each week.
